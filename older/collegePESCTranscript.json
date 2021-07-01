@@ -1,0 +1,783 @@
+{
+  "@context": {
+    "ceterms": "https://purl.org/ceterms/terms",
+    "schema": "https://schema.org/",
+    "@vocab": "http://example.org/vocab/",
+    "ColTrn": "http://example.org/vocab/ColTrn/",
+    "@base": "http://example.edu/entities/"
+  },
+  "ColTrn:CollegeTranscript": {
+    "TransmissionData": {
+      "DocumentID": "050330001",
+      "CreatedDateTime": "2005-02-02T10:04:29-05:00",
+      "DocumentTypeCode": "RequestedRecord",
+      "TransmissionType": "Original",
+      "Source": {
+        "Organization": {
+          "ATP": "006882",
+          "LocalOrganizationID": {
+            "LocalOrganizationIDCode": "123456",
+            "LocalOrganizationIDQualifier": "TX"
+          },
+          "OrganizationName": [
+            "THE UNIVERSITY OF TEXAS AT AUSTIN"
+          ],
+          "Contacts": [
+            {
+              "Address": [
+                {
+                  "AddressLine": [
+                    "Office of the Registrar"
+                  ],
+                  "City": "Austin",
+                  "StateProvinceCode": "TX",
+                  "PostalCode": "78712",
+                  "AttentionLine": [
+                    "Jane Shaugness"
+                  ]
+                }
+              ],
+              "Phone": [
+                {
+                  "AreaCityCode": "512",
+                  "PhoneNumber": "4757638"
+                }
+              ],
+              "FaxPhone": [
+                {
+                  "AreaCityCode": "512",
+                  "PhoneNumber": "4757600"
+                }
+              ],
+              "Email": [
+                {
+                  "EmailAddress": "Registrar@mail.utexas.edu"
+                }
+              ],
+              "URL": [
+                {
+                  "URLAddress": "www.utexas.edu"
+                }
+              ]
+            }
+          ],
+          "Accreditation": {
+            "AccreditingBodyCode": "SACS",
+            "AccreditingBodyName": "\n\t\t\t\t\t\tSouthern Association of Colleges and Schools\n\t\t\t\t\t"
+          }
+        }
+      },
+      "Destination": {
+        "Organization": {
+          "FICE": "001506",
+          "LocalOrganizationID": {
+            "LocalOrganizationIDCode": "1234",
+            "LocalOrganizationIDQualifier": "FL"
+          },
+          "OrganizationName": [
+            "Miami Dade College"
+          ]
+        }
+      },
+      "RequestTrackingID": "23456778009"
+    },
+    "Student": {
+      "Person": {
+        "SSN": "100000000",
+        "Birth": {
+          "BirthDate": "1967-07-14"
+        },
+        "Name": {
+          "NameCode": "Legal",
+          "FirstName": "Test",
+          "MiddleName": [
+            "Record",
+            "Test"
+          ],
+          "LastName": "Speede",
+          "NameSuffix": "IV"
+        },
+        "HighSchool": {
+          "OrganizationName": "AUSTIN HIGH SCHOOL",
+          "CEEBACT": "440320"
+        },
+        "Contacts": [
+          {
+            "Address": [
+              {
+                "AddressLine": [
+                  "1223 University Dr"
+                ],
+                "City": "Austin",
+                "StateProvinceCode": "TX",
+                "PostalCode": "78211",
+                "ExpirationDate": "2009-06-15"
+              }
+            ],
+            "Email": [
+              {
+                "EmailAddress": "TestSpeede@aol.com"
+              }
+            ]
+          }
+        ],
+        "Gender": {
+          "GenderCode": "Female"
+        },
+        "Deceased": {
+          "DeceasedIndicator": true
+        }
+      },
+      "AcademicRecord": [
+        {
+          "School": {
+            "OrganizationName": "AUSTIN HIGH SCHOOL",
+            "CEEBACT": "440320",
+            "SchoolLevel": "Secondary",
+            "NoteMessage": [
+              "LOCATION: AUSTIN, TX"
+            ]
+          },
+          "AcademicAward": [
+            {
+              "AcademicAwardLevel": "B18",
+              "AcademicAwardDate": "1985-05-01",
+              "AcademicAwardTitle": "Standard High School Diploma",
+              "AcademicCompletionIndicator": true
+            }
+          ]
+        },
+        {
+          "School": {
+            "OrganizationName": "AUSTIN COMMUNITY COLLEGE",
+            "ATP": "006759",
+            "SchoolOverrideCode": "Transfer",
+            "SchoolLevel": "Postsecondary",
+            "NoteMessage": [
+              "ATTENDED: 19880601-19880831"
+            ]
+          }
+        },
+        {
+          "School": {
+            "OrganizationName": "TEXAS A and M UNIVERSITY COLLEGE STATION",
+            "ATP": "006003",
+            "SchoolOverrideCode": "Transfer",
+            "SchoolLevel": "Postsecondary",
+            "NoteMessage": [
+              "ATTENDED: 19980901-19981231"
+            ]
+          }
+        },
+        {
+          "AcademicSummary": [
+            {
+              "AcademicSummaryType": "All",
+              "AcademicSummaryLevel": "Undergraduate",
+              "GPA": {
+                "CreditHoursAttempted": 159,
+                "CreditHoursEarned": 136,
+                "CreditUnit": "Semester",
+                "GradePointAverage": 3.0915,
+                "CreditHoursforGPA": 153
+              }
+            }
+          ],
+          "AcademicSession": [
+            {
+              "AcademicSessionDetail": {
+                "SessionDesignator": "1985-09",
+                "SessionDesignatorSuffix": "1"
+              },
+              "School": {
+                "OrganizationName": "TEXAS A and M UNIVERSITY COLLEGE STATION ",
+                "ATP": "006003",
+                "SchoolOverrideCode": "Transfer"
+              },
+              "Course": [
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "LowerDivision",
+                  "CourseCreditValue": 4,
+                  "CourseCreditEarned": 4,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "A",
+                  "CourseRepeatCode": "NotCountedOther",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "SPN",
+                  "CourseNumber": "406",
+                  "OriginalCourseID": "SPAN 105",
+                  "CourseTitle": "BEGINNING SPANISH 1"
+                },
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "LowerDivision",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "A",
+                  "CourseRepeatCode": "NotCountedOther",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "HIS",
+                  "CourseNumber": "315K",
+                  "OriginalCourseID": "HIST 105",
+                  "CourseTitle": "HISTORY OF THE US 1"
+                }
+              ]
+            },
+            {
+              "AcademicSessionDetail": {
+                "SessionDesignator": "1986-01",
+                "SessionDesignatorSuffix": "1"
+              },
+              "School": {
+                "OrganizationName": "TEXAS A and M UNIVERSITY COLLEGE STATION",
+                "ATP": "006003",
+                "SchoolOverrideCode": "Transfer"
+              },
+              "Course": [
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "LowerDivision",
+                  "CourseCreditValue": 4,
+                  "CourseCreditEarned": 4,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "A",
+                  "CourseRepeatCode": "NotCountedOther",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "SPN",
+                  "CourseNumber": "407",
+                  "OriginalCourseID": "SPAN 106",
+                  "CourseTitle": "BEGINNING SPANISH 2"
+                }
+              ]
+            },
+            {
+              "AcademicSessionDetail": {
+                "SessionDesignator": "1986-09",
+                "SessionDesignatorSuffix": "1",
+                "SessionName": "FALL SEMESTER 1986",
+                "SessionType": "Semester"
+              },
+              "AcademicProgram": [
+                {
+                  "AcademicProgramName": "NATURAL SCIENCES"
+                }
+              ],
+              "AcademicSummary": [
+                {
+                  "NoteMessage": [
+                    "EFFECTIVE SPRING 1987 SCHOLASTIC PROBATION"
+                  ],
+                  "Delinquencies": [
+                    "ProbationGPA"
+                  ]
+                }
+              ]
+            },
+            {
+              "AcademicSessionDetail": {
+                "SessionDesignator": "1986-09",
+                "SessionDesignatorSuffix": "2",
+                "SessionName": "FALL SEMESTER 1986",
+                "SessionType": "Semester"
+              },
+              "AcademicProgram": [
+                {
+                  "AcademicProgramName": "ENGINERING"
+                }
+              ],
+              "Course": [
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "LowerDivision",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "B",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "GOV",
+                  "CourseNumber": "310L",
+                  "OriginalCourseID": "ID23",
+                  "CourseTitle": "AMERICAN GOVERNMENT"
+                },
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "LowerDivision",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 0,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "F",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "HIS",
+                  "CourseNumber": "309K",
+                  "CourseTitle": "WESTERN CIV IN MEDIEVAL TIMES"
+                },
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "LowerDivision",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 0,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "F",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "M",
+                  "CourseNumber": "305G",
+                  "OriginalCourseID": "ID23",
+                  "CourseTitle": "ELEM FUNCTIONS-COORD GEOMETRY"
+                }
+              ],
+              "AcademicSummary": [
+                {
+                  "GPA": {
+                    "CreditHoursAttempted": 13,
+                    "CreditHoursEarned": 7,
+                    "CreditUnit": "Semester",
+                    "GradePointAverage": 1.3076,
+                    "CreditHoursforGPA": 13
+                  }
+                }
+              ]
+            },
+            {
+              "AcademicSessionDetail": {
+                "SessionDesignator": "1988-01",
+                "SessionDesignatorSuffix": "2",
+                "SessionName": "SPRING SEMESTER 1988",
+                "SessionType": "Semester"
+              },
+              "AcademicProgram": [
+                {
+                  "AcademicProgramName": "LIBERAL ARTS"
+                }
+              ],
+              "Course": [
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "UpperDivision",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "A",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "GOV",
+                  "CourseNumber": "320K",
+                  "OriginalCourseID": "ID23",
+                  "CourseTitle": "AMER CONSTITUTIONAL DEVEL"
+                }
+              ],
+              "AcademicSummary": [
+                {
+                  "AcademicSummaryLevel": "Undergraduate",
+                  "GPA": {
+                    "CreditHoursAttempted": 15,
+                    "CreditHoursEarned": 15,
+                    "CreditUnit": "Semester",
+                    "GradePointAverage": 3.4,
+                    "CreditHoursforGPA": 15
+                  },
+                  "NoteMessage": [
+                    "EFFECTIVE SUMMER 1988 PROBATION ENDED "
+                  ],
+                  "Delinquencies": [
+                    "GoodStanding"
+                  ]
+                }
+              ]
+            },
+            {
+              "AcademicSessionDetail": {
+                "SessionDesignator": "1988-06",
+                "SessionDesignatorSuffix": "1",
+                "SessionName": "SUMMER SEMESTER 1988",
+                "SessionType": "SummerSession"
+              },
+              "AcademicProgram": [
+                {
+                  "AcademicProgramName": "LIBERAL ARTS"
+                }
+              ],
+              "Course": [
+                {
+                  "CourseCreditBasis": "CreditByExam",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "UpperDivision",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "A",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "HIS",
+                  "CourseNumber": "346K",
+                  "OriginalCourseID": "ID23",
+                  "CourseTitle": "LATIN AMERICA BEFORE 1810",
+                  "CourseOverrideSchool": {
+                    "OrganizationName": "AUSTIN COMMUNITY COLLEGE",
+                    "ATP": "006759"
+                  }
+                }
+              ]
+            },
+            {
+              "AcademicSessionDetail": {
+                "SessionDesignator": "1988-06",
+                "SessionDesignatorSuffix": "2"
+              },
+              "AcademicProgram": [
+                {
+                  "AcademicProgramName": "LIBERAL ARTS"
+                }
+              ],
+              "Course": [
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "LowerDivision",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "A",
+                  "CourseRepeatCode": "NotCountedOther",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "E",
+                  "CourseNumber": "316K",
+                  "OriginalCourseID": "ENG 2633",
+                  "CourseTitle": "AMERICAN LITERATURE 1"
+                }
+              ]
+            },
+            {
+              "AcademicSessionDetail": {
+                "SessionDesignator": "1989-01",
+                "SessionDesignatorSuffix": "1",
+                "SessionName": "SPRING SEMESTER 1989",
+                "SessionType": "Semester"
+              },
+              "AcademicProgram": [
+                {
+                  "AcademicProgramName": "LIBERAL ARTS"
+                }
+              ],
+              "Course": [
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "UpperDivision",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "A",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "GOV",
+                  "CourseNumber": "327L",
+                  "CourseTitle": "PUBLIC OPINION AND AMER POL"
+                },
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "LowerDivision",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "A",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "BIO",
+                  "CourseNumber": "301M",
+                  "CourseTitle": "ECOLOGY, EVOLUTION, and SOCIETY"
+                }
+              ],
+              "AcademicSummary": [
+                {
+                  "AcademicSummaryLevel": "Undergraduate",
+                  "GPA": {
+                    "CreditHoursAttempted": 12,
+                    "CreditHoursEarned": 12,
+                    "CreditUnit": "Semester",
+                    "GradePointAverage": 3.75,
+                    "CreditHoursforGPA": 12
+                  }
+                }
+              ]
+            },
+            {
+              "AcademicSessionDetail": {
+                "SessionDesignator": "1989-09",
+                "SessionDesignatorSuffix": "1",
+                "SessionName": "FALL SEMESTER 1989",
+                "SessionType": "Semester"
+              },
+              "AcademicProgram": [
+                {
+                  "AcademicProgramName": "LIBERAL ARTS"
+                }
+              ],
+              "Course": [
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "UpperDivision",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "A",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "GOV",
+                  "CourseNumber": "357M",
+                  "CourseTitle": "JURISPRUDENCE"
+                },
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "UpperDivision",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "A",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "GOV",
+                  "CourseNumber": "358",
+                  "CourseTitle": "INTRO TO PUBLIC ADMINISTRATION"
+                },
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "UpperDivision",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "A",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "HIS",
+                  "CourseNumber": "344D",
+                  "CourseTitle": "ENGLAND IN THE MIDDLE AGES"
+                },
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "UpperDivision",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "A",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "HIS",
+                  "CourseNumber": "350L",
+                  "CourseTitle": "FIRST LADIES IN THE 20TH CEN"
+                }
+              ],
+              "AcademicSummary": [
+                {
+                  "AcademicSummaryLevel": "Undergraduate",
+                  "GPA": {
+                    "CreditHoursAttempted": 12,
+                    "CreditHoursEarned": 12,
+                    "CreditUnit": "Semester",
+                    "GradePointAverage": 4,
+                    "CreditHoursforGPA": 12
+                  }
+                }
+              ]
+            },
+            {
+              "AcademicSessionDetail": {
+                "SessionDesignator": "2001-01",
+                "SessionDesignatorSuffix": "1",
+                "SessionName": "SPRING SEMESTER 2001",
+                "SessionType": "Semester"
+              },
+              "AcademicProgram": [
+                {
+                  "AcademicProgramName": "INTERNATIONAL EXCHANGE",
+                  "NoteMessage": [
+                    "CURRIC: LIBERAL ARTS"
+                  ]
+                }
+              ]
+            },
+            {
+              "AcademicSessionDetail": {
+                "SessionDesignator": "20010-01",
+                "SessionDesignatorSuffix": "2",
+                "SessionName": "SPRING SEMESTER 2001",
+                "SessionType": "Semester"
+              },
+              "AcademicProgram": [
+                {
+                  "AcademicProgramName": "FINE ARTS"
+                }
+              ],
+              "Course": [
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "LowerDivision",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "A",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "T D",
+                  "CourseNumber": "303C",
+                  "CourseTitle": "TRAINING SPEAKING VOICE-CXS"
+                },
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "UpperDivision",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "B",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "E",
+                  "CourseNumber": "321",
+                  "CourseTitle": "SHAKESPEARE: SELECTED PLAYS"
+                },
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "UpperDivision",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "B",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "GOV",
+                  "CourseNumber": "365N",
+                  "CourseTitle": "2-IMMIGRATION AND COMPAR POLIT"
+                },
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "LowerDivision",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "A",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "TLC",
+                  "CourseNumber": "311",
+                  "CourseTitle": "INFORMATION IN CYBERSPACE"
+                },
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "LowerDivision",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "A",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "S W",
+                  "CourseNumber": "310",
+                  "CourseTitle": "INTRO TO SOCL WORK & SOCL WELF"
+                }
+              ],
+              "AcademicSummary": [
+                {
+                  "GPA": {
+                    "CreditHoursAttempted": 15,
+                    "CreditHoursEarned": 15,
+                    "CreditUnit": "Semester",
+                    "GradePointAverage": 3.6,
+                    "CreditHoursforGPA": 15
+                  }
+                }
+              ]
+            },
+            {
+              "AcademicSessionDetail": {
+                "SessionDesignator": "2001-09",
+                "SessionDesignatorSuffix": "1",
+                "SessionName": "FALL SEMESTER 2001",
+                "SessionType": "Semester"
+              },
+              "AcademicProgram": [
+                {
+                  "AcademicProgramName": "INTERNATIONAL EXCHANGE",
+                  "NoteMessage": [
+                    "CURRIC: LIBERAL ARTS"
+                  ]
+                }
+              ],
+              "Course": [
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "Graduate",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "A",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "PHL",
+                  "CourseNumber": "388",
+                  "CourseTitle": "CONFERENCE COURSE"
+                },
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "Graduate",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "501",
+                  "CourseAcademicGrade": "CR",
+                  "CourseRepeatCode": "NotCountedOther",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "PHL",
+                  "CourseNumber": "388C",
+                  "CourseTitle": "CONFERENCE COURSE"
+                },
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "Graduate",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "A",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "SOC",
+                  "CourseNumber": "387J",
+                  "CourseTitle": "FUNDAMENTALS OF RESEARCH METHS"
+                },
+                {
+                  "CourseCreditBasis": "Regular",
+                  "CourseCreditUnits": "Semester",
+                  "CourseCreditLevel": "Graduate",
+                  "CourseCreditValue": 3,
+                  "CourseCreditEarned": 3,
+                  "CourseAcademicGradeScaleCode": "25",
+                  "CourseAcademicGrade": "B",
+                  "CourseCIPCode": "999",
+                  "CourseSubjectAbbreviation": "SOC",
+                  "CourseNumber": "389K",
+                  "CourseTitle": "3-HUMAN MORTALITY"
+                }
+              ],
+              "AcademicSummary": [
+                {
+                  "AcademicSummaryLevel": "Undergraduate",
+                  "GPA": {
+                    "CreditHoursAttempted": 12,
+                    "CreditHoursEarned": 12,
+                    "CreditUnit": "Semester",
+                    "GradePointAverage": 3.6666,
+                    "CreditHoursforGPA": 9
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "@context": {
+    "ceterms": "https://purl.org/ceterms/terms",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "@vocab": "http://example.org/vocab/",
+    "ColTrn": "http://example.org/vocab/",
+    "@base": "http://example.edu/entities/",
+    "type": {
+      "@id": "@type",
+      "@type": "@id"
+    },
+    "TransmissionData": "@nest",
+    "DocumentID": {
+      "@id": "@id",
+      "@type": "@id"
+    },
+    "DocumentTypeCode": {
+      "@id": "@type",
+      "@type": "@id"
+    },
+    "Source": {
+      "@id": "source",
+      "@container": "@type"
+    },
+    "Destination": {
+      "@id": "destination",
+      "@container": "@type"
+    },
+    "Organization": "schema:EducationalOrganization",
+    "OrganizationName": "schema:name",
+    "Student": {
+      "@id": "schema:about",
+      "@context": {
+        "Person": "schema:Person",
+        "Birth": "@nest",
+        "BirthDate": "schema:birthDate",
+        "Name": {
+          "@id": "name",
+          "@context": {
+            "NameCode": {
+              "@id": "@type"
+            }
+          }
+        }
+      }
+    }
+  },
+  "ColTrn:CollegeTranscript": {
+    "TransmissionData": {
+      "DocumentID": "050330001",
+      "DocumentTypeCode": "RequestedRecord",
+      "Source": {
+        "Organization": {
+          "OrganizationName": [
+            "THE UNIVERSITY OF TEXAS AT AUSTIN"
+          ]
+        }
+      },
+      "Destination": {
+        "Organization": {
+          "OrganizationName": [
+            "Miami Dade College"
+          ]
+        }
+      }
+    },
+    "Student": {
+      "type": "Person",
+      "Birth": {
+        "BirthDate": "1967-07-14"
+      },
+      "Name": {
+        "NameCode": "Legal",
+        "FirstName": "Test",
+        "MiddleName": [
+          "Record",
+          "Test"
+        ],
+        "LastName": "Speede",
+        "NameSuffix": "IV"
+      },
+      "HighSchool": {
+        "OrganizationName": "AUSTIN HIGH SCHOOL"
+      },
+      "Contacts": [
+        {
+          "Address": [
+            {
+              "AddressLine": [
+                "1223 University Dr"
+              ],
+              "City": "Austin",
+              "StateProvinceCode": "TX",
+              "PostalCode": "78211",
+              "ExpirationDate": "2009-06-15"
+            }
+          ],
+          "Email": [
+            {
+              "EmailAddress": "TestSpeede@aol.com"
+            }
+          ]
+        }
+      ],
+      "Gender": {
+        "GenderCode": "Female"
+      },
+      "Deceased": {
+        "DeceasedIndicator": true
+      }
+    }
+  }
+}

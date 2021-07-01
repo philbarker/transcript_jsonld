@@ -1,0 +1,5656 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"additionalProperties": false,
+	"definitions": {
+		".ColTrn:CollegeTranscript": {
+			"additionalProperties": false,
+			"properties": {
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType"
+					},
+					"type": "array"
+				},
+				"Student": {
+					"$ref": "#/definitions/AcRec:StudentType"
+				},
+				"TransmissionData": {
+					"$ref": "#/definitions/AcRec:TransmissionDataType"
+				},
+				"UserDefinedExtensions": {
+					"$ref": "#/definitions/core:UserDefinedExtensionsType"
+				}
+			},
+			"required": [
+				"Student",
+				"TransmissionData"
+			],
+			"type": "object"
+		},
+		"AcRec:AcademicAwardType": {
+			"additionalProperties": false,
+			"description": "Academic awards, degrees, diplomas, certifications, etc.",
+			"properties": {
+				"AcademicAwardDate": {
+					"$ref": "#/definitions/core:AcademicAwardDateType",
+					"description": "The date on which the academic award was conferred."
+				},
+				"AcademicAwardLevel": {
+					"$ref": "#/definitions/core:AcademicAwardLevelType",
+					"description": "The level of the degree, certificate, or award granted for the successful completion of requirements of an academic program."
+				},
+				"AcademicAwardProgram": {
+					"items": {
+						"$ref": "#/definitions/AcRec:AcademicProgramType",
+						"description": "Information related to the specific area of study (e.g., major) under which the award was granted."
+					},
+					"type": "array"
+				},
+				"AcademicAwardTitle": {
+					"$ref": "#/definitions/core:AcademicAwardTitleType",
+					"description": "The descriptive title for the academic award."
+				},
+				"AcademicCompletionDate": {
+					"$ref": "#/definitions/core:AcademicCompletionDateType",
+					"description": "The date on which the student's requirements for the degree or diploma were met or completed."
+				},
+				"AcademicCompletionIndicator": {
+					"$ref": "#/definitions/core:AcademicCompletionIndicatorType",
+					"description": "An indication that the degree-seeking student completed all of the requirements for his or her academic program.  Not used for Non-Degree programs."
+				},
+				"AcademicDegreeRequirement": {
+					"items": {
+						"$ref": "#/definitions/core:AcademicDegreeRequirementType",
+						"description": "Thesis or dissertation information if required for the award."
+					},
+					"type": "array"
+				},
+				"AcademicHonors": {
+					"items": {
+						"$ref": "#/definitions/core:AcademicHonorsType",
+						"description": "Honors information for the academic award."
+					},
+					"type": "array"
+				},
+				"AcademicSummary": {
+					"items": {
+						"$ref": "#/definitions/AcRec:AcademicSummaryE1Type",
+						"description": "Academic summary information pertaining to the award or diploma."
+					},
+					"type": "array"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the academic award"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"AcRec:AcademicProgramType": {
+			"additionalProperties": false,
+			"description": "Indicates whether the academic program is a major, minor, area of concentration or specialization.",
+			"properties": {
+				"AcademicProgramName": {
+					"$ref": "#/definitions/core:AcademicProgramNameType",
+					"description": "Literal name of program, major, or field of study."
+				},
+				"AcademicProgramType": {
+					"$ref": "#/definitions/core:AcademicProgramTypeType",
+					"description": "Indicates whether the academic program is a major, minor, area of concentration or specialization."
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the Academic Program"
+					},
+					"type": "array"
+				},
+				"ProgramCIPCode": {
+					"$ref": "#/definitions/core:ProgramCIPCodeType",
+					"description": "Code indicating a discipline or field of study assigned by the Classification of Instructional Programs for Postsecondary Institutions"
+				},
+				"ProgramCSISCode": {
+					"$ref": "#/definitions/core:ProgramCSISCodeType",
+					"description": "Code indicating a discipline or field of study assigned by Statistics Canada Canadian College Student Information System"
+				},
+				"ProgramESISCode": {
+					"$ref": "#/definitions/core:ProgramESISCodeType",
+					"description": "Code indicating a discipline or field of study assigned by the Statistics Canada Enhanced Student Information System."
+				},
+				"ProgramHEGISCode": {
+					"$ref": "#/definitions/core:ProgramHEGISCodeType",
+					"description": "Code indicating a discipline or field of study assigned by Higher Education General Information Survey"
+				},
+				"ProgramLocalCode": {
+					"$ref": "#/definitions/core:ProgramLocalCodeType",
+					"description": "This is a code typically created and used within a school or school district"
+				},
+				"ProgramSecondarySchoolCode": {
+					"$ref": "#/definitions/core:ProgramSecondarySchoolCodeType",
+					"description": "Code indicating the type of secondary school program or award that a student is pursuing"
+				},
+				"ProgramSummary": {
+					"$ref": "#/definitions/AcRec:AcademicSummaryE2Type",
+					"description": "Summary information about the Academic Program for an Academic Session"
+				},
+				"ProgramUSISCode": {
+					"$ref": "#/definitions/core:ProgramUSISCodeType",
+					"description": "Code indicating a discipline or field of study assigned by the Statistics Canada University Student Information System."
+				},
+				"UserDefinedExtensions": {
+					"$ref": "#/definitions/core:UserDefinedExtensionsType",
+					"description": "A mini schema containing formatted data"
+				}
+			},
+			"type": "object"
+		},
+		"AcRec:AcademicRecordType": {
+			"additionalProperties": false,
+			"description": "Information concerning the academic achievement or status of the student.",
+			"properties": {
+				"AcademicAward": {
+					"items": {
+						"$ref": "#/definitions/AcRec:AcademicAwardType",
+						"description": "Academic awards, degrees, diplomas, certifications, etc."
+					},
+					"type": "array"
+				},
+				"AcademicSession": {
+					"items": {
+						"$ref": "#/definitions/AcRec:AcademicSessionType",
+						"description": "Course, award and summary information related to a specific time period.  Typically arranged into successive semesters or school years and is the preferred method for conveying academic coursework."
+					},
+					"type": "array"
+				},
+				"AcademicSummary": {
+					"items": {
+						"$ref": "#/definitions/AcRec:AcademicSummaryFType",
+						"description": "Used to send summary totals for all work taken at a certain academic level"
+					},
+					"type": "array"
+				},
+				"AdditionalStudentAchievements": {
+					"items": {
+						"$ref": "#/definitions/core:AdditionalStudentAchievementsType",
+						"description": "Achievements not tied to a specific course, session or award."
+					},
+					"type": "array"
+				},
+				"CohortGraduationYear": {
+					"$ref": "#/definitions/core:CohortYearType",
+					"description": "The school year in which the student entered the baseline group used for computing completion rates, e.g., high school year and program."
+				},
+				"Course": {
+					"items": {
+						"$ref": "#/definitions/AcRec:CourseType",
+						"description": "Academic coursework not related to a specific academic session."
+					},
+					"type": "array"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the academic record"
+					},
+					"type": "array"
+				},
+				"School": {
+					"$ref": "#/definitions/AcRec:SchoolType",
+					"description": "Override school"
+				},
+				"StudentLevel": {
+					"$ref": "#/definitions/core:StudentLevelType",
+					"description": "Used to indicate the grade level of the student at the time the transcript is being sent, or the last grade level of the student."
+				},
+				"UserDefinedExtensions": {
+					"$ref": "#/definitions/core:UserDefinedExtensionsType",
+					"description": "Additional structured information. Requires mutually defined XML schema."
+				}
+			},
+			"type": "object"
+		},
+		"AcRec:AcademicSessionType": {
+			"additionalProperties": false,
+			"description": "Course, award and summary information related to a specific time period.  Typically arranged into successive semesters or school years and is the preferred method for conveying academic coursework.",
+			"properties": {
+				"AcademicAward": {
+					"items": {
+						"$ref": "#/definitions/AcRec:AcademicAwardType",
+						"description": "Academic awards associated with this session"
+					},
+					"type": "array"
+				},
+				"AcademicProgram": {
+					"items": {
+						"$ref": "#/definitions/AcRec:AcademicProgramType",
+						"description": "The major or degree objectives for the student at the time of this session"
+					},
+					"type": "array"
+				},
+				"AcademicSessionDetail": {
+					"$ref": "#/definitions/core:AcademicSessionDetailType",
+					"description": "Information identifying the time period  for the beginning of this session"
+				},
+				"AcademicSummary": {
+					"items": {
+						"$ref": "#/definitions/AcRec:AcademicSummaryFType",
+						"description": "Academic summary for this session"
+					},
+					"type": "array"
+				},
+				"AttendanceCount": {
+					"$ref": "#/definitions/core:AttendanceCountType",
+					"description": "Attendance recorded as days (or partial days) present or absent"
+				},
+				"Course": {
+					"items": {
+						"$ref": "#/definitions/AcRec:CourseType",
+						"description": "Education courses associated with this session"
+					},
+					"type": "array"
+				},
+				"LearningExperience": {
+					"items": {
+						"$ref": "#/definitions/AcRec:LearningExperienceType",
+						"description": "Information about  a learning experience"
+					},
+					"type": "array"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the academic session"
+					},
+					"type": "array"
+				},
+				"School": {
+					"$ref": "#/definitions/AcRec:SchoolType",
+					"description": "Override School"
+				},
+				"StudentLevel": {
+					"$ref": "#/definitions/core:StudentLevelType",
+					"description": "An indication of the classification of the student at the time of this Academic Session"
+				},
+				"UserDefinedExtensions": {
+					"$ref": "#/definitions/core:UserDefinedExtensionsType",
+					"description": "This is a mini schema of previously agreed upon formatted data about the session.  It is used by a group of previously agreed upon users, frequently within a state or among the users of a particular vendor"
+				}
+			},
+			"required": [
+				"AcademicSessionDetail"
+			],
+			"type": "object"
+		},
+		"AcRec:AcademicSummaryBaseType": {
+			"additionalProperties": false,
+			"description": "Base type, only used as extension base",
+			"properties": {
+				"AcademicHonors": {
+					"items": {
+						"$ref": "#/definitions/core:AcademicHonorsType",
+						"description": "Honors information for the academic award."
+					},
+					"type": "array"
+				},
+				"AcademicSummaryLevel": {
+					"$ref": "#/definitions/core:CourseCreditLevelType",
+					"description": "The level of credit associated with the credit hours earned for the course."
+				},
+				"AcademicSummaryType": {
+					"$ref": "#/definitions/core:AcademicSummaryTypeType",
+					"description": "Summary Type is an indication of what is being summarized over which period of time."
+				},
+				"ClassRank": {
+					"$ref": "#/definitions/core:ClassRankType",
+					"description": "The student's class rank relative to other students in their academic cohort (e.g. class)."
+				},
+				"ClassSize": {
+					"$ref": "#/definitions/xs:decimal",
+					"description": "The numeric size of the academic cohort (e.g. class)."
+				},
+				"GPA": {
+					"$ref": "#/definitions/core:GPAType",
+					"description": "GPA for the Award Program"
+				},
+				"HighSchoolCreditSummary": {
+					"$ref": "#/definitions/core:HighSchoolCreditSummaryType",
+					"description": "This is a summary of credits taken at a secondary school"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about academic record"
+					},
+					"type": "array"
+				},
+				"UserDefinedExtensions": {
+					"$ref": "#/definitions/core:UserDefinedExtensionsType",
+					"description": "Additional structured information. Requires mutually defined XML schema."
+				}
+			},
+			"type": "object"
+		},
+		"AcRec:AcademicSummaryE1Type": {
+			"additionalProperties": false,
+			"description": "Used in  AcademicRecordType and AcademicAwardType",
+			"properties": {
+				"AcademicHonors": {
+					"items": {
+						"$ref": "#/definitions/core:AcademicHonorsType",
+						"description": "Honors information for the academic award."
+					},
+					"type": "array"
+				},
+				"AcademicProgram": {
+					"$ref": "#/definitions/core:AcademicProgramType",
+					"description": "Academic Program(s) related to this Academic Summary"
+				},
+				"AcademicSummaryLevel": {
+					"$ref": "#/definitions/core:CourseCreditLevelType",
+					"description": "The level of credit associated with the credit hours earned for the course."
+				},
+				"AcademicSummaryType": {
+					"$ref": "#/definitions/core:AcademicSummaryTypeType",
+					"description": "Summary Type is an indication of what is being summarized over which period of time."
+				},
+				"ClassRank": {
+					"$ref": "#/definitions/core:ClassRankType",
+					"description": "The student's class rank relative to other students in their academic cohort (e.g. class)."
+				},
+				"ClassSize": {
+					"$ref": "#/definitions/xs:decimal",
+					"description": "The numeric size of the academic cohort (e.g. class)."
+				},
+				"GPA": {
+					"$ref": "#/definitions/core:GPAType",
+					"description": "GPA for the Award Program"
+				},
+				"HighSchoolCreditSummary": {
+					"$ref": "#/definitions/core:HighSchoolCreditSummaryType",
+					"description": "This is a summary of credits taken at a secondary school"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about academic record"
+					},
+					"type": "array"
+				},
+				"UserDefinedExtensions": {
+					"$ref": "#/definitions/core:UserDefinedExtensionsType",
+					"description": "Additional structured information. Requires mutually defined XML schema."
+				}
+			},
+			"type": "object"
+		},
+		"AcRec:AcademicSummaryE2Type": {
+			"additionalProperties": false,
+			"description": "Used in  AcademicProgramType",
+			"properties": {
+				"AcademicHonors": {
+					"items": {
+						"$ref": "#/definitions/core:AcademicHonorsType",
+						"description": "Honors information for the academic award."
+					},
+					"type": "array"
+				},
+				"AcademicSummaryLevel": {
+					"$ref": "#/definitions/core:CourseCreditLevelType",
+					"description": "The level of credit associated with the credit hours earned for the course."
+				},
+				"AcademicSummaryType": {
+					"$ref": "#/definitions/core:AcademicSummaryTypeType",
+					"description": "Summary Type is an indication of what is being summarized over which period of time."
+				},
+				"ClassRank": {
+					"$ref": "#/definitions/core:ClassRankType",
+					"description": "The student's class rank relative to other students in their academic cohort (e.g. class)."
+				},
+				"ClassSize": {
+					"$ref": "#/definitions/xs:decimal",
+					"description": "The numeric size of the academic cohort (e.g. class)."
+				},
+				"Delinquencies": {
+					"items": {
+						"$ref": "#/definitions/core:DelinquenciesType",
+						"description": "The academic standing of the student upon transfer to the institution"
+					},
+					"type": "array"
+				},
+				"ExitDate": {
+					"$ref": "#/definitions/core:ExitDateType",
+					"description": "The date on which the student officially withdrew, was withdrawn, or graduated."
+				},
+				"GPA": {
+					"$ref": "#/definitions/core:GPAType",
+					"description": "GPA for the Award Program"
+				},
+				"HighSchoolCreditSummary": {
+					"$ref": "#/definitions/core:HighSchoolCreditSummaryType",
+					"description": "This is a summary of credits taken at a secondary school"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about academic record"
+					},
+					"type": "array"
+				},
+				"UserDefinedExtensions": {
+					"$ref": "#/definitions/core:UserDefinedExtensionsType",
+					"description": "Additional structured information. Requires mutually defined XML schema."
+				}
+			},
+			"type": "object"
+		},
+		"AcRec:AcademicSummaryFType": {
+			"additionalProperties": false,
+			"description": "Full type, used in AcademicSessionType and TransferCreditType",
+			"properties": {
+				"AcademicHonors": {
+					"items": {
+						"$ref": "#/definitions/core:AcademicHonorsType",
+						"description": "Honors information for the academic award."
+					},
+					"type": "array"
+				},
+				"AcademicProgram": {
+					"$ref": "#/definitions/core:AcademicProgramType",
+					"description": "Academic Program(s) related to this Academic Summary"
+				},
+				"AcademicSummaryLevel": {
+					"$ref": "#/definitions/core:CourseCreditLevelType",
+					"description": "The level of credit associated with the credit hours earned for the course."
+				},
+				"AcademicSummaryType": {
+					"$ref": "#/definitions/core:AcademicSummaryTypeType",
+					"description": "Summary Type is an indication of what is being summarized over which period of time."
+				},
+				"ClassRank": {
+					"$ref": "#/definitions/core:ClassRankType",
+					"description": "The student's class rank relative to other students in their academic cohort (e.g. class)."
+				},
+				"ClassRankDate": {
+					"$ref": "#/definitions/core:ClassRankDateType",
+					"description": "The date on which the student was included in the class ranking and the class was ranked"
+				},
+				"ClassRankSessionCount": {
+					"$ref": "#/definitions/core:ClassRankSessionCountType",
+					"description": "The number of sessions of coursework included in the ranking of the student in the class"
+				},
+				"ClassRankYear": {
+					"$ref": "#/definitions/core:ClassRankYearType",
+					"description": "The year on which the student was included in the class ranking and the class was ranked"
+				},
+				"ClassRankYearMonth": {
+					"$ref": "#/definitions/core:ClassRankYearMonthType",
+					"description": "The year and month in which the student was included in the class ranking and the class was ranked"
+				},
+				"ClassSize": {
+					"$ref": "#/definitions/xs:decimal",
+					"description": "The numeric size of the academic cohort (e.g. class)."
+				},
+				"Delinquencies": {
+					"items": {
+						"$ref": "#/definitions/core:DelinquenciesType",
+						"description": "The academic standing of the student upon transfer to the institution"
+					},
+					"type": "array"
+				},
+				"EntryDate": {
+					"$ref": "#/definitions/core:EntryDateType",
+					"description": "The date on which the student officially was admitted to the school or when the student first attended the school."
+				},
+				"ExitDate": {
+					"$ref": "#/definitions/core:ExitDateType",
+					"description": "The date on which the student officially withdrew, was withdrawn, or graduated."
+				},
+				"ExitReasonCode": {
+					"$ref": "#/definitions/core:ExitReasonCodeType",
+					"description": "The reason the student stopped attending.  It is a code set approved by the US Department of Education's National Center for Education Statistics and is included in the NCES Handbook."
+				},
+				"GPA": {
+					"$ref": "#/definitions/core:GPAType",
+					"description": "GPA for the Award Program"
+				},
+				"HighSchoolCreditSummary": {
+					"$ref": "#/definitions/core:HighSchoolCreditSummaryType",
+					"description": "This is a summary of credits taken at a secondary school"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about academic record"
+					},
+					"type": "array"
+				},
+				"UserDefinedExtensions": {
+					"$ref": "#/definitions/core:UserDefinedExtensionsType",
+					"description": "Additional structured information. Requires mutually defined XML schema."
+				}
+			},
+			"type": "object"
+		},
+		"AcRec:AddressType": {
+			"additionalProperties": false,
+			"description": "This is a combined Address Group for a choice between Domestic or International",
+			"properties": {
+				"AddressLine": {
+					"items": {
+						"$ref": "#/definitions/core:AddressLineType",
+						"description": "Local delivery information such as street, building number, PO box, or apartment portion of a postal address of a Contact at the Sending (Source) High School."
+					},
+					"minItems": 1,
+					"type": "array"
+				},
+				"AttentionLine": {
+					"items": {
+						"$ref": "#/definitions/core:AttentionLineType",
+						"description": "The individual or office name within the postal address where inquiries should be directed."
+					},
+					"type": "array"
+				},
+				"City": {
+					"$ref": "#/definitions/core:CityType",
+					"description": "The city portion of the Address of a Contact at the Sending (Source) High School."
+				},
+				"CountryCode": {
+					"$ref": "#/definitions/core:CountryCodeType",
+					"description": "Code indicating Country. Use ISO 3166-1 alpha-2 standard. "
+				},
+				"EffectiveDate": {
+					"$ref": "#/definitions/core:AddressEffectiveDateType",
+					"description": "This the date when this address for the sending high school did or will become effective."
+				},
+				"ExpirationDate": {
+					"$ref": "#/definitions/core:AddressExpirationDateType",
+					"description": "This the date when this address for the sending high school will no longer be valid."
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the addresses of the contacts at the source  school"
+					},
+					"type": "array"
+				},
+				"PostalCode": {
+						"$ref": "#/definitions/core:PostalCodeType",
+						"description": "The postal code portion of the Address."
+				},
+				"StateProvince": {
+					"$ref": "#/definitions/core:StateProvinceType",
+					"description": "The literal name of the state, province or territory of a postal address of the source of this document. Use for addresses outside US or Canada."
+				},
+				"StateProvinceCode": {
+					"$ref": "#/definitions/core:StateProvinceCodeType",
+					"description": "Code for US states, etc., and Canadian provinces."
+				}
+			},
+			"required": [
+				"AddressLine",
+				"City"
+			],
+			"type": "object"
+		},
+		"AcRec:ContactsType": {
+			"additionalProperties": false,
+			"description": "To identify a person or an office at the sending school  to which administrative communications should be directed",
+			"properties": {
+				"Address": {
+					"items": {
+						"$ref": "#/definitions/AcRec:AddressType",
+						"description": "This is a combined Address Group for a choice between Domestic or International"
+					},
+					"type": "array"
+				},
+				"Email": {
+					"items": {
+						"$ref": "#/definitions/AcRec:EmailType",
+						"description": "Email address of source institution contact"
+					},
+					"type": "array"
+				},
+				"FaxPhone": {
+					"items": {
+						"$ref": "#/definitions/AcRec:PhoneType",
+						"description": "Fax phone number of source institution contact"
+					},
+					"type": "array"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the contacts at the source institution"
+					},
+					"type": "array"
+				},
+				"Phone": {
+					"items": {
+						"$ref": "#/definitions/AcRec:PhoneType",
+						"description": "Phone number of source institution contact"
+					},
+					"type": "array"
+				},
+				"URL": {
+					"items": {
+						"$ref": "#/definitions/core:URLType",
+						"description": "The Uniform Resource Locator of source institution"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"AcRec:CourseSupplementalAcademicGradeType": {
+			"additionalProperties": false,
+			"description": "Grades that are reported, which combine to make the final grade in a course.",
+			"properties": {
+				"CourseSupplementalGrade": {
+					"items": {
+						"$ref": "#/definitions/AcRec:CourseSupplementalGradeType",
+						"description": "Information in the child data element CourseSupplementalGrade about the inclusion of component parts of a grade in a course."
+					},
+					"minItems": 1,
+					"type": "array"
+				}
+			},
+			"required": [
+				"CourseSupplementalGrade"
+			],
+			"type": "object"
+		},
+		"AcRec:CourseSupplementalGradeType": {
+			"additionalProperties": false,
+			"description": "Information in the child data element CourseSupplementalGrade about the inclusion of component parts of a grade in a course.",
+			"properties": {
+				"CourseAcademicSupplementalGrade": {
+					"$ref": "#/definitions/core:CourseAcademicGradeType",
+					"description": "The academic grade reported for this component or supplemental course"
+				},
+				"CourseAcademicSupplementalGradeScaleCode": {
+					"$ref": "#/definitions/core:CourseAcademicGradeScaleCodeType",
+					"description": "The grading scale used by an academic educational institution for an academic course."
+				},
+				"CourseAcademicSupplementalGradeStatusCode": {
+					"$ref": "#/definitions/core:CourseAcademicGradeStatusCodeType",
+					"description": "Special enrollment or completion status of this course"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the Course Supplemental Grade"
+					},
+					"type": "array"
+				},
+				"SupplementalGradeCode": {
+					"$ref": "#/definitions/core:SupplementalGradeCodeType",
+					"description": "The type of component grade that is being included for an education course"
+				},
+				"SupplementalGradeSubSession": {
+					"$ref": "#/definitions/core:SupplementalGradeSubSessionType",
+					"description": "This is the numeric count of the subsession of a course.  The earliest subsession would have the value of \"1\".  The next would be \"2\", etc.  Each would be a positive whole number."
+				}
+			},
+			"type": "object"
+		},
+		"AcRec:CourseType": {
+			"additionalProperties": false,
+			"description": "Academic coursework not related to a specific academic session.",
+			"properties": {
+				"AgencyCourseID": {
+					"$ref": "#/definitions/core:AgencyCourseIDType",
+					"description": "The course ID that might have been assigned to this course by the state or other agency"
+				},
+				"Attribute": {
+					"items": {
+						"$ref": "#/definitions/core:RAPType",
+						"description": "Attributes of this course which may require special handling by the receiving institution"
+					},
+					"type": "array"
+				},
+				"ClassSize": {
+					"$ref": "#/definitions/core:ClassSizeType",
+					"description": "The number of enrollments in a specific class to be used as a benchmark for the average grade reported for a Course element"
+				},
+				"CourseAcademicGrade": {
+					"$ref": "#/definitions/core:CourseAcademicGradeType",
+					"description": "The final grade awarded for participation in the course."
+				},
+				"CourseAcademicGradeScaleCode": {
+					"$ref": "#/definitions/core:CourseAcademicGradeScaleCodeType",
+					"description": "The grading scale used by an academic educational institution for an academic course."
+				},
+				"CourseAcademicGradeStatusCode": {
+					"$ref": "#/definitions/core:CourseAcademicGradeStatusCodeType",
+					"description": "Special enrollment or completion status of this course"
+				},
+				"CourseAddDate": {
+					"$ref": "#/definitions/core:CourseAddDateType",
+					"description": "The date a student was added to an academic course at a school."
+				},
+				"CourseApplicability": {
+					"$ref": "#/definitions/core:CourseApplicabilityType",
+					"description": "The academic program to which this academic course applies toward graduation."
+				},
+				"CourseAverageGrade": {
+					"$ref": "#/definitions/core:CourseAcademicGradeType",
+					"description": "The calculated average grade earned by all enrolled in a given course. This grade is calculated on the same scale as CourseAcademicGrade."
+				},
+				"CourseBeginDate": {
+					"$ref": "#/definitions/core:CourseBeginDateType",
+					"description": "The official begin date for this course"
+				},
+				"CourseCIPCode": {
+					"$ref": "#/definitions/core:CourseCIPCodeType",
+					"description": "The Classification of Instructional Programs (CIP) code to describe the area of study for the course."
+				},
+				"CourseCSISCode": {
+					"$ref": "#/definitions/core:CourseCSISCodeType",
+					"description": "The Statistics Canada Canadian College Student Information System (CCSIS) code to describe the area of study for the course."
+				},
+				"CourseCreditBasis": {
+					"$ref": "#/definitions/core:CourseCreditBasisType",
+					"description": "The type of enrollment associated with the credit hours for the course."
+				},
+				"CourseCreditEarned": {
+					"$ref": "#/definitions/core:CourseCreditEarnedType",
+					"description": "The number of credits a student earned by the successful completion of a course."
+				},
+				"CourseCreditLevel": {
+					"$ref": "#/definitions/core:CourseCreditLevelType",
+					"description": "The level of credit associated with the credit hours earned for the course."
+				},
+				"CourseCreditUnits": {
+					"$ref": "#/definitions/core:CourseCreditUnitsType",
+					"description": "The type of credit (unit, semester, or quarter) associated with the credit hours earned for the course."
+				},
+				"CourseCreditValue": {
+					"$ref": "#/definitions/core:CourseCreditValueType",
+					"description": "Number indicating the credit hours that may be earned in the course."
+				},
+				"CourseDescription": {
+					"description": "Course Description",
+					"maxLength": 255,
+					"minLength": 1,
+					"type": "string"
+				},
+				"CourseDropDate": {
+					"$ref": "#/definitions/core:CourseDropDateType",
+					"description": "The date on which the student drops or withdraws from the course."
+				},
+				"CourseEndDate": {
+					"$ref": "#/definitions/core:CourseEndDateType",
+					"description": "The official end date for this course"
+				},
+				"CourseEquivalentAcademicGrade": {
+					"items": {
+						"$ref": "#/definitions/core:CourseEquivalentAcademicGradeType",
+						"description": "The alternate grade including the grade and its scale"
+					},
+					"type": "array"
+				},
+				"CourseFiveDigitSCEDCode": {
+					"$ref": "#/definitions/core:CourseFiveDigitSCEDCodeType",
+					"description": "This set of code values is derived from the first five digits of the CourseSCEDCode above."
+				},
+				"CourseGPAApplicabilityCode": {
+					"$ref": "#/definitions/core:CourseGPAApplicabilityCodeType",
+					"description": "An indicator of whether or not this course being described is included in the computation of the student's Grade Point Average, and if so, if it weighted differently from regular courses."
+				},
+				"CourseInstructionMethod": {
+					"$ref": "#/definitions/core:CourseInstructionMethodType",
+					"description": "The method of instruction used for the course"
+				},
+				"CourseInstructionSite": {
+					"$ref": "#/definitions/core:CourseInstructionSiteType",
+					"description": "An indication of the type of location at which the course is taught."
+				},
+				"CourseInstructionSiteName": {
+					"$ref": "#/definitions/core:CourseInstructionSiteNameType",
+					"description": "The name of the location at which the course is taught."
+				},
+				"CourseInstructor": {
+					"items": {
+						"$ref": "#/definitions/core:CourseInstructorType",
+						"description": "Course instructor title and name"
+					},
+					"type": "array"
+				},
+				"CourseLevel": {
+					"$ref": "#/definitions/core:CourseLevelType",
+					"description": "The level of work demonstrated by successful completion of  the academic course being described "
+				},
+				"CourseNCESCode": {
+					"$ref": "#/definitions/core:CourseNCESCodeType",
+					"description": "The code set developed (or being developed) by the United States Department of Education's National Center for Education Statistics for the Classification of Secondary School Courses"
+				},
+				"CourseNarrativeExplanationGrade": {
+					"$ref": "#/definitions/core:CourseNarrativeExplanationGradeType",
+					"description": "The narrative of the grade awarded to a student in an academic course in those cases where a course does not receive a letter or numeric grade included in the grading scale of the Course Academic Grade Qualifier."
+				},
+				"CourseNumber": {
+					"$ref": "#/definitions/core:CourseNumberType",
+					"description": "The official reference number portion of a course identifier. This number frequently designates the level of the course as well as the level of the student expected to enroll in the course"
+				},
+				"CourseOverrideSchool": {
+					"$ref": "#/definitions/AcRec:SchoolType",
+					"description": "The school where the credit was earned if different from the Academic Session School"
+				},
+				"CourseQualityPointsEarned": {
+					"$ref": "#/definitions/core:CourseQualityPointsEarnedType",
+					"description": "The numerical value assigned to a letter grade to provide a basis of quantitative determination of an average."
+				},
+				"CourseRepeatCode": {
+					"$ref": "#/definitions/core:CourseRepeatCodeType",
+					"description": "Indicates that an academic course has been repeated by a student and how that repeat is to be computed in the student's academic grade average."
+				},
+				"CourseSCEDCode": {
+					"$ref": "#/definitions/core:CourseSCEDCodeType",
+					"description": "The School Codes for the Exchange of Data (SCED) code set being developed for the United States Department of Education's National Center for Education Statistics to describe the content and level of a course"
+				},
+				"CourseSectionNumber": {
+					"$ref": "#/definitions/core:CourseSectionNumberType",
+					"description": "The number assigned to differentiate among distinct occurrences of courses that have the same course abbreviation and number but may be considered to be different .  For example, it could be used to identify the instructor."
+				},
+				"CourseSubjectAbbreviation": {
+					"$ref": "#/definitions/core:CourseSubjectAbbreviationType",
+					"description": "The alphabetic abbreviation of the academic department or discipline offering the course. It is one part of the total course identifier number."
+				},
+				"CourseSubjectAreaCode": {
+					"$ref": "#/definitions/core:CourseSubjectAreaCodeType",
+					"description": "This set of code values is derived from the first two digits of the CourseSCEDCode above."
+				},
+				"CourseSupplementalAcademicGrade": {
+					"$ref": "#/definitions/AcRec:CourseSupplementalAcademicGradeType",
+					"description": "Grades that are reported, which combine to make the final grade in a course."
+				},
+				"CourseTitle": {
+					"$ref": "#/definitions/core:CourseTitleType",
+					"description": "The name or title of the course taken by a student at an academic institution."
+				},
+				"CourseUSISCode": {
+					"$ref": "#/definitions/core:CourseUSISCodeType",
+					"description": "The Statistics Canada University Student Information System (USIS) code to describe the area of study for the course."
+				},
+				"LanguageOfInstruction": {
+					"items": {
+						"$ref": "#/definitions/core:LanguageOfInstructionType",
+						"description": "Language associated with one or more aspects of the course"
+					},
+					"type": "array"
+				},
+				"LearningOutcome": {
+					"items": {
+						"$ref": "#/definitions/core:LearningOutcomeType",
+						"description": "Learning outcomes from the course taken and learning experience"
+					},
+					"type": "array"
+				},
+				"LearningTopic": {
+					"items": {
+						"$ref": "#/definitions/core:LearningTopicType",
+						"description": "Topics to be taught in a course, learning experience or training"
+					},
+					"type": "array"
+				},
+				"Licensure": {
+					"items": {
+						"$ref": "#/definitions/core:LicensureType",
+						"description": "Licensure requirements satisfied by successful completion of this course"
+					},
+					"type": "array"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the course"
+					},
+					"type": "array"
+				},
+				"OriginalCourseID": {
+					"$ref": "#/definitions/core:OriginalCourseIDType",
+					"description": "The course ID as it was listed when the credit was earned (e.g. before a system conversion) to show consistency between present transcripts and older ones. "
+				},
+				"OverrideSchoolCourseNumber": {
+					"$ref": "#/definitions/core:OverrideSchoolCourseNumberType",
+					"description": "The course ID as it was listed at the school where the credit was earned"
+				},
+				"Proficiency": {
+					"items": {
+						"$ref": "#/definitions/core:RAPType",
+						"description": "Proficiency level signified by successful completion of this course"
+					},
+					"type": "array"
+				},
+				"Requirement": {
+					"items": {
+						"$ref": "#/definitions/core:RAPType",
+						"description": "Curriculum requirements satisfied by successful completion of this course"
+					},
+					"type": "array"
+				},
+				"UserDefinedExtensions": {
+					"$ref": "#/definitions/core:UserDefinedExtensionsType",
+					"description": "Additional structured information. Requires mutually defined XML schema."
+				}
+			},
+			"required": [
+				"CourseCreditBasis"
+			],
+			"type": "object"
+		},
+		"AcRec:EmailType": {
+			"additionalProperties": false,
+			"description": "Email address of source institution contact",
+			"properties": {
+				"EmailAddress": {
+					"$ref": "#/definitions/core:EmailAddressType",
+					"description": "The numbers, letters, and symbols used to identify an electronic mail (Email) user within a network."
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the email address of the contact at the sending high school"
+					},
+					"type": "array"
+				}
+			},
+			"required": [
+				"EmailAddress"
+			],
+			"type": "object"
+		},
+		"AcRec:HighSchoolType": {
+			"additionalProperties": false,
+			"description": "This is the secondary school  (high school) from which the person graduated or the last high school the party attended",
+			"properties": {
+				"ACT": {
+					"$ref": "#/definitions/core:ACTType",
+					"description": "The unique identifier assigned by the American College Testing or ACT for each postsecondary data exchange partner. See www.act.org."
+				},
+				"APAS": {
+					"$ref": "#/definitions/core:APASType",
+					"description": "Alberta Post-secondary Application System."
+				},
+				"ATP": {
+					"$ref": "#/definitions/core:ATPType",
+					"description": "The unique identifier assigned for the Admissions Testing Program by the College Board for each postsecondary data exchange partner."
+				},
+				"CCD": {
+					"$ref": "#/definitions/core:CCDType",
+					"description": "The unique identifier assigned by the US Department of Education's National Center for Education Statistics as the Common Core of Data for each K12 data exchange partner."
+				},
+				"CEEBACT": {
+					"$ref": "#/definitions/core:CEEBACTType",
+					"description": "The unique identifier assigned by the College Entrance Examining Board and ACT for each K12 data exchange partner."
+				},
+				"CSIS": {
+					"$ref": "#/definitions/core:CSISType",
+					"description": "The unique identifier assigned by the Statistics Canada Canadian College Student Information System for each postsecondary data exchange partner"
+				},
+				"DUNS": {
+					"$ref": "#/definitions/core:DUNSType",
+					"description": "Data Universal Numbering System (DUNS), unique nine character company identification number issued by Dun and Bradstreet Corporation."
+				},
+				"ESIS": {
+					"$ref": "#/definitions/core:ESISType",
+					"description": "The unique identifier assigned by the Statistics Canada Enhanced Student Information System for each postsecondary data exchange partner."
+				},
+				"FICE": {
+					"$ref": "#/definitions/core:FICEType",
+					"description": "The unique identifier assigned for the Federal Interagency Committee on Education by the US Department of Education's National Center for Education Statistics for each postsecondary data exchange partner"
+				},
+				"GEOCode": {
+					"$ref": "#/definitions/core:GEOCodeSimpleType",
+					"description": "The unique identifier assigned by PESC for educational institutions."
+				},
+				"IPEDS": {
+					"$ref": "#/definitions/core:IPEDSType",
+					"description": "The unique identifier assigned by the National Center for Education Statistics for the Integrated Postsecondary Education Data System for each postsecondary data exchange partner."
+				},
+				"MutuallyDefined": {
+					"$ref": "#/definitions/core:MutuallyDefinedType",
+					"description": "This code set could be used by prior agreement  among a set of trading partners."
+				},
+				"NCHELPID": {
+					"$ref": "#/definitions/core:NCHELPIDType",
+					"description": "The unique identifier assigned by National Council on Higher Education Loan Programs for each data exchange partner."
+				},
+				"OPEID": {
+					"$ref": "#/definitions/xs:string",
+					"description": "The unique identifier assigned by the Office of Postsecondary Education for each data exchange partner."
+				},
+				"OrganizationName": {
+					"$ref": "#/definitions/core:OrganizationNameType",
+					"description": "Name of Non-person entity such as Organization, Institution, Agency or Business."
+				},
+				"PSIS": {
+					"$ref": "#/definitions/core:PSISType",
+					"description": "The unique identifier assigned by the Statistics Canada Enhanced Student Information System for each data exchange partner."
+				},
+				"PSS": {
+					"$ref": "#/definitions/core:PSSType",
+					"description": "The unique identifier assigned to private K12 schools in the US by the US Department of Education's National Center for Education Statistics (NCES)"
+				},
+				"USIS": {
+					"$ref": "#/definitions/core:USISType",
+					"description": "The unique identifier assigned by the Statistics Canada University Student Information System for each postsecondary data exchange partner "
+				}
+			},
+			"required": [
+				"OrganizationName"
+			],
+			"type": "object"
+		},
+		"AcRec:LearningExperienceType": {
+			"additionalProperties": false,
+			"description": "A type describing information about a learning experience",
+			"properties": {
+				"LearningReflection": {
+					"$ref": "#/definitions/xs:string",
+					"description": "A learner's essay or statement about the extra- and co-curricular learning course taken or about the services experience."
+				},
+				"Mentor": {
+					"items": {
+						"$ref": "#/definitions/core:EndorseType",
+						"description": "The information of a person who coaches a learner during a service or an extra- and co-curricular experience learning program."
+					},
+					"type": "array"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about a learning experience"
+					},
+					"type": "array"
+				},
+				"PlacementLocation": {
+					"$ref": "#/definitions/xs:string",
+					"description": "The location where a learner studies or provides the services for the extra- and co-curricular experience learning program or courses."
+				},
+				"SponsorOrganization": {
+					"$ref": "#/definitions/xs:string",
+					"description": "The department or organization that sponsors the extra- and co-curricular experience learning program or courses."
+				},
+				"UserDefinedExtensions": {
+					"$ref": "#/definitions/core:UserDefinedExtensionsType",
+					"description": "Additional structured information. Requires mutually defined XML schema. Additional structured information.  Requires mutually defined XML schema."
+				}
+			},
+			"type": "object"
+		},
+		"AcRec:OrganizationType": {
+			"additionalProperties": false,
+			"description": "Non-person entity such as Organization, Institution, Agency or Business.",
+			"properties": {
+				"ACT": {
+					"$ref": "#/definitions/core:ACTType",
+					"description": "The unique identifier assigned by the American College Testing or ACT for each postsecondary data exchange partner. See www.act.org."
+				},
+				"APAS": {
+					"$ref": "#/definitions/core:APASType",
+					"description": "Alberta Post-secondary Application System."
+				},
+				"ATP": {
+					"$ref": "#/definitions/core:ATPType",
+					"description": "The unique identifier assigned for the Admissions Testing Program by the College Board for each postsecondary data exchange partner."
+				},
+				"Accreditation": {
+					"$ref": "#/definitions/core:AccreditationType",
+					"description": "This complex data element provides information about the accreditation of the school sending the transcript."
+				},
+				"CCD": {
+					"$ref": "#/definitions/core:CCDType",
+					"description": "The unique identifier assigned by the US Department of Education's National Center for Education Statistics as the Common Core of Data for each K12 data exchange partner."
+				},
+				"CEEBACT": {
+					"$ref": "#/definitions/core:CEEBACTType",
+					"description": "The unique identifier assigned by the College Entrance Examining Board and ACT for each K12 data exchange partner."
+				},
+				"CSIS": {
+					"$ref": "#/definitions/core:CSISType",
+					"description": "The unique identifier assigned by the Statistics Canada Canadian College Student Information System for each postsecondary data exchange partner"
+				},
+				"Contacts": {
+					"items": {
+						"$ref": "#/definitions/AcRec:ContactsType",
+						"description": "To identify a person or an office at the sending school  to which administrative communications should be directed"
+					},
+					"type": "array"
+				},
+				"DUNS": {
+					"$ref": "#/definitions/core:DUNSType",
+					"description": "Data Universal Numbering System (DUNS), unique nine character company identification number issued by Dun and Bradstreet Corporation."
+				},
+				"ESIS": {
+					"$ref": "#/definitions/core:ESISType",
+					"description": "The unique identifier assigned by the Statistics Canada Enhanced Student Information System for each postsecondary data exchange partner."
+				},
+				"FICE": {
+					"$ref": "#/definitions/core:FICEType",
+					"description": "The unique identifier assigned for the Federal Interagency Committee on Education by the US Department of Education's National Center for Education Statistics for each postsecondary data exchange partner"
+				},
+				"GEOCode": {
+					"$ref": "#/definitions/core:GEOCodeSimpleType",
+					"description": "The unique identifier assigned by PESC for educational institutions."
+				},
+				"IPEDS": {
+					"$ref": "#/definitions/core:IPEDSType",
+					"description": "The unique identifier assigned by the National Center for Education Statistics for the Integrated Postsecondary Education Data System for each postsecondary data exchange partner."
+				},
+				"LocalOrganizationID": {
+					"$ref": "#/definitions/core:LocalOrganizationIDType",
+					"description": "A code set typically used by a state, province or region to further identify the sending school."
+				},
+				"MutuallyDefined": {
+					"$ref": "#/definitions/core:MutuallyDefinedType",
+					"description": "This code set could be used by prior agreement  among a set of trading partners."
+				},
+				"NCHELPID": {
+					"$ref": "#/definitions/core:NCHELPIDType",
+					"description": "The unique identifier assigned by National Council on Higher Education Loan Programs for each data exchange partner."
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the organization"
+					},
+					"type": "array"
+				},
+				"OPEID": {
+					"$ref": "#/definitions/xs:string",
+					"description": "The unique identifier assigned by the Office of Postsecondary Education for each data exchange partner."
+				},
+				"OrganizationName": {
+					"items": {
+						"description": "Name of Non-person entity such as Organization, Institution, Agency or Business.",
+						"maxLength": 60,
+						"minLength": 1,
+						"type": "string"
+					},
+					"type": "array"
+				},
+				"PSIS": {
+					"$ref": "#/definitions/core:PSISType",
+					"description": "The unique identifier assigned by the Statistics Canada Enhanced Student Information System for each data exchange partner."
+				},
+				"PSS": {
+					"$ref": "#/definitions/core:PSSType",
+					"description": "The unique identifier assigned to private K12 schools in the US by the US Department of Education's National Center for Education Statistics (NCES)"
+				},
+				"USIS": {
+					"$ref": "#/definitions/core:USISType",
+					"description": "The unique identifier assigned by the Statistics Canada University Student Information System for each postsecondary data exchange partner "
+				}
+			},
+			"type": "object"
+		},
+		"AcRec:PersonType": {
+			"additionalProperties": false,
+			"description": "Biographical and demographic information about the student.",
+			"properties": {
+				"AgencyAssignedID": {
+					"$ref": "#/definitions/core:AgencyAssignedIDType",
+					"description": "The ID assigned by the state or province or an agency, to the person (student)."
+				},
+				"AgencyIdentifier": {
+					"items": {
+						"$ref": "#/definitions/core:AgencyIdentifierType",
+						"description": "This complex data element is used to provide a student ID assigned by an agency, state, province, etc."
+					},
+					"type": "array"
+				},
+				"AlternateName": {
+					"items": {
+						"$ref": "#/definitions/core:NameType",
+						"description": "Any other names by which the student may be known"
+					},
+					"type": "array"
+				},
+				"Birth": {
+					"$ref": "#/definitions/core:BirthType",
+					"description": "Identifying information related to a person's birth"
+				},
+				"Contacts": {
+					"items": {
+						"$ref": "#/definitions/AcRec:ContactsType",
+						"description": "Contact information for the student as recorded by the sending institution"
+					},
+					"type": "array"
+				},
+				"Deceased": {
+					"$ref": "#/definitions/core:DeceasedType",
+					"description": "Information related a student's death"
+				},
+				"Gender": {
+					"$ref": "#/definitions/core:GenderType",
+					"description": "Gender of the student"
+				},
+				"HighSchool": {
+					"$ref": "#/definitions/AcRec:HighSchoolType",
+					"description": "This is the secondary school  (high school) from which the person graduated or the last high school the party attended."
+				},
+				"Language": {
+					"items": {
+						"$ref": "#/definitions/core:LanguageType",
+						"description": "Information about the student's ability to communicate in languages other than the primary language of the country where the sending school is located."
+					},
+					"type": "array"
+				},
+				"NSN": {
+					"$ref": "#/definitions/core:NSNIDType",
+					"description": "Canadian National Student Number Identifier Type"
+				},
+				"Name": {
+					"$ref": "#/definitions/core:NameType",
+					"description": "The name of record of the student at the sending institution"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the person"
+					},
+					"type": "array"
+				},
+				"PartialSSN": {
+					"$ref": "#/definitions/core:PartialSSNType",
+					"description": "The last four digits of the person's U.S. Social Security Number"
+				},
+				"RecipientAssignedID": {
+					"$ref": "#/definitions/core:RecipientAssignedIDType",
+					"description": "Recipient Asigned Identifier Type"
+				},
+				"Residency": {
+					"$ref": "#/definitions/AcRec:ResidencyType",
+					"description": "Where the student currently resides"
+				},
+				"SIN": {
+					"$ref": "#/definitions/core:SINIDType",
+					"description": "The person's Canadian Social Insurance Number"
+				},
+				"SSN": {
+					"$ref": "#/definitions/core:SSNType",
+					"description": "The person's U.S. Social Security Number"
+				},
+				"SchoolAssignedPersonID": {
+					"$ref": "#/definitions/core:SchoolAssignedPersonIDType",
+					"description": "School Assigned Identifier Type"
+				}
+			},
+			"required": [
+				"Name"
+			],
+			"type": "object"
+		},
+		"AcRec:PhoneType": {
+			"additionalProperties": false,
+			"description": "Phone number of source institution contact",
+			"properties": {
+				"AreaCityCode": {
+					"$ref": "#/definitions/core:AreaCityCodeType",
+					"description": "Regional dialing code"
+				},
+				"CountryPrefixCode": {
+					"$ref": "#/definitions/core:CountryPrefixCodeType",
+					"description": "International dialing code"
+				},
+				"EffectiveDate": {
+					"$ref": "#/definitions/core:AddressEffectiveDateType",
+					"description": "This the date when this phone information for the sending high school did or will become effective."
+				},
+				"ExpirationDate": {
+					"$ref": "#/definitions/core:AddressExpirationDateType",
+					"description": "This the date when this phone information for the sending high school will no longer be valid."
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the phone number of the contact at the source institution"
+					},
+					"type": "array"
+				},
+				"PhoneNumber": {
+					"$ref": "#/definitions/core:PhoneNumberType",
+					"description": "Telephone number"
+				},
+				"PhoneNumberExtension": {
+					"$ref": "#/definitions/core:PhoneNumberExtensionType",
+					"description": "The extended telephone addressing information used in addition to phone number such as a PBX extension, a pager PIN, or FAX sub-address"
+				}
+			},
+			"required": [
+				"PhoneNumber"
+			],
+			"type": "object"
+		},
+		"AcRec:ResidencyType": {
+			"additionalProperties": false,
+			"description": "Where the student currently resides",
+			"properties": {
+				"Country": {
+					"$ref": "#/definitions/core:CountryType",
+					"description": "Name of the country which the claimant states as the country of permanent residence"
+				},
+				"CountryCode": {
+					"$ref": "#/definitions/core:CountryCodeType",
+					"description": "Code indicating Country. Use ISO 3166-1 alpha-2 standard. "
+				},
+				"County": {
+					"$ref": "#/definitions/core:CountyType",
+					"description": "Name of the county which the claimant states as the county of permanent residence"
+				},
+				"CountyCode": {
+					"$ref": "#/definitions/core:CountyCodeType",
+					"description": "A code identifying the county which the applicant claims as the permanent residence. This is a 5-digit code which includes state (2 digits) and county within a state (3 digits)."
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about transcript"
+					},
+					"type": "array"
+				},
+				"ResidencyStatusCode": {
+					"$ref": "#/definitions/core:ResidencyStatusCodeType",
+					"description": "Declaration made by the claimant as to his or her permanent residency"
+				},
+				"StateProvince": {
+					"$ref": "#/definitions/core:StateProvinceType",
+					"description": "The literal name of the state, province or territory of a postal address of the source of this document. Use for addresses outside US or Canada."
+				},
+				"StateProvinceCode": {
+					"$ref": "#/definitions/core:StateProvinceCodeType",
+					"description": "Code for US states, etc., and Canadian provinces."
+				}
+			},
+			"type": "object"
+		},
+		"AcRec:SchoolType": {
+			"additionalProperties": false,
+			"description": "Override school",
+			"properties": {
+				"ACT": {
+					"$ref": "#/definitions/core:ACTType",
+					"description": "The unique identifier assigned by the American College Testing or ACT for each postsecondary data exchange partner. See www.act.org."
+				},
+				"APAS": {
+					"$ref": "#/definitions/core:APASType",
+					"description": "Alberta Post-secondary Application System."
+				},
+				"ATP": {
+					"$ref": "#/definitions/core:ATPType",
+					"description": "The unique identifier assigned for the Admissions Testing Program by the College Board for each postsecondary data exchange partner."
+				},
+				"CCD": {
+					"$ref": "#/definitions/core:CCDType",
+					"description": "The unique identifier assigned by the US Department of Education's National Center for Education Statistics as the Common Core of Data for each K12 data exchange partner."
+				},
+				"CEEBACT": {
+					"$ref": "#/definitions/core:CEEBACTType",
+					"description": "The unique identifier assigned by the College Entrance Examining Board and ACT for each K12 data exchange partner."
+				},
+				"CSIS": {
+					"$ref": "#/definitions/core:CSISType",
+					"description": "The unique identifier assigned by the Statistics Canada Canadian College Student Information System for each postsecondary data exchange partner"
+				},
+				"Contacts": {
+					"items": {
+						"$ref": "#/definitions/AcRec:ContactsType",
+						"description": "Contact info at Override School"
+					},
+					"type": "array"
+				},
+				"DUNS": {
+					"$ref": "#/definitions/core:DUNSType",
+					"description": "Data Universal Numbering System (DUNS), unique nine character company identification number issued by Dun and Bradstreet Corporation."
+				},
+				"ESIS": {
+					"$ref": "#/definitions/core:ESISType",
+					"description": "The unique identifier assigned by the Statistics Canada Enhanced Student Information System for each postsecondary data exchange partner."
+				},
+				"FICE": {
+					"$ref": "#/definitions/core:FICEType",
+					"description": "The unique identifier assigned for the Federal Interagency Committee on Education by the US Department of Education's National Center for Education Statistics for each postsecondary data exchange partner"
+				},
+				"GEOCode": {
+					"$ref": "#/definitions/core:GEOCodeSimpleType",
+					"description": "The unique identifier assigned by PESC for educational institutions."
+				},
+				"IPEDS": {
+					"$ref": "#/definitions/core:IPEDSType",
+					"description": "The unique identifier assigned by the National Center for Education Statistics for the Integrated Postsecondary Education Data System for each postsecondary data exchange partner."
+				},
+				"LocalOrganizationID": {
+					"$ref": "#/definitions/core:LocalOrganizationIDType",
+					"description": "A code set typically used by a state, province or region to further identify the school whose record is beng sent"
+				},
+				"MutuallyDefined": {
+					"$ref": "#/definitions/core:MutuallyDefinedType",
+					"description": "This code set could be used by prior agreement  among a set of trading partners."
+				},
+				"NCHELPID": {
+					"$ref": "#/definitions/core:NCHELPIDType",
+					"description": "The unique identifier assigned by National Council on Higher Education Loan Programs for each data exchange partner."
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the Override School"
+					},
+					"type": "array"
+				},
+				"OPEID": {
+					"$ref": "#/definitions/xs:string",
+					"description": "The unique identifier assigned by the Office of Postsecondary Education for each data exchange partner."
+				},
+				"OrganizationName": {
+					"$ref": "#/definitions/core:OrganizationNameType",
+					"description": "Name of Override School."
+				},
+				"PSIS": {
+					"$ref": "#/definitions/core:PSISType",
+					"description": "The unique identifier assigned by the Statistics Canada Enhanced Student Information System for each data exchange partner."
+				},
+				"PSS": {
+					"$ref": "#/definitions/core:PSSType",
+					"description": "The unique identifier assigned to private K12 schools in the US by the US Department of Education's National Center for Education Statistics (NCES)"
+				},
+				"SchoolLevel": {
+					"$ref": "#/definitions/core:SchoolLevelType",
+					"description": "Indicates level of Override School"
+				},
+				"SchoolOverrideCode": {
+					"$ref": "#/definitions/core:SchoolOverrideCodeType",
+					"description": "The source of the academic credit if not awarded by the home or parent institution"
+				},
+				"USIS": {
+					"$ref": "#/definitions/core:USISType",
+					"description": "The unique identifier assigned by the Statistics Canada University Student Information System for each postsecondary data exchange partner "
+				}
+			},
+			"required": [
+				"OrganizationName"
+			],
+			"type": "object"
+		},
+		"AcRec:SourceDestinationType": {
+			"additionalProperties": false,
+			"description": "Type for Source and Destination",
+			"properties": {
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about source institution"
+					},
+					"type": "array"
+				},
+				"Organization": {
+					"$ref": "#/definitions/AcRec:OrganizationType",
+					"description": "Non-person entity such as Organization, Institution, Agency or Business."
+				}
+			},
+			"required": [
+				"Organization"
+			],
+			"type": "object"
+		},
+		"AcRec:StudentType": {
+			"additionalProperties": false,
+			"description": "Body of document. One segment per student",
+			"properties": {
+				"AcademicRecord": {
+					"items": {
+						"$ref": "#/definitions/AcRec:AcademicRecordType",
+						"description": "Information concerning the academic achievement or status of the student."
+					},
+					"minItems": 1,
+					"type": "array"
+				},
+				"Health": {
+					"$ref": "#/definitions/core:HealthType",
+					"description": "Immunization, vaccinations and health screenings"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the student"
+					},
+					"type": "array"
+				},
+				"Person": {
+					"$ref": "#/definitions/AcRec:PersonType",
+					"description": "Biographical and demographic information about the student."
+				},
+				"Tests": {
+					"items": {
+						"$ref": "#/definitions/core:TestsType",
+						"description": "Academic and achievement test data"
+					},
+					"type": "array"
+				},
+				"UserDefinedExtensions": {
+					"$ref": "#/definitions/core:UserDefinedExtensionsType",
+					"description": "Additional structured information. Requires mutually defined XML schema."
+				}
+			},
+			"required": [
+				"AcademicRecord",
+				"Person"
+			],
+			"type": "object"
+		},
+		"AcRec:TransmissionDataType": {
+			"additionalProperties": false,
+			"description": "Routing and header information",
+			"properties": {
+				"CreatedDateTime": {
+					"$ref": "#/definitions/core:CreatedDateTimeType",
+					"description": "The Date and Time stamp when the document was created"
+				},
+				"Destination": {
+					"$ref": "#/definitions/AcRec:SourceDestinationType",
+					"description": "This field is mandatory and essential to indicate the destination or recipient of the transcript being sent."
+				},
+				"DocumentCompleteCode": {
+					"$ref": "#/definitions/core:DocumentCompleteCodeType",
+					"description": "This element indicates whether the document conveys a complete record. Partial documents may be produced for information that is recorded in multiple media or formats.  If the student is still enrolled at the school, but the record being sent includes all the available information to date for that student, then the record would be considered complete, and this data element would not be included in the transcript.  A value of Partial generally means that the remainder will be sent in hard copy."
+				},
+				"DocumentID": {
+					"$ref": "#/definitions/core:DocumentIDType",
+					"description": "The File Transmission Date and Time stamp with additional unique qualifying characters"
+				},
+				"DocumentOfficialCode": {
+					"$ref": "#/definitions/core:DocumentOfficialCodeType",
+					"description": "This element indicates if the document is unofficial. Unofficial documents may be produced for reference purpose but may not be binding."
+				},
+				"DocumentProcessCode": {
+					"$ref": "#/definitions/core:DocumentProcessCodeType",
+					"description": "This element indicates a TEST or PRODUCTION document"
+				},
+				"DocumentTypeCode": {
+					"$ref": "#/definitions/core:DocumentTypeCodeType",
+					"description": "Type and purpose of document being transmitted"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about transmission"
+					},
+					"type": "array"
+				},
+				"RequestTrackingID": {
+					"$ref": "#/definitions/core:RequestTrackingIDType",
+					"description": "The unique ID associated with a request action that is returned to the requestor for document matching and tracking."
+				},
+				"Source": {
+					"$ref": "#/definitions/AcRec:SourceDestinationType",
+					"description": "This field is required and essential to indicate the source of the Transcript being sent.  It is normally the sending school where the student enrolled for courses."
+				},
+				"TransmissionType": {
+					"$ref": "#/definitions/core:TransmissionTypeType",
+					"description": "The nature of the transmission"
+				},
+				"UserDefinedExtensions": {
+					"$ref": "#/definitions/core:UserDefinedExtensionsType",
+					"description": "Additional structured information.  Requires mutually defined XML schema."
+				}
+			},
+			"required": [
+				"CreatedDateTime",
+				"Destination",
+				"DocumentID",
+				"DocumentTypeCode",
+				"Source",
+				"TransmissionType"
+			],
+			"type": "object"
+		},
+		"core:ACTType": {
+			"description": "The unique identifier for postsecondary educational institutions assigned by American College Testing available at www.act.org",
+			"maxLength": 4,
+			"minLength": 4,
+			"type": "string"
+		},
+		"core:APASType": {
+			"description": "Alberta Post-secondary Application System.",
+			"maxLength": 12,
+			"minLength": 2,
+			"type": "string"
+		},
+		"core:ATPType": {
+			"description": "The unique identifier for the Admissions Testing Program assigned by the College Board for each data exchange partner.",
+			"maxLength": 6,
+			"minLength": 6,
+			"type": "string"
+		},
+		"core:AcademicAwardDateType": {
+			"description": "The date on which the academic award was conferred.",
+			"type": "string"
+		},
+		"core:AcademicAwardLevelType": {
+			"description": "The level of the degree, certificate, or award granted for the successful completion of requirements of an academic program.B17 Did not complete secondary schoolB18 Standard High School Diploma which may or may not include an exit testB19 Advanced or honors diplomaB20 Vocational diplomaB21 Special Education Diploma normally for students with a disabilityB22 Certificate of completion or attendanceB23 Special certificate of completion or attendanceB24 General Education Development (GED) DiplomaB25 Other high school equivalency diplomaB26 International diploma or certificate such as International Baccalaureate B27 Standard High School Diploma with only 3 year curriculumB28 Met all graduation requirements except for required exit testFrenchBaccalaureate is an award made to high school students who complete a rigorous program of student including foreign languages.  It allows French and international students to obtain a standardized qualification, typically at the age of 18. This then qualifies holders to work in certain areas, or go on to tertiary education or acquire some other professional qualification or training.CEGEP is an award made by Canadian secondary schools that is typically equivalent to a high school diploma plus one year of college level courses",
+			"enum": [
+				"B17",
+				"B18",
+				"B19",
+				"B20",
+				"B21",
+				"B22",
+				"B23",
+				"B24",
+				"B25",
+				"B26",
+				"B27",
+				"B28",
+				"B58",
+				"B59",
+				"B60",
+				"0.0",
+				"1.1",
+				"1.2",
+				"1.3",
+				"1.4",
+				"1.5",
+				"2.0",
+				"2.1",
+				"2.2",
+				"2.3",
+				"2.4",
+				"2.5",
+				"2.6",
+				"2.7",
+				"2.8",
+				"3.1",
+				"3.2",
+				"3.3",
+				"4.0",
+				"4.1",
+				"4.2",
+				"4.3",
+				"4.4",
+				"4.5",
+				"FrenchBaccalaureate",
+				"CEGEP",
+				"1",
+				"2",
+				"3",
+				"4",
+				"5",
+				"6",
+				"7",
+				"8",
+				"9",
+				"10",
+				"11",
+				"17",
+				"18",
+				"19"
+			],
+			"type": "string"
+		},
+		"core:AcademicAwardTitleType": {
+			"description": "The descriptive title for the academic award.",
+			"maxLength": 400,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:AcademicCompletionDateType": {
+			"description": "The date on which the student's requirements for the degree or diploma were met or completed.",
+			"type": "string"
+		},
+		"core:AcademicCompletionIndicatorType": {
+			"description": "An indication that the degree-seeking student completed all of the requirements for his or her academic program.  Not used for Non-Degree programs.",
+			"type": "boolean"
+		},
+		"core:AcademicDegreeRequirementType": {
+			"additionalProperties": false,
+			"description": "Thesis or dissertation information if required for the award.",
+			"properties": {
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about degree requirements"
+					},
+					"type": "array"
+				},
+				"ThesisDissertationAdvisor": {
+					"$ref": "#/definitions/core:ThesisDissertationAdvisorType",
+					"description": "The advisor (Major Professor) supervising the Thesis or Dissertation on behalf of the student earning the degree."
+				},
+				"ThesisDissertationTitle": {
+					"$ref": "#/definitions/core:ThesisDissertationTitleType",
+					"description": "The title of the thesis or dissertation."
+				},
+				"URLAddress": {
+					"$ref": "#/definitions/core:URLAddressType",
+					"description": "The Uniform Resource Locator (URL) address of the sending high school or of a contact at the sending high school"
+				}
+			},
+			"type": "object"
+		},
+		"core:AcademicHonorsType": {
+			"additionalProperties": false,
+			"description": "Honors information for the academic award.",
+			"properties": {
+				"HonorsLevel": {
+					"$ref": "#/definitions/core:HonorsRecognitionLevelType",
+					"description": "A code value representing 1st highest honor, 2nd highest and 3rd highest."
+				},
+				"HonorsTitle": {
+					"$ref": "#/definitions/core:HonorsRecognitionTitleType",
+					"description": "The descriptive title for the honors received."
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the academic honors"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"core:AcademicProgramNameType": {
+			"description": "Literal name of program, major, or field of study.",
+			"maxLength": 120,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:AcademicProgramType": {
+			"additionalProperties": false,
+			"description": "Indicates whether the academic program is a major, minor, area of concentration or specialization.",
+			"properties": {
+				"AcademicProgramName": {
+					"$ref": "#/definitions/core:AcademicProgramNameType",
+					"description": "Literal name of program, major, or field of study."
+				},
+				"AcademicProgramType": {
+					"$ref": "#/definitions/core:AcademicProgramTypeType",
+					"description": "Indicates whether the academic program is a major, minor, area of concentration or specialization."
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the Academic Program"
+					},
+					"type": "array"
+				},
+				"ProgramCIPCode": {
+					"$ref": "#/definitions/core:ProgramCIPCodeType",
+					"description": "Code indicating a discipline or field of study assigned by the Classification of Instructional Programs for Postsecondary Institutions"
+				},
+				"ProgramCSISCode": {
+					"$ref": "#/definitions/core:ProgramCSISCodeType",
+					"description": "Code indicating a discipline or field of study assigned by Statistics Canada Canadian College Student Information System"
+				},
+				"ProgramESISCode": {
+					"$ref": "#/definitions/core:ProgramESISCodeType",
+					"description": "Code indicating a discipline or field of study assigned by the Statistics Canada Enhanced Student Information System."
+				},
+				"ProgramHEGISCode": {
+					"$ref": "#/definitions/core:ProgramHEGISCodeType",
+					"description": "Code indicating a discipline or field of study assigned by Higher Education General Information Survey"
+				},
+				"ProgramLocalCode": {
+					"$ref": "#/definitions/core:ProgramLocalCodeType",
+					"description": "This is a code typically created and used within a school or school district"
+				},
+				"ProgramSecondarySchoolCode": {
+					"$ref": "#/definitions/core:ProgramSecondarySchoolCodeType",
+					"description": "Code indicating the type of secondary school program or award that a student is pursuing"
+				},
+				"ProgramUSISCode": {
+					"$ref": "#/definitions/core:ProgramUSISCodeType",
+					"description": "Code indicating a discipline or field of study assigned by the Statistics Canada University Student Information System."
+				}
+			},
+			"type": "object"
+		},
+		"core:AcademicProgramTypeType": {
+			"description": "Indicates whether the academic program is a major, minor, area of concentration or specialization.",
+			"enum": [
+				"Concentration",
+				"Focus",
+				"Major",
+				"Minor",
+				"SecondMajor",
+				"Specialization"
+			],
+			"type": "string"
+		},
+		"core:AcademicSessionDetailType": {
+			"additionalProperties": false,
+			"description": "Information identifying the time period  for the beginning of this session",
+			"properties": {
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the Academic Session"
+					},
+					"type": "array"
+				},
+				"SessionBeginDate": {
+					"$ref": "#/definitions/core:SessionBeginDateType",
+					"description": "Actual calendar date when session begins."
+				},
+				"SessionDesignator": {
+					"$ref": "#/definitions/core:SessionDesignatorType",
+					"description": "The academic session for which the data are recorded and applicable."
+				},
+				"SessionDesignatorSuffix": {
+					"$ref": "#/definitions/core:SessionDesignatorSuffixType",
+					"description": "A free form extension to the session ID to differentiate discreet sub-sessions within the same session"
+				},
+				"SessionEndDate": {
+					"$ref": "#/definitions/core:SessionEndDateType",
+					"description": "Actual calendar date when session ends."
+				},
+				"SessionName": {
+					"$ref": "#/definitions/core:SessionNameType",
+					"description": "Free-form name of session."
+				},
+				"SessionSchoolYear": {
+					"$ref": "#/definitions/core:SessionSchoolYearType",
+					"description": "This is the range of years that are considered to be a school year.  "
+				},
+				"SessionType": {
+					"$ref": "#/definitions/core:SessionTypeType",
+					"description": "Indicates the type of academic session at an educational institution."
+				}
+			},
+			"required": [
+				"SessionDesignator"
+			],
+			"type": "object"
+		},
+		"core:AcademicSummaryTypeType": {
+			"description": "Summary Type is an indication of what is being summarized over which period of time.",
+			"enum": [
+				"All",
+				"SenderOnly",
+				"TransferOnly",
+				"AllNotRepeated",
+				"SenderNotRepeated",
+				"TransferNotRepeated",
+				"AcademicRenewal",
+				"CarryoverCredit",
+				"DegreeApplicable",
+				"NonDegreeApplicable",
+				"ConvertedFrom",
+				"ConvertedTo",
+				"Weighted",
+				"NonWeighted",
+				"UserDefined",
+				"Cumulative"
+			],
+			"type": "string"
+		},
+		"core:AccreditationType": {
+			"additionalProperties": false,
+			"description": "This complex data element provides information about the accreditation of the school sending the transcript.",
+			"properties": {
+				"AccreditingBodyCode": {
+					"$ref": "#/definitions/core:AccreditationTypeType",
+					"description": "This is the acronym for the regional or other accrediting body that has given accreditation to the school sending the high school transcript"
+				},
+				"AccreditingBodyName": {
+					"$ref": "#/definitions/core:AccreditationTypeName",
+					"description": "The name of the accrediting body."
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the accreditation of the sending high school"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"core:AccreditationTypeName": {
+			"description": "Need Definition",
+			"maxLength": 80,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:AccreditationTypeType": {
+			"description": "Need Definition",
+			"enum": [
+				"MSA",
+				"NCA-CASI",
+				"NCA-HLC",
+				"NEASC-CIHE",
+				"NEASC-CTCI",
+				"NWCCU",
+				"Other",
+				"SACS",
+				"WASC-ACCJC",
+				"WASC-ACSCU"
+			],
+			"type": "string"
+		},
+		"core:AdditionalStudentAchievementsType": {
+			"additionalProperties": false,
+			"description": "Achievements not tied to a specific course, session or award.",
+			"properties": {
+				"Attribute": {
+					"items": {
+						"$ref": "#/definitions/core:RAPType",
+						"description": "Attributes of the Additional Student Achievement which may require special handling by the receiving institution"
+					},
+					"type": "array"
+				},
+				"Language": {
+					"items": {
+						"$ref": "#/definitions/core:LanguageType",
+						"description": "Language associated with one or more aspects of the Additional Student Achievement"
+					},
+					"type": "array"
+				},
+				"Licensure": {
+					"items": {
+						"$ref": "#/definitions/core:LicensureType",
+						"description": "Licensure requirements satisfied by successful completion of the Additional Student Achievement"
+					},
+					"type": "array"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the Additional Student Achievement"
+					},
+					"type": "array"
+				},
+				"Proficiency": {
+					"items": {
+						"$ref": "#/definitions/core:RAPType",
+						"description": "Proficiency level signified by successful completion of the Additional Student Achievement"
+					},
+					"type": "array"
+				},
+				"Requirement": {
+					"items": {
+						"$ref": "#/definitions/core:RAPType",
+						"description": "Curriculum requirements satisfied by successful completion of the Additional Student Achievement"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"core:AddressEffectiveDateType": {
+			"description": "Not found in any education record schemas.  This is now used as EffectiveDate.  Not in CRC we use addressupdatedate  The effective date of the Address.",
+			"type": "string"
+		},
+		"core:AddressExpirationDateType": {
+			"description": " The expiration date of the address.",
+			"type": "string"
+		},
+		"core:AddressLineType": {
+			"description": "Local delivery information such as street, building number, PO box, or apartment portion of a postal address of a Contact at the Sending (Source) High School.",
+			"maxLength": 40,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:AddressType": {
+			"additionalProperties": false,
+			"description": "This is a combined Address Group for a choice between Domestic or International",
+			"properties": {
+				"AddressLine": {
+					"items": {
+						"$ref": "#/definitions/core:AddressLineType",
+						"description": "Local delivery information such as street, building number, PO box, or apartment portion of a postal address of a Contact at the Sending (Source) High School."
+					},
+					"minItems": 1,
+					"type": "array"
+				},
+				"AttentionLine": {
+					"items": {
+						"$ref": "#/definitions/core:AttentionLineType",
+						"description": "The individual or office name within the postal address where inquiries should be directed."
+					},
+					"type": "array"
+				},
+				"City": {
+					"$ref": "#/definitions/core:CityType",
+					"description": "The city portion of the Address of a Contact at the Sending (Source) High School."
+				},
+				"CountryCode": {
+					"$ref": "#/definitions/core:CountryCodeType",
+					"description": "Code indicating Country. Use ISO 3166-1 alpha-2 standard. "
+				},
+				"EffectiveDate": {
+					"$ref": "#/definitions/core:AddressEffectiveDateType",
+					"description": "This the date when this address for the sending high school did or will become effective."
+				},
+				"ExpirationDate": {
+					"$ref": "#/definitions/core:AddressExpirationDateType",
+					"description": "This the date when this address for the sending high school will no longer be valid."
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the addresses of the contacts at the source  school"
+					},
+					"type": "array"
+				},
+				"PostalCode": {
+						"$ref": "#/definitions/core:PostalCodeType",
+						"description": "The postal code portion of the Address."
+				},
+				"StateProvince": {
+					"$ref": "#/definitions/core:StateProvinceType",
+					"description": "The literal name of the state, province or territory of a postal address of the source of this document. Use for addresses outside US or Canada."
+				},
+				"StateProvinceCode": {
+					"$ref": "#/definitions/core:StateProvinceCodeType",
+					"description": "Code for US states, etc., and Canadian provinces."
+				}
+			},
+			"required": [
+				"AddressLine",
+				"City"
+			],
+			"type": "object"
+		},
+		"core:AgeType": {
+			"description": "An integer that specifies how old a person is",
+			"minimum": 1,
+			"type": "integer"
+		},
+		"core:AgencyAssignedIDType": {
+			"description": "The ID assigned by the state or province or an agency, to the person (student).",
+			"maxLength": 30,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:AgencyCodeType": {
+			"description": "A code that describes the type of agency that assigned the student's identification number",
+			"enum": [
+				"District",
+				"Migrant",
+				"MutuallyDefined",
+				"National",
+				"Province",
+				"Regional",
+				"State"
+			],
+			"type": "string"
+		},
+		"core:AgencyCourseIDType": {
+			"description": "The course ID that might have been assigned to this course by the state or other agency",
+			"maxLength": 30,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:AgencyIdentifierType": {
+			"additionalProperties": false,
+			"description": "This complex data element is used to provide a student ID assigned by an agency, state, province, etc.",
+			"properties": {
+				"AgencyAssignedID": {
+					"$ref": "#/definitions/core:AgencyAssignedIDType",
+					"description": "An identification number that has been assigned to the student by a state or province or other agency"
+				},
+				"AgencyCode": {
+					"$ref": "#/definitions/core:AgencyCodeType",
+					"description": "A code that describes the type of agency that assigned the student's identification number"
+				},
+				"AgencyName": {
+					"$ref": "#/definitions/core:AgencyNameType",
+					"description": "The name of the state, province or agency that assigned the identification number to the student"
+				},
+				"CountryCode": {
+					"$ref": "#/definitions/core:CountryCodeType",
+					"description": "The code that identifies the country in the world in which the agency that assigned the ID to the student is located.  .  Use ISO 3 155-1 alpha-2 standard."
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the identification number assigned by an agency"
+					},
+					"type": "array"
+				},
+				"StateProvinceCode": {
+					"$ref": "#/definitions/core:StateProvinceCodeType",
+					"description": "The code that identifies the state or province in the US or Canada in which the agency that assigned the identification number to the student is located."
+				}
+			},
+			"required": [
+				"AgencyAssignedID",
+				"AgencyCode"
+			],
+			"type": "object"
+		},
+		"core:AgencyNameType": {
+			"description": "The name of the state, province or agency that assigned the identification number to the student",
+			"maxLength": 60,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:AlternateOutcomeFrameworkType": {
+			"additionalProperties": false,
+			"description": "A container to hold the alternative framework taxonomies that map to the learning outcome",
+			"properties": {
+				"FrameworkOutcome": {
+					"items": {
+						"$ref": "#/definitions/core:FrameworkOutcomeType",
+						"description": "information about the outcome of a learning activity Alternative framework skill taxonomy"
+					},
+					"type": "array"
+				},
+				"FrameworkSourceReference": {
+					"$ref": "#/definitions/core:URLType",
+					"description": "URL of the alternative framework that has the outcome taxnomies URI of alternative framework"
+				}
+			},
+			"type": "object"
+		},
+		"core:AreaCityCodeType": {
+			"description": "Regional dialing code",
+			"maxLength": 5,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:AttendanceCountType": {
+			"additionalProperties": false,
+			"description": "Attendance recorded as days (or partial days) present or absent",
+			"properties": {
+				"DaysAbsent": {
+					"$ref": "#/definitions/core:DaysAbsentType",
+					"description": "The number of  days or partial days that the student did not attend classes this session"
+				},
+				"DaysPresent": {
+					"$ref": "#/definitions/core:DaysPresentType",
+					"description": "The number of  days or partial days that the student attended classes this session"
+				}
+			},
+			"type": "object"
+		},
+		"core:AttentionLineType": {
+			"description": "The individual or office name within the postal address where inquiries should be directed.",
+			"maxLength": 45,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:BirthCityType": {
+			"description": "The city in which the person was born.",
+			"maxLength": 25,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:BirthCountryCodeType": {
+			"description": "The name of the country in which the person was born.",
+			"enum": [
+				"AD",
+				"AE",
+				"AF",
+				"AG",
+				"AI",
+				"AL",
+				"AM",
+				"AO",
+				"AQ",
+				"AR",
+				"AS",
+				"AT",
+				"AU",
+				"AW",
+				"AX",
+				"AZ",
+				"BA",
+				"BB",
+				"BD",
+				"BE",
+				"BF",
+				"BG",
+				"BH",
+				"BI",
+				"BJ",
+				"BL",
+				"BM",
+				"BN",
+				"BO",
+				"BQ",
+				"BR",
+				"BS",
+				"BT",
+				"BV",
+				"BW",
+				"BY",
+				"BZ",
+				"CA",
+				"CC",
+				"CD",
+				"CF",
+				"CG",
+				"CH",
+				"CI",
+				"CK",
+				"CL",
+				"CM",
+				"CN",
+				"CO",
+				"CR",
+				"CU",
+				"CV",
+				"CW",
+				"CX",
+				"CY",
+				"CZ",
+				"DE",
+				"DJ",
+				"DK",
+				"DM",
+				"DO",
+				"DZ",
+				"EC",
+				"EE",
+				"EG",
+				"EH",
+				"ER",
+				"ES",
+				"ET",
+				"FI",
+				"FJ",
+				"FK",
+				"FM",
+				"FO",
+				"FR",
+				"GA",
+				"GB",
+				"GD",
+				"GE",
+				"GF",
+				"GG",
+				"GH",
+				"GI",
+				"GL",
+				"GM",
+				"GN",
+				"GP",
+				"GQ",
+				"GR",
+				"GS",
+				"GT",
+				"GU",
+				"GW",
+				"GY",
+				"HK",
+				"HM",
+				"HN",
+				"HR",
+				"HT",
+				"HU",
+				"ID",
+				"IE",
+				"IL",
+				"IM",
+				"IN",
+				"IO",
+				"IQ",
+				"IR",
+				"IS",
+				"IT",
+				"JE",
+				"JM",
+				"JO",
+				"JP",
+				"KE",
+				"KG",
+				"KH",
+				"KI",
+				"KM",
+				"KN",
+				"KP",
+				"KR",
+				"KW",
+				"KY",
+				"KZ",
+				"LA",
+				"LB",
+				"LC",
+				"LI",
+				"LK",
+				"LR",
+				"LS",
+				"LT",
+				"LU",
+				"LV",
+				"LY",
+				"MA",
+				"MC",
+				"MD",
+				"ME",
+				"MF",
+				"MG",
+				"MH",
+				"MK",
+				"ML",
+				"MM",
+				"MN",
+				"MO",
+				"MP",
+				"MQ",
+				"MR",
+				"MS",
+				"MT",
+				"MU",
+				"MV",
+				"MW",
+				"MX",
+				"MY",
+				"MZ",
+				"NA",
+				"NC",
+				"NE",
+				"NF",
+				"NG",
+				"NI",
+				"NL",
+				"NO",
+				"NP",
+				"NR",
+				"NU",
+				"NZ",
+				"OM",
+				"PA",
+				"PE",
+				"PF",
+				"PG",
+				"PH",
+				"PK",
+				"PL",
+				"PM",
+				"PN",
+				"PR",
+				"PS",
+				"PT",
+				"PW",
+				"PY",
+				"QA",
+				"RE",
+				"RO",
+				"RS",
+				"RU",
+				"RW",
+				"SA",
+				"SB",
+				"SC",
+				"SD",
+				"SE",
+				"SG",
+				"SH",
+				"SI",
+				"SJ",
+				"SK",
+				"SL",
+				"SM",
+				"SN",
+				"SO",
+				"SR",
+				"SS",
+				"ST",
+				"SV",
+				"SX",
+				"SY",
+				"SZ",
+				"TC",
+				"TD",
+				"TF",
+				"TG",
+				"TH",
+				"TJ",
+				"TK",
+				"TL",
+				"TM",
+				"TN",
+				"TO",
+				"TR",
+				"TT",
+				"TV",
+				"TW",
+				"TZ",
+				"UA",
+				"UG",
+				"UM",
+				"US",
+				"UY",
+				"UZ",
+				"VA",
+				"VC",
+				"VE",
+				"VG",
+				"VI",
+				"VN",
+				"VU",
+				"WF",
+				"WS",
+				"YE",
+				"YT",
+				"ZA",
+				"ZM",
+				"ZW"
+			],
+			"type": "string"
+		},
+		"core:BirthDateType": {
+			"description": "Date of Birth",
+			"type": "string"
+		},
+		"core:BirthStateProvinceCodeType": {
+			"description": "The state, province, or extra-state jurisdiction in which the person was born",
+			"enum": [
+				"AA",
+				"AB",
+				"AE",
+				"AK",
+				"AL",
+				"AP",
+				"AR",
+				"AS",
+				"AZ",
+				"BC",
+				"CA",
+				"CO",
+				"CT",
+				"CZ",
+				"DC",
+				"DE",
+				"FL",
+				"FM",
+				"GA",
+				"GU",
+				"HI",
+				"IA",
+				"ID",
+				"IL",
+				"IN",
+				"KS",
+				"KY",
+				"LA",
+				"MA",
+				"MB",
+				"MD",
+				"ME",
+				"MH",
+				"MI",
+				"MN",
+				"MO",
+				"MP",
+				"MS",
+				"MT",
+				"NB",
+				"NC",
+				"ND",
+				"NE",
+				"NF",
+				"NH",
+				"NJ",
+				"NL",
+				"NM",
+				"NS",
+				"NT",
+				"NU",
+				"NV",
+				"NY",
+				"OH",
+				"OK",
+				"ON",
+				"OR",
+				"PA",
+				"PE",
+				"PR",
+				"PW",
+				"QC",
+				"RI",
+				"SC",
+				"SD",
+				"SK",
+				"TN",
+				"TX",
+				"UT",
+				"VA",
+				"VI",
+				"VT",
+				"WA",
+				"WI",
+				"WV",
+				"WY",
+				"YT"
+			],
+			"type": "string"
+		},
+		"core:BirthType": {
+			"additionalProperties": false,
+			"description": "Identifying information related to a person's birth",
+			"properties": {
+				"Age": {
+					"$ref": "#/definitions/core:AgeType",
+					"description": "An integer that specifies how old a person is"
+				},
+				"BirthCity": {
+					"$ref": "#/definitions/core:BirthCityType",
+					"description": "The city in which the person was born."
+				},
+				"BirthCountry": {
+					"$ref": "#/definitions/core:BirthCountryCodeType",
+					"description": "The name of the country in which the person was born.  Use ISO 3 155-1 alpha-2 standard. "
+				},
+				"BirthDate": {
+					"$ref": "#/definitions/core:BirthDateType",
+					"description": "Date of Birth"
+				},
+				"BirthStateProvinceCode": {
+					"$ref": "#/definitions/core:BirthStateProvinceCodeType",
+					"description": "The state, province, or extra-state jurisdiction in which the person was born"
+				},
+				"BirthYear": {
+					"$ref": "#/definitions/core:BirthYearType",
+					"description": "Year of Birth"
+				},
+				"Birthday": {
+					"$ref": "#/definitions/core:BirthdayType",
+					"description": "Month and Day of Birth"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about transcript"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"core:BirthYearType": {
+			"description": "Year of Birth",
+			"type": "string"
+		},
+		"core:BirthdayType": {
+			"description": "Month and Day of Birth",
+			"type": "string"
+		},
+		"core:CCDType": {
+			"description": "The unique identifier assigned by National Center for Education Statistics as the Common Core of Data for each data exchange partner.",
+			"maxLength": 12,
+			"minLength": 12,
+			"type": "string"
+		},
+		"core:CEEBACTType": {
+			"description": "The unique identifier assigned by the College Entrance Examining Board and ACT for each K-12 data exchange partner.",
+			"maxLength": 6,
+			"minLength": 6,
+			"type": "string"
+		},
+		"core:CSISType": {
+			"description": "The unique identifier assigned by the Statistics Canada Canadian College Student Information System for each postsecondary data exchange partner.",
+			"maxLength": 6,
+			"minLength": 6,
+			"type": "string"
+		},
+		"core:CityType": {
+			"description": "The city portion of the Address of a Contact at the Sending (Source) High School.",
+			"maxLength": 30,
+			"minLength": 2,
+			"type": "string"
+		},
+		"core:ClassRankDateType": {
+			"description": "The date on which the student was included in the class ranking and the class was ranked",
+			"type": "string"
+		},
+		"core:ClassRankSessionCountType": {
+			"description": "The number of sessions of coursework included in the ranking of the student in the class",
+			"maximum": 9999,
+			"minimum": 1,
+			"type": "integer"
+		},
+		"core:ClassRankType": {
+			"description": "The student's class rank relative to other students in their academic cohort (e.g. class).",
+			"maximum": 9999,
+			"minimum": 1,
+			"type": "integer"
+		},
+		"core:ClassRankYearMonthType": {
+			"description": "The year and month in which the student was included in the class ranking and the class was ranked",
+			"type": "string"
+		},
+		"core:ClassRankYearType": {
+			"description": "The year on which the student was included in the class ranking and the class was ranked",
+			"type": "string"
+		},
+		"core:ClassSizeType": {
+			"description": "The numeric size of the academic cohort (e.g. class).",
+			"maximum": 9999,
+			"minimum": 1,
+			"type": "integer"
+		},
+		"core:CohortYearType": {
+			"description": "The school year in which the student entered the baseline group used for computing completion rates, e.g., high school year and program.",
+			"type": "string"
+		},
+		"core:CompositeNameType": {
+			"description": "The full name of the person in Last NameSuffix, First Middle order; comma after last name or NameSuffix",
+			"maxLength": 45,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:ConditionsMetCodeType": {
+			"description": "Indicates whether and how conditions for the requirement have been attained.",
+			"enum": [
+				"Yes",
+				"No",
+				"Conditional",
+				"MutuallyDefined"
+			],
+			"type": "string"
+		},
+		"core:ConditionsMetDateType": {
+			"description": "Date requirement was met.",
+			"type": "string"
+		},
+		"core:CountryCodeType": {
+			"description": "Code indicating Country. Use ISO 3166-1 alpha-2 standard. ",
+			"enum": [
+				"AD",
+				"AE",
+				"AF",
+				"AG",
+				"AI",
+				"AL",
+				"AM",
+				"AO",
+				"AQ",
+				"AR",
+				"AS",
+				"AT",
+				"AU",
+				"AW",
+				"AX",
+				"AZ",
+				"BA",
+				"BB",
+				"BD",
+				"BE",
+				"BF",
+				"BG",
+				"BH",
+				"BI",
+				"BJ",
+				"BL",
+				"BM",
+				"BN",
+				"BO",
+				"BQ",
+				"BR",
+				"BS",
+				"BT",
+				"BV",
+				"BW",
+				"BY",
+				"BZ",
+				"CA",
+				"CC",
+				"CD",
+				"CF",
+				"CG",
+				"CH",
+				"CI",
+				"CK",
+				"CL",
+				"CM",
+				"CN",
+				"CO",
+				"CR",
+				"CU",
+				"CV",
+				"CW",
+				"CX",
+				"CY",
+				"CZ",
+				"DE",
+				"DJ",
+				"DK",
+				"DM",
+				"DO",
+				"DZ",
+				"EC",
+				"EE",
+				"EG",
+				"EH",
+				"ER",
+				"ES",
+				"ET",
+				"FI",
+				"FJ",
+				"FK",
+				"FM",
+				"FO",
+				"FR",
+				"GA",
+				"GB",
+				"GD",
+				"GE",
+				"GF",
+				"GG",
+				"GH",
+				"GI",
+				"GL",
+				"GM",
+				"GN",
+				"GP",
+				"GQ",
+				"GR",
+				"GS",
+				"GT",
+				"GU",
+				"GW",
+				"GY",
+				"HK",
+				"HM",
+				"HN",
+				"HR",
+				"HT",
+				"HU",
+				"ID",
+				"IE",
+				"IL",
+				"IM",
+				"IN",
+				"IO",
+				"IQ",
+				"IR",
+				"IS",
+				"IT",
+				"JE",
+				"JM",
+				"JO",
+				"JP",
+				"KE",
+				"KG",
+				"KH",
+				"KI",
+				"KM",
+				"KN",
+				"KP",
+				"KR",
+				"KW",
+				"KY",
+				"KZ",
+				"LA",
+				"LB",
+				"LC",
+				"LI",
+				"LK",
+				"LR",
+				"LS",
+				"LT",
+				"LU",
+				"LV",
+				"LY",
+				"MA",
+				"MC",
+				"MD",
+				"ME",
+				"MF",
+				"MG",
+				"MH",
+				"MK",
+				"ML",
+				"MM",
+				"MN",
+				"MO",
+				"MP",
+				"MQ",
+				"MR",
+				"MS",
+				"MT",
+				"MU",
+				"MV",
+				"MW",
+				"MX",
+				"MY",
+				"MZ",
+				"NA",
+				"NC",
+				"NE",
+				"NF",
+				"NG",
+				"NI",
+				"NL",
+				"NO",
+				"NP",
+				"NR",
+				"NU",
+				"NZ",
+				"OM",
+				"PA",
+				"PE",
+				"PF",
+				"PG",
+				"PH",
+				"PK",
+				"PL",
+				"PM",
+				"PN",
+				"PR",
+				"PS",
+				"PT",
+				"PW",
+				"PY",
+				"QA",
+				"RE",
+				"RO",
+				"RS",
+				"RU",
+				"RW",
+				"SA",
+				"SB",
+				"SC",
+				"SD",
+				"SE",
+				"SG",
+				"SH",
+				"SI",
+				"SJ",
+				"SK",
+				"SL",
+				"SM",
+				"SN",
+				"SO",
+				"SR",
+				"SS",
+				"ST",
+				"SV",
+				"SX",
+				"SY",
+				"SZ",
+				"TC",
+				"TD",
+				"TF",
+				"TG",
+				"TH",
+				"TJ",
+				"TK",
+				"TL",
+				"TM",
+				"TN",
+				"TO",
+				"TR",
+				"TT",
+				"TV",
+				"TW",
+				"TZ",
+				"UA",
+				"UG",
+				"UM",
+				"US",
+				"UY",
+				"UZ",
+				"VA",
+				"VC",
+				"VE",
+				"VG",
+				"VI",
+				"VN",
+				"VU",
+				"WF",
+				"WS",
+				"YE",
+				"YT",
+				"ZA",
+				"ZM",
+				"ZW"
+			],
+			"type": "string"
+		},
+		"core:CountryPrefixCodeType": {
+			"description": "International dialing code",
+			"maxLength": 3,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:CountryType": {
+			"description": "Name of the country which the claimant states as the country of permanent residence",
+			"maxLength": 30,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:CountyCodeType": {
+			"description": "A code identifying the county which the applicant claims as the permanent residence. This is a 5-digit code which includes state (2 digits) and county within a state (3 digits).",
+			"maxLength": 3,
+			"minLength": 2,
+			"type": "string"
+		},
+		"core:CountyType": {
+			"description": "Name of the county which the claimant states as the county of permanent residence",
+			"maxLength": 30,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:CourseAcademicGradeScaleCodeType": {
+			"description": "The grading scale used by an academic educational institution for an academic course.",
+			"maxLength": 3,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:CourseAcademicGradeStatusCodeType": {
+			"description": "Special enrollment or completion status of this course",
+			"enum": [
+				"AuditedCourse",
+				"Completed",
+				"HonorsGrade",
+				"Incomplete",
+				"IncompleteNotResolvedFail",
+				"InProgress",
+				"NotYetReported",
+				"OtherFail",
+				"OtherPass",
+				"PassFailFail",
+				"PassFailPass",
+				"PlanningToTake",
+				"TransferNoGrade",
+				"Withdrew",
+				"WithdrewFailing",
+				"WithdrewNoPenalty",
+				"WithdrewPassing"
+			],
+			"type": "string"
+		},
+		"core:CourseAcademicGradeType": {
+			"description": "The final grade awarded for participation in the course.",
+			"maxLength": 10,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:CourseAddDateType": {
+			"description": "The date a student was added to an academic course at a school.",
+			"type": "string"
+		},
+		"core:CourseApplicabilityType": {
+			"description": "The academic program to which this academic course applies toward graduation.",
+			"enum": [
+				"NotApplicable",
+				"FirstProgram",
+				"SecondProgram",
+				"BothPrograms"
+			],
+			"type": "string"
+		},
+		"core:CourseBeginDateType": {
+			"description": "The official begin date for this course",
+			"type": "string"
+		},
+		"core:CourseCIPCodeType": {
+			"description": "The Classification of Instructional Programs (CIP) code to describe the area of study for the course.",
+			"maxLength": 10,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:CourseCSISCodeType": {
+			"description": "The Statistics Canada Canadian College Student Information System (CCSIS) code to describe the area of study for the course.",
+			"maxLength": 10,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:CourseCreditBasisType": {
+			"description": "The type of enrollment associated with the credit hours for the course.",
+			"enum": [
+				"Regular",
+				"AcademicRenewal",
+				"AdvancedPlacement",
+				"AdvancedStanding",
+				"ContinuingEducation",
+				"Correspondence",
+				"Exemption",
+				"Equivalence",
+				"InternationalBaccalaureate",
+				"Military",
+				"Remedial",
+				"CreditByExam",
+				"HighSchoolTransferCredit",
+				"HighSchoolCreditOnly",
+				"HighSchoolDualCredit",
+				"JuniorHighSchoolCredit",
+				"LifeExperience",
+				"Major",
+				"AdultBasic"
+			],
+			"type": "string"
+		},
+		"core:CourseCreditEarnedType": {
+			"description": "The number of credits a student earned by the successful completion of a course.",
+			"type": "number"
+		},
+		"core:CourseCreditLevelType": {
+			"description": "The level of credit associated with the credit hours earned for the course.",
+			"enum": [
+				"SeventhGrade",
+				"EighthGrade",
+				"NinthGrade",
+				"TenthGrade",
+				"EleventhGrade",
+				"TwelfthGrade",
+				"Grade13",
+				"Dual",
+				"DualGraduateUndergraduate",
+				"DualHighSchoolCollege",
+				"Graduate",
+				"GraduateProfessional",
+				"LowerDivision",
+				"Professional",
+				"Secondary",
+				"TechnicalPreparatory",
+				"Undergraduate",
+				"Ungraded",
+				"UpperDivision",
+				"Vocational"
+			],
+			"type": "string"
+		},
+		"core:CourseCreditUnitsType": {
+			"description": "The type of credits used at the high school",
+			"enum": [
+				"NoCredit",
+				"Quarter",
+				"Semester",
+				"Units",
+				"ClockHours",
+				"CarnegieUnits",
+				"ContinuingEducationUnits",
+				"Unreported",
+				"Other",
+				"NoCredit ",
+				"Quarter ",
+				"Semester  ",
+				"Units ",
+				"Other "
+			],
+			"type": "string"
+		},
+		"core:CourseCreditValueType": {
+			"description": "Number indicating the credit hours that may be earned in the course.",
+			"type": "number"
+		},
+		"core:CourseDescriptionType": {
+			"description": "The text description describing the content of the course, as carried in the sending institution's course catalog.",
+			"maxLength": 255,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:CourseDropDateType": {
+			"description": "The date on which the student drops or withdraws from the course.",
+			"type": "string"
+		},
+		"core:CourseEndDateType": {
+			"description": "The official end date for this course",
+			"type": "string"
+		},
+		"core:CourseEquivalentAcademicGradeType": {
+			"additionalProperties": false,
+			"description": "The alternate grade including the grade and its scale",
+			"properties": {
+				"EquivalentAcademicGrade": {
+					"$ref": "#/definitions/core:CourseAcademicGradeType",
+					"description": "The grade earned for a course calculated under a different grade scale than the primary grade recorded"
+				},
+				"EquivalentGradeScaleCode": {
+					"$ref": "#/definitions/core:CourseAcademicGradeScaleCodeType",
+					"description": "The alternative grade scale under which the related EquivalentAcademicGrade is calculated"
+				}
+			},
+			"required": [
+				"EquivalentAcademicGrade"
+			],
+			"type": "object"
+		},
+		"core:CourseFiveDigitSCEDCodeType": {
+			"description": "This set of code values is derived from the first five digits of the CourseSCEDCode above.",
+			"maxLength": 5,
+			"minLength": 5,
+			"type": "string"
+		},
+		"core:CourseGPAApplicabilityCodeType": {
+			"description": "An indicator of whether or not this course being described is included in the computation of the student's Grade Point Average, and if so, if it weighted differently from regular courses.",
+			"enum": [
+				"Applicable",
+				"NotApplicable",
+				"Weighted"
+			],
+			"type": "string"
+		},
+		"core:CourseInstructionMethodType": {
+			"description": "The primary method of instruction used for the course.",
+			"enum": [
+				"Lecture",
+				"Laboratory",
+				"Seminar",
+				"IndependentStudy",
+				"Private Study",
+				"PracticeTeaching",
+				"Internship",
+				"Practicum",
+				"ApprenticeshipExternship",
+				"AppliedInstruction",
+				"Residency",
+				"ClinicalRotationInstruction",
+				"SelfPaced",
+				"FieldStudy",
+				"InternetInstruction",
+				"InteractiveVideo",
+				"Videotape",
+				"Television",
+				"OtherDistanceLearning",
+				"Audiotape",
+				"ComputerBasedInstruction",
+				"CompressedVideo",
+				"Correspondence",
+				"CooperativeEducation",
+				"WorkStudy"
+			],
+			"type": "string"
+		},
+		"core:CourseInstructionSiteNameType": {
+			"description": "The name of the location at which the course is taught.",
+			"maxLength": 30,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:CourseInstructionSiteType": {
+			"description": "An indication of the type of location at which the course is taught.",
+			"enum": [
+				"OnCampus",
+				"OffCampus",
+				"Extension",
+				"StudyAbroad",
+				"Correctional",
+				"Millitary",
+				"Telecommunication",
+				"Auxiliary",
+				"ClinicHospital",
+				"DistanceLearning"
+			],
+			"type": "string"
+		},
+		"core:CourseInstructorType": {
+			"additionalProperties": false,
+			"description": "The detailed information about the course instructor",
+			"properties": {
+				"Name": {
+					"$ref": "#/definitions/core:NameType",
+					"description": "The name of record of the student at the sending institution"
+				},
+				"PositionTitle": {
+					"$ref": "#/definitions/core:PositionTitleType",
+					"description": "Title of this employment position"
+				}
+			},
+			"required": [
+				"Name"
+			],
+			"type": "object"
+		},
+		"core:CourseLevelType": {
+			"description": "The level of work demonstrated by successful completion of  the academic course being described ",
+			"enum": [
+				"Accelerated",
+				"AdultBasic",
+				"AdvancedPlacement",
+				"Basic",
+				"CollegeLevel",
+				"CollegePreparatory",
+				"Dual",
+				"Dual Grad/Upper",
+				"Dual HS/Undergrad",
+				"GiftedTalented",
+				"GraduateProfessional",
+				"Honors",
+				"InternationalBaccalaureate",
+				"LowerDivision",
+				"NonAcademic",
+				"Regents",
+				"Remedial",
+				"SpecialEducation",
+				"TechnicalPreparatory",
+				"UpperDivision",
+				"Vocational"
+			],
+			"type": "string"
+		},
+		"core:CourseNCESCodeType": {
+			"description": "The code set developed (or being developed) by the United States Department of Education's National Center for Education Statistics for the Classification of Secondary School Courses",
+			"maxLength": 10,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:CourseNarrativeExplanationGradeType": {
+			"description": "The narrative of the grade awarded to a student in an academic course in those cases where a course does not receive a letter or numeric grade included in the grading scale of the Course Academic Grade Qualifier.",
+			"maxLength": 200,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:CourseNumberType": {
+			"description": "The official reference number portion of a course identifier. This number frequently designates the level of the course as well as the level of the student expected to enroll in the course",
+			"maxLength": 15,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:CourseQualityPointsEarnedType": {
+			"description": "The numerical value assigned to a letter grade to provide a basis of quantitative determination of an average.",
+			"type": "number"
+		},
+		"core:CourseRepeatCodeType": {
+			"description": "Indicates that an academic course has been repeated by a student and how that repeat is to be computed in the student's academic grade average.",
+			"enum": [
+				"RepeatCounted",
+				"RepeatNotCounted",
+				"ReplacementCounted",
+				"ReplacedNotCounted",
+				"RepeatOtherInstitution",
+				"NotCountedOther"
+			],
+			"type": "string"
+		},
+		"core:CourseSCEDCodeType": {
+			"description": "The School Codes for the Exchange of Data (SCED) code set being developed for the United States Department of Education's National Center for Education Statistics to describe the content and level of a course",
+			"maxLength": 12,
+			"minLength": 12,
+			"type": "string"
+		},
+		"core:CourseSectionNumberType": {
+			"description": "The number assigned to differentiate among distinct occurrences of courses that have the same course abbreviation and number but may be considered to be different .  For example, it could be used to identify the instructor.",
+			"maxLength": 10,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:CourseSubjectAbbreviationType": {
+			"description": "The alphabetic abbreviation of the academic department or discipline offering the course. It is one part of the total course identifier number.",
+			"maxLength": 10,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:CourseSubjectAreaCodeType": {
+			"description": "This set of code values is derived from the first two digits of the CourseSCEDCode above.",
+			"enum": [
+				"EnglishLanguageLiterature",
+				"Mathematics",
+				"LifePhysicalSciences",
+				"SocialSciencesHistory",
+				"FinePerformingArts",
+				"ForeignLanguageLiterature",
+				"ReligiousEducationTheology",
+				"PhysicalHealthSafetyEducation",
+				"MilitaryScience",
+				"ComputerInformationSciences",
+				"CommunicationsAudioVisualTechnology",
+				"BusinessMarketing",
+				"Manufacturing",
+				"HealthCareSciences",
+				"PublicProtectiveGovernmentService",
+				"HospitalityTourism",
+				"ArchitectureConstruction",
+				"AgricultureFoodNaturalResources",
+				"HumanServices",
+				"TransportationDistributionLogistics",
+				"EngineeringTechnology",
+				"Miscellaneous",
+				"SpecialExceptionalEducationServices"
+			],
+			"type": "string"
+		},
+		"core:CourseTitleType": {
+			"description": "The name or title of the course taken by a student at an academic institution.",
+			"maxLength": 120,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:CourseUSISCodeType": {
+			"description": "The Statistics Canada University Student Information System (USIS) code to describe the area of study for the course.",
+			"maxLength": 10,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:CreatedDateTimeType": {
+			"description": "The Date and Time stamp when the document was created",
+			"type": "string"
+		},
+		"core:CreditHoursAttemptedType": {
+			"description": "The total value of credit hours attempted whether or not included in the hours for GPA or hours earned.",
+			"type": "number"
+		},
+		"core:CreditHoursDeficientType": {
+			"description": "The total value of credit hours the student is lacking in order to successfully complete requirements for an award, diploma or certificate.",
+			"type": "number"
+		},
+		"core:CreditHoursEarnedType": {
+			"description": "The total value of credit hours successfully completed or earned.",
+			"type": "number"
+		},
+		"core:CreditHoursRequiredType": {
+			"description": "The total value of credit hours that are required for the award or diploma for which the student is pursuing",
+			"type": "number"
+		},
+		"core:CreditHoursforGPAType": {
+			"description": "The total value of credit hours used to calculate the Grade Point Average.",
+			"type": "number"
+		},
+		"core:DUNSType": {
+			"description": "Data Universal Numbering System (DUNS), unique nine character company identification number issued by Dun and Bradstreet Corporation.",
+			"maxLength": 9,
+			"minLength": 9,
+			"type": "string"
+		},
+		"core:DaysAbsentType": {
+			"description": "The number of  days or partial days that the student did not attend classes this session",
+			"type": "number"
+		},
+		"core:DaysPresentType": {
+			"description": "The number of  days or partial days that the student attended classes this session",
+			"type": "number"
+		},
+		"core:DeceasedIndicatorType": {
+			"description": "Indicates the person is deceased.",
+			"type": "boolean"
+		},
+		"core:DeceasedType": {
+			"additionalProperties": false,
+			"description": "Information related a student's death",
+			"properties": {
+				"DeceasedIndicator": {
+					"$ref": "#/definitions/core:DeceasedIndicatorType",
+					"description": "Indicates the person is deceased."
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the deceased student"
+					},
+					"type": "array"
+				}
+			},
+			"required": [
+				"DeceasedIndicator"
+			],
+			"type": "object"
+		},
+		"core:DelinquenciesType": {
+			"description": "The academic standing of the student upon transfer to the institution",
+			"enum": [
+				"ExclusionAcademic",
+				"ExclusionDiscipline",
+				"GoodStanding",
+				"ProbationGPA",
+				"ProbationHours",
+				"SuspensionGPA",
+				"SuspensionHours",
+				"ProbationDiscipline",
+				"SuspensionDiscipline",
+				"Unknown",
+				"Other"
+			],
+			"type": "string"
+		},
+		"core:DocumentCompleteCodeType": {
+			"description": "This element indicates whether the document conveys a complete record. Partial documents may be produced for information that is recorded in multiple media or formats.  If the student is still enrolled at the school, but the record being sent includes all the available information to date for that student, then the record would be considered complete, and this data element would not be included in the transcript.  A value of Partial generally means that the remainder will be sent in hard copy.",
+			"enum": [
+				"Complete",
+				"Partial",
+				""
+			],
+			"type": "string"
+		},
+		"core:DocumentIDType": {
+			"description": "The File Transmission Date and Time stamp with additional unique qualifying characters",
+			"maxLength": 36,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:DocumentOfficialCodeType": {
+			"description": "This element indicates if the document is unofficial. Unofficial documents may be produced for reference purpose but may not be binding.",
+			"enum": [
+				"Official",
+				"Unofficial"
+			],
+			"type": "string"
+		},
+		"core:DocumentProcessCodeType": {
+			"description": "This element indicates a TEST or PRODUCTION document",
+			"enum": [
+				"TEST",
+				"PRODUCTION"
+			],
+			"type": "string"
+		},
+		"core:DocumentTypeCodeType": {
+			"description": "Type and purpose of document being transmitted",
+			"enum": [
+				"Acknowledgment",
+				"Application",
+				"Cancel",
+				"Certificate",
+				"CertificationRequest",
+				"Change",
+				"Credential",
+				"Diploma",
+				"DisbursementAcknowledgement",
+				"DisbursementForecast",
+				"DisbursementRoster",
+				"InstitutionRequest",
+				"GainfulEmploymentStudentResponseFile",
+				"GainfulEmploymentStudentSubmittal",
+				"IPEDS",
+				"NSLDSEnrollmentError",
+				"NSLDSEnrollmentSubmittal",
+				"Receipt",
+				"Request",
+				"RequestedRecord",
+				"Response",
+				"ReverseTransfer",
+				"StudentRequest",
+				"TermEnroll",
+				"TermGrade",
+				"ThirdPartyRequest"
+			],
+			"type": "string"
+		},
+		"core:ESISType": {
+			"description": "The unique identifier assigned by the Statistics Canada Enhanced Student Information System for each data postsecondary exchange partner.",
+			"maxLength": 8,
+			"minLength": 8,
+			"type": "string"
+		},
+		"core:EducationSubtestCodeType": {
+			"description": "Code identifying the sub-part of a standardized test (e.g. Quantitative, Verbal).  These codes are the newer codes used in the XML Education Test Score Reporting and the Application for Admission schemas.  They are tied to each individual test.",
+			"enum": [
+				"Algebra",
+				"Algebra1",
+				"AlgebraGeometryCoordinate",
+				"Analytical",
+				"Biochemistry",
+				"Biology",
+				"BiologyCell",
+				"BiologyCellularAndMolecular",
+				"BiologyMolecularAndGenetics",
+				"BiologyOrganismal",
+				"CalculusAB",
+				"Chemistry",
+				"CommandOfEvidence",
+				"CommunicatingReasoning",
+				"CompositeScore",
+				"Comprehension",
+				"Computation",
+				"ConceptsAndProcedures",
+				"ConceptsApplications",
+				"EcologyAndEvolution",
+				"English",
+				"EnglishA",
+				"EnglishB",
+				"EnglishConventions",
+				"EnglishLanguageArts",
+				"EnglishRhetoricalSkills",
+				"EnglishTestOfStandardWritten",
+				"EnglishUsageMechanics",
+				"Essay",
+				"EvidenceBasedReadingAndWriting",
+				"Expression",
+				"ExpressionOfIdeas",
+				"Fit",
+				"GeometryTrigonometry",
+				"HistoryAmerican",
+				"HistoryAndSocialStudiesAnalysis",
+				"HistoryEuropean",
+				"InformationLocating",
+				"InterestArts",
+				"InterestBusinessContact",
+				"InterestBusinessOperations",
+				"InterestScience",
+				"InterestSocialService",
+				"InterestTechnical",
+				"LanguageArts",
+				"LanguageForeignA",
+				"LanguageForeignB",
+				"Listening",
+				"ListeningComprehension",
+				"LiteraryResponses",
+				"LiteratureAndArtsInterpreting",
+				"Math",
+				"MathAlgebraPreAlgebra",
+				"MathApplied",
+				"MathElementaryPreAlgebra",
+				"MathematicsAdvanced",
+				"MathGeometry",
+				"MathIntermediate",
+				"MathPlaneGeometryTrigonometry",
+				"MeasurementAndGeometry",
+				"Mechanics",
+				"ModelingAndDataAnalysis",
+				"NumberSense",
+				"Observation",
+				"OtherSubtest",
+				"Performance",
+				"Physics",
+				"ProbabilityAndStatistics",
+				"ProblemSolvingAndDataAnalysis",
+				"PsychologyExperimental",
+				"PsychologySocial",
+				"Quantitative",
+				"Reading",
+				"ReadingArtsLiterature",
+				"ReadingComprehension",
+				"ReadingInformational",
+				"ReadingSocialStudiesScience",
+				"Research",
+				"Science",
+				"ScienceAnalysis",
+				"SocialStudies",
+				"Spelling",
+				"Talent",
+				"Teamwork",
+				"TechnologyApplied",
+				"Total",
+				"TotalScore",
+				"Usage",
+				"Verbal",
+				"Vocabulary",
+				"WordAnalysis",
+				"WordsInContext",
+				"Writing",
+				"WritingAnalytical",
+				"WritingBusiness",
+				"WritingConventions",
+				"WritingEnglish",
+				"WritingStrategies",
+				"WrittenExpressionAndStructure"
+			],
+			"type": "string"
+		},
+		"core:EducationTestCodeType": {
+			"description": "Code identifying the test in the newer XML version of Test Codes",
+			"enum": [
+				"ACT",
+				"ACTExplore",
+				"ACTInterestInventory",
+				"ACTPlan",
+				"ACTWorkKeys",
+				"APArt2D",
+				"APArt3D",
+				"APArtDrawing",
+				"APArtGeneral",
+				"APBiology",
+				"APCalculusAB",
+				"APCalculusBC",
+				"APChemistry",
+				"APChineseLanguageAndCulture",
+				"APComputerScienceA",
+				"APComputerScienceAB",
+				"APComputerScienceB",
+				"APComputerSciencePrinciples",
+				"APEconomicsMacro",
+				"APEconomicsMicro",
+				"APEnglishLanguageComposition",
+				"APEnvironmentalScience",
+				"APFrenchLanguage",
+				"APFrenchLiterature",
+				"APGermanLanguage",
+				"APGovernmentPoliticsComparative",
+				"APGovernmentPoliticsUS",
+				"APHistoryArt",
+				"APHistoryEurope",
+				"APHistoryUS",
+				"APHistoryWorld",
+				"APHumanGeography",
+				"APItalianLanguageAndCulture",
+				"APJapaneseLanguageAndCulture",
+				"APLatin",
+				"APLatinCatHor",
+				"APLatinVergil",
+				"APMusicListeningLiterature",
+				"APMusicTheory",
+				"APPhysics",
+				"APPhysics1Algebra",
+				"APPhysics2Algebra",
+				"APPhysicsElectricityAndMagnetism",
+				"APPhysicsEngineeringMechanics",
+				"APPhysicsMechanics",
+				"APPsychology",
+				"APSpanishLanguage",
+				"APSpanishLiterature",
+				"APStatistics",
+				"Aspire",
+				"CAAP",
+				"CAEL",
+				"CaliforniaHighSchoolExitExam",
+				"CAN",
+				"CFTST",
+				"CLEPAccountingFinancial",
+				"CLEPAlgebraCollege",
+				"CLEPBiology",
+				"CLEPBusinessLawIntroduction",
+				"CLEPCalculus",
+				"CLEPChemistry",
+				"CLEPCompositionCollegeFreshman",
+				"CLEPCompositionEnglish",
+				"CLEPEconomicsMacro",
+				"CLEPEconomicsMicro",
+				"CLEPEnglishComposition",
+				"CLEPFrenchLanguage",
+				"CLEPGermanLanguage",
+				"CLEPGovernmentAmerican",
+				"CLEPHistoryUSFrom1865",
+				"CLEPHistoryUSTo1877",
+				"CLEPHumanGrowthDevelopment",
+				"CLEPHumanities",
+				"CLEPInformationSystems",
+				"CLEPLanguageSpanish",
+				"CLEPLiteratureAmerican",
+				"CLEPLiteratureAnalysisAndInterpreting",
+				"CLEPLiteratureEnglish",
+				"CLEPManagement",
+				"CLEPMarketing",
+				"CLEPMath",
+				"CLEPMathCollege",
+				"CLEPPreCalculus",
+				"CLEPPsychologyEducational",
+				"CLEPPsychologyIntroductory",
+				"CLEPSciencesNatural",
+				"CLEPSocialSciencesAndHistory",
+				"CLEPSociologyIntroductory",
+				"CLEPWesternCivilizationFrom1648",
+				"CLEPWesternCivilizationTo1648",
+				"Compass",
+				"COPE",
+				"EFAS",
+				"Engage",
+				"GED",
+				"GELCP",
+				"GMAT",
+				"GRE",
+				"GREBiochemistryCellMolecular",
+				"GREBiology",
+				"GREChemistry",
+				"GREComputerScience",
+				"GRELiteratureEnglish",
+				"GREMathematics",
+				"GREPhysics",
+				"GREPsychology",
+				"IELTS",
+				"InternationalBaccalaureate",
+				"ITELP",
+				"LSAT",
+				"MCAT",
+				"MELAB",
+				"OtherStateTest",
+				"OtherTest",
+				"PTEA",
+				"QualityCore",
+				"SAT",
+				"SATBiology",
+				"SATChemistry",
+				"SATChineseListening",
+				"SATFrenchListening",
+				"SATGerman",
+				"SATGermanListening",
+				"SATHebrew",
+				"SATHebrewModern",
+				"SATHistoryWorld",
+				"SATItalian",
+				"SATJapaneseWithListening",
+				"SATKoreanListening",
+				"SATLatin",
+				"SATLiterature",
+				"SATMath1",
+				"SATMath2",
+				"SATPhysics",
+				"SATSpanish",
+				"SATSpanishListening",
+				"SATUSHistory",
+				"SBACEnglishLanguageArts",
+				"SBACMathematics",
+				"TABE",
+				"TMAGE",
+				"TOEFL"
+			],
+			"type": "string"
+		},
+		"core:EmailAddressType": {
+			"description": "The numbers, letters, and symbols used to identify an electronic mail (Email) user within a network.",
+			"maxLength": 128,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:EmailType": {
+			"additionalProperties": false,
+			"description": "Email address of source institution contact",
+			"properties": {
+				"EmailAddress": {
+					"$ref": "#/definitions/core:EmailAddressType",
+					"description": "The numbers, letters, and symbols used to identify an electronic mail (Email) user within a network."
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the email address of the contact at the sending high school"
+					},
+					"type": "array"
+				}
+			},
+			"required": [
+				"EmailAddress"
+			],
+			"type": "object"
+		},
+		"core:EndorseType": {
+			"additionalProperties": false,
+			"description": "Info of a Person who endorses a diploma, a program or a certificate",
+			"properties": {
+				"Department": {
+					"$ref": "#/definitions/core:OrganizationNameType",
+					"description": "The department within and organization"
+				},
+				"Name": {
+					"$ref": "#/definitions/core:NameType",
+					"description": "The name of record of the student at the sending institution"
+				},
+				"PositionTitle": {
+					"$ref": "#/definitions/core:PositionTitleType",
+					"description": "Job title or position of the contact at the endorsing organization"
+				}
+			},
+			"type": "object"
+		},
+		"core:EntryDateType": {
+			"description": "The date on which the student officially was admitted to the school or when the student first attended the school.",
+			"type": "string"
+		},
+		"core:ExitDateType": {
+			"description": "The date on which the student officially withdrew, was withdrawn, or graduated.",
+			"type": "string"
+		},
+		"core:ExitReasonCodeType": {
+			"description": "The reason the student stopped attending.  It is a code set approved by the US Department of Education's National Center for Education Statistics and is included in the NCES Handbook.",
+			"enum": [
+				"1907",
+				"1908",
+				"1909",
+				"1910",
+				"1911",
+				"1912",
+				"1913",
+				"1914",
+				"1915",
+				"1916",
+				"1917",
+				"1918",
+				"1919",
+				"1920",
+				"1921",
+				"1922",
+				"1923",
+				"1924",
+				"1925",
+				"1926",
+				"1927",
+				"1928",
+				"1930",
+				"1931",
+				"3499",
+				"3500",
+				"3501",
+				"3502",
+				"3503",
+				"3504",
+				"3505",
+				"3508",
+				"3509",
+				"9999"
+			],
+			"type": "string"
+		},
+		"core:FICEType": {
+			"description": "The unique identifier once maintained for the Federal Interagency Committee on Education by the National Center for Education Statistics for each postsecondary data exchange partner.",
+			"maxLength": 6,
+			"minLength": 6,
+			"type": "string"
+		},
+		"core:FirstNameType": {
+			"description": "The first name of the person, usually given at birth, baptism, or during, another ceremony, or through legal change",
+			"maxLength": 35,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:FrameworkOutcomeIdType": {
+			"description": "Program and course information for Learning Records",
+			"maxLength": 40,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:FrameworkOutcomeType": {
+			"additionalProperties": false,
+			"description": "information about the outcome of a learning activity",
+			"properties": {
+				"FrameworkOutcomeId": {
+					"$ref": "#/definitions/core:FrameworkOutcomeIdType",
+					"description": "Identifier for outcome Alternative outcome id "
+				},
+				"FrameworkOutcomeValue": {
+					"$ref": "#/definitions/core:LearningOutcomeDescriptionType",
+					"description": "A container to hold the alternative framework taxonomies that map to the learning outcome Definition of alternative outcome taxonomy"
+				}
+			},
+			"required": [
+				"FrameworkOutcomeValue"
+			],
+			"type": "object"
+		},
+		"core:GEOCodeSimpleType": {
+			"description": "The unique identifier assigned by PESC for educational institutions.",
+			"maxLength": 7,
+			"minLength": 7,
+			"pattern": "^([A-Za-z]{2,2}[0-9A-Za-z]{5,5})$",
+			"type": "string"
+		},
+		"core:GPARangeMaximumType": {
+			"description": "The maximum possible GPA",
+			"type": "number"
+		},
+		"core:GPARangeMinimumType": {
+			"description": "The minimum possible GPA",
+			"type": "number"
+		},
+		"core:GPAType": {
+			"additionalProperties": false,
+			"description": "GPA for the Award Program",
+			"properties": {
+				"CreditHoursAttempted": {
+					"$ref": "#/definitions/core:CreditHoursAttemptedType",
+					"description": "The total value of credit hours attempted whether or not included in the hours for GPA or hours earned."
+				},
+				"CreditHoursDeficient": {
+					"$ref": "#/definitions/core:CreditHoursDeficientType",
+					"description": "The total value of credit hours the student is lacking in order to successfully complete requirements for an award, diploma or certificate."
+				},
+				"CreditHoursEarned": {
+					"$ref": "#/definitions/core:CreditHoursEarnedType",
+					"description": "The total value of credit hours successfully completed or earned."
+				},
+				"CreditHoursRequired": {
+					"$ref": "#/definitions/core:CreditHoursRequiredType",
+					"description": "The total value of credit hours that are required for the award or diploma for which the student is pursuing"
+				},
+				"CreditHoursforGPA": {
+					"$ref": "#/definitions/core:CreditHoursforGPAType",
+					"description": "The total value of credit hours used to calculate the Grade Point Average."
+				},
+				"CreditUnit": {
+					"$ref": "#/definitions/core:CourseCreditUnitsType",
+					"description": "The type of credit (unit, semester, or quarter) associated with the credit hours earned for the course."
+				},
+				"GPARangeMaximum": {
+					"$ref": "#/definitions/core:GPARangeMaximumType",
+					"description": "The maximum possible GPA"
+				},
+				"GPARangeMinimum": {
+					"$ref": "#/definitions/core:GPARangeMinimumType",
+					"description": "The minimum possible GPA"
+				},
+				"GradePointAverage": {
+					"$ref": "#/definitions/core:GradePointAverageType",
+					"description": "The value of the total quality points divided by the Credit Hours for Grade Point Average."
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the GPA"
+					},
+					"type": "array"
+				},
+				"TotalQualityPoints": {
+					"$ref": "#/definitions/core:TotalQualityPointsType",
+					"description": "The total value of quality points used for the calculation of the Grade Point Average."
+				}
+			},
+			"type": "object"
+		},
+		"core:GenderCodeType": {
+			"description": "The gender of the Student",
+			"enum": [
+				"Female",
+				"Male",
+				"Unreported",
+				"Unspecified"
+			],
+			"type": "string"
+		},
+		"core:GenderType": {
+			"additionalProperties": false,
+			"description": "Gender of the student",
+			"properties": {
+				"GenderCode": {
+					"$ref": "#/definitions/core:GenderCodeType",
+					"description": "The gender of the Student"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about Gender"
+					},
+					"type": "array"
+				}
+			},
+			"required": [
+				"GenderCode"
+			],
+			"type": "object"
+		},
+		"core:GradePointAverageType": {
+			"description": "The value of the total quality points divided by the Credit Hours for Grade Point Average.",
+			"type": "number"
+		},
+		"core:HealthType": {
+			"additionalProperties": false,
+			"description": "Immunization, vaccinations and health screenings",
+			"properties": {
+				"Immunizations": {
+					"items": {
+						"$ref": "#/definitions/core:ImmunizationsType",
+						"description": "Information about immunizations"
+					},
+					"type": "array"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about immunizations"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"core:HighSchoolCreditSummaryType": {
+			"additionalProperties": false,
+			"description": "This is a summary of credits taken at a secondary school",
+			"properties": {
+				"HighSchoolSubjectArea": {
+					"items": {
+						"$ref": "#/definitions/core:HighSchoolSubjectAreaType",
+						"description": "The part of the high school curriculum area that is to be described and summarized"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"core:HighSchoolSubjectAreaCodeType": {
+			"description": "This simple data element describes major areas of the high school curriculum ",
+			"enum": [
+				"AcademicElective",
+				"Arts",
+				"English",
+				"ForeignLanguage",
+				"HistorySocialScience",
+				"LabScience",
+				"Math",
+				"Other",
+				"Science"
+			],
+			"type": "string"
+		},
+		"core:HighSchoolSubjectAreaNameType": {
+			"description": "The name of the major area of the high school curriculum",
+			"maxLength": 30,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:HighSchoolSubjectAreaType": {
+			"additionalProperties": false,
+			"description": "The part of the high school curriculum area that is to be described and summarized",
+			"properties": {
+				"CourseCreditEarned": {
+					"$ref": "#/definitions/core:CourseCreditEarnedType",
+					"description": "The number of credits a student earned by the successful completion of a course."
+				},
+				"CourseCreditUnits": {
+					"$ref": "#/definitions/core:CourseCreditUnitsType",
+					"description": "The type of credits used at the high school"
+				},
+				"CreditHoursDeficient": {
+					"$ref": "#/definitions/core:CreditHoursDeficientType",
+					"description": "The number of credit units that the student still needs to complete in this curriculum area in order to receive the award or diploma"
+				},
+				"CreditHoursRequired": {
+					"$ref": "#/definitions/core:CreditHoursRequiredType",
+					"description": "The number of credit units needed to satisfy the graduation requirements in this area"
+				},
+				"HighSchoolSubjectAreaCode": {
+					"$ref": "#/definitions/core:HighSchoolSubjectAreaCodeType",
+					"description": "This simple data element describes major areas of the high school curriculum "
+				},
+				"HighSchoolSubjectAreaName": {
+					"$ref": "#/definitions/core:HighSchoolSubjectAreaNameType",
+					"description": "The name of the major area of the high school curriculum"
+				}
+			},
+			"type": "object"
+		},
+		"core:HonorsRecognitionLevelType": {
+			"description": "A code value representing 1st highest honor, 2nd highest and 3rd highest.",
+			"enum": [
+				"FirstHighest",
+				"SecondHighest",
+				"ThirdHighest"
+			],
+			"type": "string"
+		},
+		"core:HonorsRecognitionTitleType": {
+			"description": "The descriptive title for the honors received.",
+			"maxLength": 60,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:IPEDSType": {
+			"description": "The unique identifier for Integrated Postsecondary Education Data System assigned by the National Center for Education Statistics for each postsecondary data exchange partner.",
+			"maxLength": 6,
+			"minLength": 6,
+			"type": "string"
+		},
+		"core:ImmunizationCodeType": {
+			"description": "Medical immunization or vaccine code from the Current Procedural Terminology (CPT) 2002 of the American Medical Association.",
+			"maxLength": 20,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:ImmunizationDateType": {
+			"description": "Date of immunization",
+			"type": "string"
+		},
+		"core:ImmunizationStatusCodeType": {
+			"description": "Information about the number of the innoculation or the type of exemption",
+			"enum": [
+				"EighthInnoculation",
+				"FifthInnoculation",
+				"FirstInnoculation",
+				"FourthInnoculation",
+				"HadTheDisease",
+				"MedicalExemption",
+				"NinthInnoculation",
+				"PersonalExemption",
+				"ReligiousExemption",
+				"SecondInnoculation",
+				"SeventhInnoculation",
+				"SixthInnoculation",
+				"ThirdInnoculation"
+			],
+			"type": "string"
+		},
+		"core:ImmunizationsType": {
+			"additionalProperties": false,
+			"description": "Information about immunizations",
+			"properties": {
+				"ImmunizationCode": {
+					"$ref": "#/definitions/core:ImmunizationCodeType",
+					"description": "Medical immunization or vaccine code from the Current Procedural Terminology (CPT) 2002 of the American Medical Association."
+				},
+				"ImmunizationDate": {
+					"$ref": "#/definitions/core:ImmunizationDateType",
+					"description": "Date of immunization"
+				},
+				"ImmunizationStatusCode": {
+					"$ref": "#/definitions/core:ImmunizationStatusCodeType",
+					"description": "Information about the number of the innoculation or the type of exemption"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the immunization"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"core:InstructionUsageType": {
+			"description": "The use of the language in the context of instruction.Instruction - Language of InstructionExamination - Language of ExaminationWrittenExam - Language in which Examination is written",
+			"enum": [
+				"Instruction",
+				"Examination",
+				"WrittenExam"
+			],
+			"type": "string"
+		},
+		"core:LanguageCodeType": {
+			"description": "Code indicating the language being used, using ISO 639-2 code (Alpha-3) set. These codes are available at http://www.loc.gov/standards/iso639-2/",
+			"maxLength": 3,
+			"minLength": 3,
+			"type": "string"
+		},
+		"core:LanguageOfInstructionType": {
+			"additionalProperties": false,
+			"description": "Language associated with one or more aspects of the course",
+			"properties": {
+				"InstructionUsage": {
+					"$ref": "#/definitions/core:InstructionUsageType",
+					"description": "The use of the language in the context of instruction.Instruction - Language of InstructionExamination - Language of ExaminationWrittenExam - Language in which Examination is written"
+				},
+				"LanguageCode": {
+					"$ref": "#/definitions/core:LanguageCodeType",
+					"description": "Code indicating the language being used, using ISO 639-2 code (Alpha-3) set. These codes are available at http://www.loc.gov/standards/iso639-2/"
+				},
+				"LanguageUsage": {
+					"$ref": "#/definitions/core:LanguageUsageType",
+					"description": "Indication of person's use of the language"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the language of instruction"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"core:LanguageProficiencyType": {
+			"description": "Adeptness in comprehending and using the language",
+			"enum": [
+				"EnglishOnly",
+				"Excellent",
+				"Fair",
+				"FullyEnglishProficient",
+				"Good",
+				"LimitedEnglishProficiency",
+				"NonEnglishSpeaking",
+				"Poor",
+				"RedesignatedFluentEnglishProficient",
+				"Unacceptable",
+				"Unknown"
+			],
+			"type": "string"
+		},
+		"core:LanguageType": {
+			"additionalProperties": false,
+			"description": "Information about the student's ability to communicate in languages other than the primary language of the country where the sending school is located.",
+			"properties": {
+				"LanguageCode": {
+					"$ref": "#/definitions/core:LanguageCodeType",
+					"description": "Code indicating the language being used, using ISO 639-2 code (Alpha-3) set. These codes are available at http://www.loc.gov/standards/iso639-2/"
+				},
+				"LanguageProficiency": {
+					"$ref": "#/definitions/core:LanguageProficiencyType",
+					"description": "Adeptness in comprehending and using the language"
+				},
+				"LanguageUsage": {
+					"$ref": "#/definitions/core:LanguageUsageType",
+					"description": "Indication of person's use of the language"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the language proficiency"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"core:LanguageUsageType": {
+			"description": "Indication of person's use of the language",
+			"enum": [
+				"Always",
+				"FirstSpokenLanguage",
+				"Native",
+				"Reading",
+				"SomeSections",
+				"Sometimes",
+				"Speaking",
+				"SpokenAtHome",
+				"Writing",
+				"WrittenCommunication"
+			],
+			"type": "string"
+		},
+		"core:LastNameType": {
+			"description": "The last name or surname by which a person is legally known",
+			"maxLength": 35,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:LearningOutcomeDescriptionType": {
+			"description": "Text describing the outcome of a learning experience",
+			"maxLength": 300,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:LearningOutcomeProficiencyCodeType": {
+			"description": "Assessment of learning proficiency",
+			"enum": [
+				"Novice",
+				"Intermediate",
+				"Proficient",
+				"Distinguished",
+				"Master"
+			],
+			"type": "string"
+		},
+		"core:LearningOutcomeQualificationAssessmentType": {
+			"additionalProperties": false,
+			"description": "Assessment of learning proficiency",
+			"properties": {
+				"LearningOutcomeProficiencyCode": {
+					"$ref": "#/definitions/core:LearningOutcomeProficiencyCodeType",
+					"description": "Assessment of learning proficiency Assessment of learning proficiency"
+				},
+				"LearningOutcomeSkillCode": {
+					"$ref": "#/definitions/core:LearningOutcomeSkillCodeType",
+					"description": "Learning Outcome Skill based on DQP intellectual skills Learning Outcome Skill based on DQP intellectual skills"
+				}
+			},
+			"required": [
+				"LearningOutcomeProficiencyCode",
+				"LearningOutcomeSkillCode"
+			],
+			"type": "object"
+		},
+		"core:LearningOutcomeSkillCodeType": {
+			"description": "Learning Outcome Skill based on DQP intellectual skills",
+			"enum": [
+				"AnalyticInquiry",
+				"UseInformationResources",
+				"EngagingDiversePerspective",
+				"EthicalReasoning",
+				"QuantitativeFluency",
+				"CommunicativeFluency",
+				"ProgramSpecificIntellectualPracticalSkills"
+			],
+			"type": "string"
+		},
+		"core:LearningOutcomeType": {
+			"additionalProperties": false,
+			"description": "Program learning outcome and the outcome evaluations and alternative outcome mapping",
+			"properties": {
+				"AlternateOutcomeFramework": {
+					"items": {
+						"$ref": "#/definitions/core:AlternateOutcomeFrameworkType",
+						"description": "A container to hold the alternative framework taxonomies that map to the learning outcome Alternative framework associated with learning in outcome  "
+					},
+					"type": "array"
+				},
+				"LearningOutcomeDescription": {
+					"$ref": "#/definitions/core:LearningOutcomeDescriptionType",
+					"description": "Program learning outcome and the outcome evaluations and alternative outcome mapping The narrative of course learning outcomes."
+				},
+				"LearningOutcomeQualificationAssessment": {
+					"items": {
+						"$ref": "#/definitions/core:LearningOutcomeQualificationAssessmentType",
+						"description": "Information aobut the assessent used to evaluate a learning experience Learning Outcome Assessment"
+					},
+					"type": "array"
+				}
+			},
+			"required": [
+				"LearningOutcomeDescription"
+			],
+			"type": "object"
+		},
+		"core:LearningTopicType": {
+			"description": "Topics to be taught for a course, learning experience or training",
+			"maxLength": 300,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:LicensureFulfillmentCodeType": {
+			"description": "A code that indicates the degree to which the licensure requirements were met.",
+			"enum": [
+				"Complete",
+				"Partial",
+				"Contribute"
+			],
+			"type": "string"
+		},
+		"core:LicensureNameType": {
+			"description": "Free-form name of license or certification.",
+			"maxLength": 60,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:LicensurePassageDateType": {
+			"description": "Date of licensure passage",
+			"type": "string"
+		},
+		"core:LicensureType": {
+			"additionalProperties": false,
+			"description": "Licensure requirements satisfied by successful completion of this course",
+			"properties": {
+				"LicensureFulfillmentCode": {
+					"$ref": "#/definitions/core:LicensureFulfillmentCodeType",
+					"description": "A code that indicates the degree to which the licensure requirements were met."
+				},
+				"LicensureName": {
+					"items": {
+						"$ref": "#/definitions/core:LicensureNameType",
+						"description": "Free-form name of license or certification."
+					},
+					"type": "array"
+				},
+				"LicensurePassageDate": {
+					"items": {
+						"$ref": "#/definitions/core:LicensurePassageDateType",
+						"description": "Date of licensure passage"
+					},
+					"type": "array"
+				},
+				"LicensureStateProvinceCode": {
+					"$ref": "#/definitions/core:StateProvinceCodeType",
+					"description": "Code for US states and Canadian provinces."
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the licensure"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"core:LocalOrganizationIDCodeQualifierType": {
+			"description": "A code set that includes a code for states, possessions and territories of the United States of America and Canadian provinces.",
+			"enum": [
+				"AA",
+				"AB",
+				"AE",
+				"AK",
+				"AL",
+				"AP",
+				"AR",
+				"AS",
+				"AZ",
+				"BC",
+				"CA",
+				"CO",
+				"CT",
+				"CZ",
+				"DC",
+				"DE",
+				"FL",
+				"FM",
+				"GA",
+				"GU",
+				"HI",
+				"IA",
+				"ID",
+				"IL",
+				"IN",
+				"KS",
+				"KY",
+				"LA",
+				"MA",
+				"MB",
+				"MD",
+				"ME",
+				"MH",
+				"MI",
+				"MN",
+				"MO",
+				"MP",
+				"MS",
+				"MT",
+				"NB",
+				"NC",
+				"ND",
+				"NE",
+				"NF",
+				"NH",
+				"NJ",
+				"NL",
+				"NM",
+				"NS",
+				"NT",
+				"NU",
+				"NV",
+				"NY",
+				"OH",
+				"OK",
+				"ON",
+				"OR",
+				"PA",
+				"PE",
+				"PR",
+				"PW",
+				"QC",
+				"RI",
+				"SC",
+				"SD",
+				"SK",
+				"TN",
+				"TX",
+				"UT",
+				"VA",
+				"VI",
+				"VT",
+				"WA",
+				"WI",
+				"WV",
+				"WY",
+				"YT",
+				"ZZ"
+			],
+			"type": "string"
+		},
+		"core:LocalOrganizationIDCodeType": {
+			"description": "The code assigned for the sending school by the state, province or other mutually defined agency specified in the LocalIDQualifier that follows.",
+			"maxLength": 35,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:LocalOrganizationIDType": {
+			"additionalProperties": false,
+			"description": "A code set typically used by a state, province or region to further identify the sending school.",
+			"properties": {
+				"LocalOrganizationIDCode": {
+					"$ref": "#/definitions/core:LocalOrganizationIDCodeType",
+					"description": "The code assigned for the sending school by the state, province or other mutually defined agency specified in the LocalIDQualifier that follows."
+				},
+				"LocalOrganizationIDQualifier": {
+					"$ref": "#/definitions/core:LocalOrganizationIDCodeQualifierType",
+					"description": "This is the state, province or other mutually defined agency that assigned the Local ID Code above."
+				}
+			},
+			"required": [
+				"LocalOrganizationIDCode",
+				"LocalOrganizationIDQualifier"
+			],
+			"type": "object"
+		},
+		"core:MiddleNameType": {
+			"description": "A secondary name of the person, usually given at birth, baptism, or during another naming ceremony or through legal change",
+			"maxLength": 35,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:MutuallyDefinedType": {
+			"description": "This code set could be used by prior agreement with a previously agreed upon set of trading partners, usually within a state or province, or within a group of several states or provinces.",
+			"maxLength": 60,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:NCHELPIDType": {
+			"description": "The unique identifier assigned by National Council on Higher Education Loan Programs for each data exchange partner.",
+			"maxLength": 8,
+			"minLength": 3,
+			"type": "string"
+		},
+		"core:NSNIDType": {
+			"description": "Canadian National Student Number",
+			"type": "string"
+		},
+		"core:NameCodeType": {
+			"description": "This data element is used to describe the type of name included in this complex data element",
+			"enum": [
+				"Casual",
+				"Formal",
+				"Former",
+				"LawSchoolApplicationSource",
+				"Legal",
+				"MedicalSchoolApplicationSource",
+				"Nickname",
+				"Other"
+			],
+			"type": "string"
+		},
+		"core:NamePrefixType": {
+			"description": "An honorific, title or form of address that precedes the name.",
+			"maxLength": 30,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:NameSuffixType": {
+			"description": "The expression of an individual's generation within a family.",
+			"enum": [
+				"JR",
+				"SR",
+				"I",
+				"II",
+				"III",
+				"IV",
+				"V",
+				"VI",
+				"VII",
+				"VIII",
+				"IX",
+				"X"
+			],
+			"type": "string"
+		},
+		"core:NameTitleType": {
+			"description": "An honorific, title or credential that follows the name.",
+			"maxLength": 30,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:NameType": {
+			"additionalProperties": false,
+			"description": "The name of record of the student at the sending institution",
+			"properties": {
+				"CompositeName": {
+					"$ref": "#/definitions/core:CompositeNameType",
+					"description": "The full name of the person in Last NameSuffix, First Middle order; comma after last name or NameSuffix"
+				},
+				"FirstName": {
+					"$ref": "#/definitions/core:FirstNameType",
+					"description": "The first name of the person, usually given at birth, baptism, or during, another ceremony, or through legal change"
+				},
+				"LastName": {
+					"$ref": "#/definitions/core:LastNameType",
+					"description": "The last name or surname by which a person is legally known"
+				},
+				"MiddleName": {
+					"items": {
+						"$ref": "#/definitions/core:MiddleNameType",
+						"description": "A secondary name of the person, usually given at birth, baptism, or during another naming ceremony or through legal change"
+					},
+					"type": "array"
+				},
+				"NameCode": {
+					"$ref": "#/definitions/core:NameCodeType",
+					"description": "This data element is used to describe the type of name included in this complex data element"
+				},
+				"NamePrefix": {
+					"$ref": "#/definitions/core:NamePrefixType",
+					"description": "An honorific, title or form of address that precedes the name."
+				},
+				"NameSuffix": {
+					"$ref": "#/definitions/core:NameSuffixType",
+					"description": "The expression of an individual's generation within a family."
+				},
+				"NameTitle": {
+					"$ref": "#/definitions/core:NameTitleType",
+					"description": "An honorific, title or credential that follows the name."
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the student name"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"core:NoteMessageType": {
+			"description": "Additional information about transcript",
+			"maxLength": 80,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:OrganizationNameType": {
+			"description": "Name of Non-person entity such as Organization, Institution, Agency or Business.",
+			"maxLength": 60,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:OriginalCourseIDType": {
+			"description": "The course ID as it was listed when the credit was earned (e.g. before a system conversion) to show consistency between present transcripts and older ones. ",
+			"maxLength": 30,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:OverrideSchoolCourseNumberType": {
+			"description": "The course ID as it was listed at the school where the credit was earned",
+			"maxLength": 35,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:PSISType": {
+			"description": "The unique identifier assigned by the Statistics Canada Enhanced Student Information System for each data postsecondary exchange partner.",
+			"maxLength": 8,
+			"minLength": 8,
+			"type": "string"
+		},
+		"core:PSSType": {
+			"description": "The unique identifier assigned by the US Department of Education's National Center for Education Statistics for each private K-12 school data exchange partner.",
+			"maxLength": 8,
+			"minLength": 8,
+			"type": "string"
+		},
+		"core:PartialSSNType": {
+			"description": "The last four digits of the person's U.S. Social Security Number",
+			"pattern": "^([\\d]{4,4})$",
+			"type": "string"
+		},
+		"core:PhoneNumberExtensionType": {
+			"description": "The extended telephone addressing information used in addition to phone number such as a PBX extension, a pager PIN, or FAX sub-address",
+			"maxLength": 5,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:PhoneNumberType": {
+			"description": "Telephone number",
+			"maxLength": 11,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:PhoneType": {
+			"additionalProperties": false,
+			"description": "Phone number of source institution contact",
+			"properties": {
+				"AreaCityCode": {
+					"$ref": "#/definitions/core:AreaCityCodeType",
+					"description": "Regional dialing code"
+				},
+				"CountryPrefixCode": {
+					"$ref": "#/definitions/core:CountryPrefixCodeType",
+					"description": "International dialing code"
+				},
+				"EffectiveDate": {
+					"$ref": "#/definitions/core:AddressEffectiveDateType",
+					"description": "This the date when this phone information for the sending high school did or will become effective."
+				},
+				"ExpirationDate": {
+					"$ref": "#/definitions/core:AddressExpirationDateType",
+					"description": "This the date when this phone information for the sending high school will no longer be valid."
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the phone number of the contact at the source institution"
+					},
+					"type": "array"
+				},
+				"PhoneNumber": {
+					"$ref": "#/definitions/core:PhoneNumberType",
+					"description": "Telephone number"
+				},
+				"PhoneNumberExtension": {
+					"$ref": "#/definitions/core:PhoneNumberExtensionType",
+					"description": "The extended telephone addressing information used in addition to phone number such as a PBX extension, a pager PIN, or FAX sub-address"
+				}
+			},
+			"required": [
+				"PhoneNumber"
+			],
+			"type": "object"
+		},
+		"core:PositionTitleType": {
+			"description": "Title of this employment position",
+			"maxLength": 80,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:PostalCodeType": {
+			"description": "The postal code portion of the Address.",
+			"maxLength": 17,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:ProgramCIPCodeType": {
+			"description": "Code indicating a discipline or field of study assigned by the Classification of Instructional Programs for Postsecondary Institutions",
+			"maxLength": 20,
+			"minLength": 6,
+			"type": "string"
+		},
+		"core:ProgramCSISCodeType": {
+			"description": "Code indicating a discipline or field of study assigned by Statistics Canada Canadian College Student Information System",
+			"maxLength": 5,
+			"minLength": 5,
+			"type": "string"
+		},
+		"core:ProgramESISCodeType": {
+			"description": "Code indicating a discipline or field of study assigned by the Statistics Canada Enhanced Student Information System.",
+			"maxLength": 20,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:ProgramHEGISCodeType": {
+			"description": "Code indicating a discipline or field of study assigned by Higher Education General Information Survey",
+			"maxLength": 20,
+			"minLength": 6,
+			"type": "string"
+		},
+		"core:ProgramLocalCodeType": {
+			"description": "This is a code typically created and used within a school or school district",
+			"maxLength": 80,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:ProgramSecondarySchoolCodeType": {
+			"description": "Code indicating the type of secondary school program or award that a student is pursuing",
+			"enum": [
+				"CareerPrep",
+				"CollegePrep",
+				"CollegePrepOrCollegeTechPrep",
+				"CollegeTechPrep",
+				"General",
+				"Occupational",
+				"Vocational"
+			],
+			"type": "string"
+		},
+		"core:ProgramUSISCodeType": {
+			"description": "Code indicating a discipline or field of study assigned by the Statistics Canada University Student Information System.",
+			"maxLength": 5,
+			"minLength": 5,
+			"type": "string"
+		},
+		"core:RAPCodeType": {
+			"description": "Requirement demonstrated or earned in addition to or as part of an academic award.",
+			"maxLength": 3,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:RAPNameType": {
+			"description": "Literal name of requirement",
+			"maxLength": 60,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:RAPType": {
+			"additionalProperties": false,
+			"description": "However, it has 4 basic elements: RAPCode, RAPCodeQualifier, RAPName  and  RAPSubName.",
+			"properties": {
+				"ConditionsMetCode": {
+					"items": {
+						"$ref": "#/definitions/core:ConditionsMetCodeType",
+						"description": "Indicates whether and how conditions for the requirement have been attained."
+					},
+					"type": "array"
+				},
+				"ConditionsMetDate": {
+					"items": {
+						"$ref": "#/definitions/core:ConditionsMetDateType",
+						"description": "Date requirement was met."
+					},
+					"type": "array"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about RAP Code"
+					},
+					"type": "array"
+				},
+				"RAPCode": {
+					"items": {
+						"$ref": "#/definitions/core:RAPCodeType",
+						"description": "Requirement demonstrated or earned in addition to or as part of an academic award."
+					},
+					"type": "array"
+				},
+				"RAPName": {
+					"items": {
+						"$ref": "#/definitions/core:RAPNameType",
+						"description": "Literal name of requirement"
+					},
+					"type": "array"
+				},
+				"RAPSubName": {
+					"items": {
+						"$ref": "#/definitions/core:RAPNameType",
+						"description": "Literal name of subsection of requirement"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"core:RecipientAssignedIDType": {
+			"description": "Recipient Asigned Identifier Type",
+			"maxLength": 20,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:RequestTrackingIDType": {
+			"description": "The unique ID associated with a request action that is returned to the requestor for document matching and tracking.",
+			"maxLength": 35,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:ResidencyStatusCodeType": {
+			"description": "Declaration made by the claimant as to his or her permanent residency",
+			"enum": [
+				"InCity",
+				"InCounty",
+				"InDistrict",
+				"InState",
+				"NonResident",
+				"NotReported",
+				"OtherResident",
+				"Resident"
+			],
+			"type": "string"
+		},
+		"core:ResidencyType": {
+			"additionalProperties": false,
+			"description": "A code indicating where the student currently resides",
+			"properties": {
+				"StateProvinceCode": {
+					"$ref": "#/definitions/core:StateProvinceCodeType",
+					"description": "Code for US states, etc., and Canadian provinces."
+				}
+			},
+			"type": "object"
+		},
+		"core:SINIDType": {
+			"description": "The person's Canadian Social Insurance Number",
+			"maxLength": 9,
+			"minLength": 9,
+			"type": "string"
+		},
+		"core:SSNType": {
+			"description": "The person's U.S. Social Security Number",
+			"pattern": "^([\\d]{9,9})$",
+			"type": "string"
+		},
+		"core:SchoolAssignedPersonIDType": {
+			"description": "School Assigned Identifier Type",
+			"maxLength": 20,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:SchoolLevelType": {
+			"description": "Indicates level of Override School",
+			"enum": [
+				"Elementary",
+				"HighSchool",
+				"JuniorHigh",
+				"Middle",
+				"Other",
+				"Postsecondary",
+				"Secondary"
+			],
+			"type": "string"
+		},
+		"core:SchoolOverrideCodeType": {
+			"description": "The source of the academic credit if not awarded by the home or parent institution.Institutional - Institutional AgreementMulticampus - Multiple Campus         Course OfferingTransfer - Transfer CreditStudyAbroad - Study AbroadCoop - Cooperative ProgramReciprocal - Reciprocal ExchangeInternship - Internship",
+			"enum": [
+				"Institutional",
+				"Multicampus",
+				"Transfer",
+				"StudyAbroad",
+				"Coop",
+				"Reciprocal",
+				"Internship"
+			],
+			"type": "string"
+		},
+		"core:ScoreInvalidatedIndicatorType": {
+			"description": "Indicates if the score has been invalidated.  If true, score previously reported for this test and test date is not valid.",
+			"type": "boolean"
+		},
+		"core:ScoreRevisedIndicatorType": {
+			"description": "Indicates if the score report has been revised.  If true, score may differ from score previously reported for this test and test date.",
+			"type": "boolean"
+		},
+		"core:ScoreSelfreportedIndicatorType": {
+			"description": "Indicates if the score has been self-reported by the student.",
+			"type": "boolean"
+		},
+		"core:ScoreValueType": {
+			"description": "The actual value of the score received on the test",
+			"maxLength": 80,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:SessionBeginDateType": {
+			"description": "Actual calendar date when session begins.",
+			"type": "string"
+		},
+		"core:SessionDesignatorSuffixType": {
+			"description": "A free form extension to the session ID to differentiate discreet sub-sessions within the same session",
+			"maxLength": 10,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:SessionDesignatorType": {
+			"description": "The academic session for which the data are recorded and applicable.",
+			"type": "string"
+		},
+		"core:SessionEndDateType": {
+			"description": "Actual calendar date when session ends.",
+			"type": "string"
+		},
+		"core:SessionNameType": {
+			"description": "Free-form name of session.",
+			"maxLength": 30,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:SessionSchoolYearType": {
+			"description": "This is the range of years that are considered to be a school year.  ",
+			"pattern": "^([\\d]{4,4}\\-[\\d]{4,4})$",
+			"type": "string"
+		},
+		"core:SessionTypeType": {
+			"description": "Indicates the type of academic session at an educational institution.",
+			"enum": [
+				"FullYear",
+				"Semester",
+				"Trimester",
+				"Quarter",
+				"Quinmester",
+				"MiniTerm",
+				"SummerSession",
+				"Intersession",
+				"LongSession",
+				"FallSession",
+				"FourOneFourPlan",
+				"Continuous",
+				"DiffersByProgram",
+				"Other",
+				"TwelveMonth"
+			],
+			"type": "string"
+		},
+		"core:StateProvinceCodeType": {
+			"description": "Code for US states, etc., and Canadian provinces.",
+			"enum": [
+				"AA",
+				"AB",
+				"AE",
+				"AK",
+				"AL",
+				"AP",
+				"AR",
+				"AS",
+				"AZ",
+				"BC",
+				"CA",
+				"CO",
+				"CT",
+				"CZ",
+				"DC",
+				"DE",
+				"FL",
+				"FM",
+				"GA",
+				"GU",
+				"HI",
+				"IA",
+				"ID",
+				"IL",
+				"IN",
+				"KS",
+				"KY",
+				"LA",
+				"MA",
+				"MB",
+				"MD",
+				"ME",
+				"MH",
+				"MI",
+				"MN",
+				"MO",
+				"MP",
+				"MS",
+				"MT",
+				"NB",
+				"NC",
+				"ND",
+				"NE",
+				"NF",
+				"NH",
+				"NJ",
+				"NL",
+				"NM",
+				"NS",
+				"NT",
+				"NU",
+				"NV",
+				"NY",
+				"OH",
+				"OK",
+				"ON",
+				"OR",
+				"PA",
+				"PE",
+				"PR",
+				"PW",
+				"QC",
+				"RI",
+				"SC",
+				"SD",
+				"SK",
+				"TN",
+				"TX",
+				"UT",
+				"VA",
+				"VI",
+				"VT",
+				"WA",
+				"WI",
+				"WV",
+				"WY",
+				"YT"
+			],
+			"type": "string"
+		},
+		"core:StateProvinceType": {
+			"description": "The literal name of the state, province or territory of a postal address of the source of this document. Use for addresses outside US or Canada.",
+			"maxLength": 30,
+			"minLength": 2,
+			"type": "string"
+		},
+		"core:StudentLevelCodeType": {
+			"description": "The current grade level of the student or the highest grade level attained by the student at the time the record was created.",
+			"enum": [
+				"Infant",
+				"PreKindergarten",
+				"HalfDayKindergarten",
+				"Kindergarten",
+				"FirstGrade",
+				"SecondGrade",
+				"ThirdGrade",
+				"FourthGrade",
+				"FifthGrade",
+				"SixthGrade",
+				"SeventhGrade",
+				"EighthGrade",
+				"NinthGrade",
+				"TenthGrade",
+				"EleventhGrade",
+				"TwelfthGrade",
+				"Grade13",
+				"Postsecondary",
+				"PostsecondaryBachelorPreliminaryYear",
+				"NonDegree",
+				"CollegeFirstYear",
+				"CollegeFirstYearAttendedBefore",
+				"CollegeSophomore",
+				"CollegeJunior",
+				"CollegeSenior",
+				"CollegeFifthYear",
+				"PostBaccalaureate",
+				"GraduateNonDegree",
+				"GraduateFirstYear",
+				"GraduateSecondYear",
+				"GraduateThirdYear",
+				"GraduateBeyondThirdYear",
+				"Professional",
+				"ProfessionalFirstYear",
+				"ProfessionalSecondYear",
+				"ProfessionalThirdYear",
+				"ProfessionalBeyondThirdYear",
+				"MastersQualifying",
+				"Masters",
+				"Doctoral",
+				"Postdoctoral",
+				"Ungraded",
+				"NoFormalSchool"
+			],
+			"type": "string"
+		},
+		"core:StudentLevelType": {
+			"additionalProperties": false,
+			"description": "Used to indicate the grade level of the student at the time the transcript is being sent, or the last grade level of the student.",
+			"properties": {
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the student's grade level"
+					},
+					"type": "array"
+				},
+				"StudentLevelCode": {
+					"$ref": "#/definitions/core:StudentLevelCodeType",
+					"description": "The current grade level of the student or the highest grade level attained by the student at the time the record was created."
+				}
+			},
+			"required": [
+				"StudentLevelCode"
+			],
+			"type": "object"
+		},
+		"core:SubtestCodeType": {
+			"description": "Code identifying the sub-part of a standardized test (e.g. Quantitative, Verbal).  These codes are the older codes originally included in the EDI transaction sets.  They are tied to each individual test.  ",
+			"maxLength": 5,
+			"minLength": 2,
+			"type": "string"
+		},
+		"core:SubtestNameType": {
+			"description": "Name of the sub-part of a standardized test",
+			"maxLength": 60,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:SubtestsType": {
+			"additionalProperties": false,
+			"description": "A logical grouping of subtest information.",
+			"properties": {
+				"EducationSubtestCode": {
+					"$ref": "#/definitions/core:EducationSubtestCodeType",
+					"description": "Code identifying the sub-part of a standardized test (e.g. Quantitative, Verbal).  These codes are the newer codes used in the XML Education Test Score Reporting and the Application for Admission schemas.  They are tied to each individual test.  "
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about assesssment subtests"
+					},
+					"type": "array"
+				},
+				"SubtestCode": {
+					"$ref": "#/definitions/core:SubtestCodeType",
+					"description": "Code identifying the sub-part of a standardized test (e.g. Quantitative, Verbal).  These codes are the older codes originally included in the EDI transaction sets.  They are tied to each individual test. "
+				},
+				"SubtestName": {
+					"$ref": "#/definitions/core:SubtestNameType",
+					"description": "Name of the sub-part of a standardized test"
+				},
+				"TestScores": {
+					"items": {
+						"$ref": "#/definitions/core:TestScoreType",
+						"description": "The score received on the test"
+					},
+					"minItems": 1,
+					"type": "array"
+				}
+			},
+			"required": [
+				"TestScores"
+			],
+			"type": "object"
+		},
+		"core:SupplementalGradeCodeType": {
+			"description": "The type of component grade that is being included for an education course",
+			"enum": [
+				"BiCourseGrade",
+				"BlendedFinalGrade",
+				"ExamGrade",
+				"InstructorAssignedGrade",
+				"SubSessionGrade",
+				"TriCourseGrade"
+			],
+			"type": "string"
+		},
+		"core:SupplementalGradeSubSessionType": {
+			"description": "This is the numeric count of the subsession of a course.  The earliest subsession would have the value of \"1\".  The next would be \"2\", etc.  Each would be a positive whole number.",
+			"minimum": 1,
+			"type": "integer"
+		},
+		"core:TestCodeType": {
+			"description": "Code identifying the test in the older EDI version of Test Codes ",
+			"maxLength": 5,
+			"minLength": 2,
+			"type": "string"
+		},
+		"core:TestDateType": {
+			"description": "Date of the test",
+			"type": "string"
+		},
+		"core:TestNameType": {
+			"description": "Name identifying the test",
+			"maxLength": 60,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:TestScoreMethodType": {
+			"description": "Code identifying the method used to measure and report the test scores",
+			"enum": [
+				"Scaled",
+				"Graded",
+				"Standard",
+				"Raw",
+				"Percent",
+				"Mastery",
+				"Adjective",
+				"Stanine",
+				"Percentile",
+				"NormalCurve",
+				"Equated",
+				"Local"
+			],
+			"type": "string"
+		},
+		"core:TestScoreType": {
+			"additionalProperties": false,
+			"description": "Codes identifying the method used to measure and report the test scores.",
+			"properties": {
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about assessment test scores"
+					},
+					"type": "array"
+				},
+				"ScoreInvalidatedIndicator": {
+					"$ref": "#/definitions/core:ScoreInvalidatedIndicatorType",
+					"description": "Indicates if the score has been invalidated.  If true, score previously reported for this test and test date is not valid."
+				},
+				"ScoreRevisedIndicator": {
+					"$ref": "#/definitions/core:ScoreRevisedIndicatorType",
+					"description": "Indicates if the score report has been revised.  If true, score may differ from score previously reported for this test and test date."
+				},
+				"ScoreSelfreportedIndicator": {
+					"$ref": "#/definitions/core:ScoreSelfreportedIndicatorType",
+					"description": "Indicates if the score has been self-reported by the student."
+				},
+				"ScoreValue": {
+					"$ref": "#/definitions/core:ScoreValueType",
+					"description": "The actual value of the score received on the test"
+				},
+				"TestScoreMethod": {
+					"$ref": "#/definitions/core:TestScoreMethodType",
+					"description": "Code identifying the method used to measure and report the test scores"
+				}
+			},
+			"required": [
+				"ScoreValue"
+			],
+			"type": "object"
+		},
+		"core:TestYearMonthType": {
+			"description": "Date of the test when only the month and year are available",
+			"type": "string"
+		},
+		"core:TestYearType": {
+			"description": "Date of the test when only the year is available",
+			"type": "string"
+		},
+		"core:TestsType": {
+			"additionalProperties": false,
+			"description": "Academic and achievement test data",
+			"properties": {
+				"EducationTestCode": {
+					"$ref": "#/definitions/core:EducationTestCodeType",
+					"description": "Code identifying the test in the newer XML version of Test Codes"
+				},
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the test"
+					},
+					"type": "array"
+				},
+				"StudentLevel": {
+					"$ref": "#/definitions/core:StudentLevelType",
+					"description": "The classification of the student at the time the student took the test"
+				},
+				"Subtest": {
+					"items": {
+						"$ref": "#/definitions/core:SubtestsType",
+						"description": "Subdivision of a standardized test "
+					},
+					"minItems": 1,
+					"type": "array"
+				},
+				"TestCode": {
+					"$ref": "#/definitions/core:TestCodeType",
+					"description": "Code identifying the test in the older EDI version of Test Codes "
+				},
+				"TestDate": {
+					"$ref": "#/definitions/core:TestDateType",
+					"description": "Date of the test"
+				},
+				"TestName": {
+					"$ref": "#/definitions/core:TestNameType",
+					"description": "Name identifying the test"
+				},
+				"TestYear": {
+					"$ref": "#/definitions/core:TestYearType",
+					"description": "Date of the test when only the year is available"
+				},
+				"TestYearMonth": {
+					"$ref": "#/definitions/core:TestYearMonthType",
+					"description": "Date of the test when only the month and year are available"
+				}
+			},
+			"required": [
+				"Subtest"
+			],
+			"type": "object"
+		},
+		"core:ThesisDissertationAdvisorType": {
+			"description": "The advisor (Major Professor) supervising the Thesis or Dissertation on behalf of the student earning the degree.",
+			"maxLength": 45,
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:ThesisDissertationTitleType": {
+			"description": "The title of the thesis or dissertation.",
+			"minLength": 1,
+			"type": "string"
+		},
+		"core:TotalQualityPointsType": {
+			"description": "The total value of quality points used for the calculation of the Grade Point Average.",
+			"type": "number"
+		},
+		"core:TransmissionTypeType": {
+			"description": "The nature of the transmission",
+			"enum": [
+				"Duplicate",
+				"MutuallyDefined",
+				"Original",
+				"Reissue",
+				"Replace",
+				"Resubmission"
+			],
+			"type": "string"
+		},
+		"core:URLAddressType": {
+			"description": "The Uniform Resource Locator (URL) address of the sending high school or of a contact at the sending high school",
+			"maxLength": 512,
+			"minLength": 0,
+			"type": "string"
+		},
+		"core:URLType": {
+			"additionalProperties": false,
+			"description": "The Uniform Resource Locator of source institution",
+			"properties": {
+				"NoteMessage": {
+					"items": {
+						"$ref": "#/definitions/core:NoteMessageType",
+						"description": "Additional information about the URL address of the source institution"
+					},
+					"type": "array"
+				},
+				"URLAddress": {
+					"$ref": "#/definitions/core:URLAddressType",
+					"description": "The Uniform Resource Locator (URL) address of the sending high school or of a contact at the sending high school"
+				}
+			},
+			"required": [
+				"URLAddress"
+			],
+			"type": "object"
+		},
+		"core:USISType": {
+			"description": "The unique identifier assigned by the Statistics Canada University Student Information System for each data postsecondary exchange partner.",
+			"maxLength": 6,
+			"minLength": 6,
+			"type": "string"
+		},
+		"core:UserDefinedExtensionsType": {
+			"additionalProperties": false,
+			"description": "Additional structured information. Requires mutually defined XML schema.",
+			"patternProperties": {
+				"^\\w+$": {
+				}
+			},
+			"type": "object"
+		},
+		"iso_3166-1:CountryAlpha2CodeSimpleType": {
+			"description": "A data type for country, territory, or dependency codes.",
+			"enum": [
+				"AD",
+				"AE",
+				"AF",
+				"AG",
+				"AI",
+				"AL",
+				"AM",
+				"AO",
+				"AQ",
+				"AR",
+				"AS",
+				"AT",
+				"AU",
+				"AW",
+				"AX",
+				"AZ",
+				"BA",
+				"BB",
+				"BD",
+				"BE",
+				"BF",
+				"BG",
+				"BH",
+				"BI",
+				"BJ",
+				"BL",
+				"BM",
+				"BN",
+				"BO",
+				"BQ",
+				"BR",
+				"BS",
+				"BT",
+				"BV",
+				"BW",
+				"BY",
+				"BZ",
+				"CA",
+				"CC",
+				"CD",
+				"CF",
+				"CG",
+				"CH",
+				"CI",
+				"CK",
+				"CL",
+				"CM",
+				"CN",
+				"CO",
+				"CR",
+				"CU",
+				"CV",
+				"CW",
+				"CX",
+				"CY",
+				"CZ",
+				"DE",
+				"DJ",
+				"DK",
+				"DM",
+				"DO",
+				"DZ",
+				"EC",
+				"EE",
+				"EG",
+				"EH",
+				"ER",
+				"ES",
+				"ET",
+				"FI",
+				"FJ",
+				"FK",
+				"FM",
+				"FO",
+				"FR",
+				"GA",
+				"GB",
+				"GD",
+				"GE",
+				"GF",
+				"GG",
+				"GH",
+				"GI",
+				"GL",
+				"GM",
+				"GN",
+				"GP",
+				"GQ",
+				"GR",
+				"GS",
+				"GT",
+				"GU",
+				"GW",
+				"GY",
+				"HK",
+				"HM",
+				"HN",
+				"HR",
+				"HT",
+				"HU",
+				"ID",
+				"IE",
+				"IL",
+				"IM",
+				"IN",
+				"IO",
+				"IQ",
+				"IR",
+				"IS",
+				"IT",
+				"JE",
+				"JM",
+				"JO",
+				"JP",
+				"KE",
+				"KG",
+				"KH",
+				"KI",
+				"KM",
+				"KN",
+				"KP",
+				"KR",
+				"KW",
+				"KY",
+				"KZ",
+				"LA",
+				"LB",
+				"LC",
+				"LI",
+				"LK",
+				"LR",
+				"LS",
+				"LT",
+				"LU",
+				"LV",
+				"LY",
+				"MA",
+				"MC",
+				"MD",
+				"ME",
+				"MF",
+				"MG",
+				"MH",
+				"MK",
+				"ML",
+				"MM",
+				"MN",
+				"MO",
+				"MP",
+				"MQ",
+				"MR",
+				"MS",
+				"MT",
+				"MU",
+				"MV",
+				"MW",
+				"MX",
+				"MY",
+				"MZ",
+				"NA",
+				"NC",
+				"NE",
+				"NF",
+				"NG",
+				"NI",
+				"NL",
+				"NO",
+				"NP",
+				"NR",
+				"NU",
+				"NZ",
+				"OM",
+				"PA",
+				"PE",
+				"PF",
+				"PG",
+				"PH",
+				"PK",
+				"PL",
+				"PM",
+				"PN",
+				"PR",
+				"PS",
+				"PT",
+				"PW",
+				"PY",
+				"QA",
+				"RE",
+				"RO",
+				"RS",
+				"RU",
+				"RW",
+				"SA",
+				"SB",
+				"SC",
+				"SD",
+				"SE",
+				"SG",
+				"SH",
+				"SI",
+				"SJ",
+				"SK",
+				"SL",
+				"SM",
+				"SN",
+				"SO",
+				"SR",
+				"SS",
+				"ST",
+				"SV",
+				"SX",
+				"SY",
+				"SZ",
+				"TC",
+				"TD",
+				"TF",
+				"TG",
+				"TH",
+				"TJ",
+				"TK",
+				"TL",
+				"TM",
+				"TN",
+				"TO",
+				"TR",
+				"TT",
+				"TV",
+				"TW",
+				"TZ",
+				"UA",
+				"UG",
+				"UM",
+				"US",
+				"UY",
+				"UZ",
+				"VA",
+				"VC",
+				"VE",
+				"VG",
+				"VI",
+				"VN",
+				"VU",
+				"WF",
+				"WS",
+				"YE",
+				"YT",
+				"ZA",
+				"ZM",
+				"ZW"
+			],
+			"type": "string"
+		},
+		"xs:decimal": {
+			"type": "number"
+		},
+		"xs:string": {
+			"type": "string"
+		}
+	},
+	"description": "JSON Schema generated by XMLSpy v2019 rel. 3 (x64) (http://www.altova.com)",
+	"properties": {
+		"@xmlns:AcRec": {
+			"default": "urn:org:pesc:sector:AcademicRecord:v1.13.0"
+		},
+		"@xmlns:ColTrn": {
+			"default": "urn:org:pesc:message:CollegeTranscript:v1.8.0"
+		},
+		"@xmlns:core": {
+			"default": "urn:org:pesc:core:CoreMain:v1.19.0"
+		},
+		"@xmlns:iso_3166-1": {
+			"default": "urn:org:pesc:codes:iso_3166-1:v1.0.0"
+		},
+		"@xmlns:xs": {
+			"default": "http://www.w3.org/2001/XMLSchema"
+		},
+		"ColTrn:CollegeTranscript": {
+			"$ref": "#/definitions/.ColTrn:CollegeTranscript"
+		}
+	},
+	"type": "object"
+}
