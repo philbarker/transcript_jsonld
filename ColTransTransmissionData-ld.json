@@ -1,7 +1,7 @@
 {
   "@context": {
     "schema": "http://schema.org/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ceterms": "https://purl.org/ctdl/terms/",
     "@vocab": "http://example.org/vocab/",
     "ColTrn": "http://example.org/vocab/",
     "@base": "http://example.edu/entities/",
@@ -18,6 +18,9 @@
       "@id": "@type",
       "@type": "@id"
     },
+    "CreatedDateTime": {
+      "@id": "ceterms:dateCreated"
+    },
     "Source": {
       "@id": "source",
       "@container": "@type"
@@ -25,7 +28,23 @@
     "Destination": {
       "@id": "destination",
       "@container": "@type"
-    }
+    },
+    "Contacts": "ceterms:ContactPoint",
+    "Organization": {
+      "@id": "ceterms:CredentialOrganization"
+    },
+    "OrganizationName": {
+      "@id": "ceterms:name"
+    },
+    "LocalOrganizationID": "ceterms:identifier",
+    "LocalOrganizationIDCode": "ceterms:identifierValueCode",
+    "LocalOrganizationIDQualifier": "ceterms:identifierTypeName",
+    "URL": "@nest",
+    "URLAddress": "ceterms:subjectWebpage",
+    "Email": "@nest",
+    "EmailAddress": "ceterms:email",
+    "Accreditation": "ceterms:accreditedBy",
+    "AccreditingBodyName": "ceterms:name"
   },
   "ColTrn:CollegeTranscript": {
     "TransmissionData": {
