@@ -1,0 +1,49 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "ceterms": "https://purl.org/ctdl/terms/",
+    "@vocab": "http://example.org/vocab/",
+    "ColTrn": "http://example.org/vocab/",
+    "@base": "http://example.edu/entities/",
+    "type": {
+      "@id": "@type",
+      "@type": "@id"
+    },
+    "TransmissionData": "@nest",
+    "DocumentID": {
+      "@id": "@id",
+      "@type": "@id"
+    },
+    "DocumentTypeCode": {
+      "@id": "@type",
+      "@type": "@id"
+    },
+    "CreatedDateTime": {
+      "@id": "ceterms:dateCreated"
+    },
+    "Source": {
+      "@id": "source",
+      "@container": "@type"
+    },
+    "Destination": {
+      "@id": "destination",
+      "@container": "@type"
+    },
+    "Contacts": "ceterms:ContactPoint",
+    "Organization": {
+      "@id": "ceterms:CredentialOrganization"
+    },
+    "OrganizationName": {
+      "@id": "ceterms:name"
+    },
+    "LocalOrganizationID": "ceterms:identifier",
+    "LocalOrganizationIDCode": "ceterms:identifierValueCode",
+    "LocalOrganizationIDQualifier": "ceterms:identifierTypeName",
+    "URL": "@nest",
+    "URLAddress": "ceterms:subjectWebpage",
+    "Email": "@nest",
+    "EmailAddress": "ceterms:email",
+    "Accreditation": "ceterms:accreditedBy",
+    "AccreditingBodyName": "ceterms:name"
+  }
+}
