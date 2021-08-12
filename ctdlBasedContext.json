@@ -1,0 +1,7 @@
+{
+  "@context": {
+    "ceterms": "https://purl.org/ctdl/terms/",
+    "@vocab": "http://example.org/vocab/",
+    "@base": "http://example.edu/entities/"
+  }
+}
