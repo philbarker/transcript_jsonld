@@ -3,13 +3,11 @@
     "schema": "http://schema.org/",
     "ceterms": "https://purl.org/ctdl/terms/",
     "@vocab": "http://example.org/vocab/",
-    "ColTrn": "http://example.org/vocab/",
     "@base": "http://example.edu/entities/",
     "type": {
       "@id": "@type",
       "@type": "@id"
     },
-    "TransmissionData": "@nest",
     "DocumentID": {
       "@id": "@id",
       "@type": "@id"
@@ -25,10 +23,6 @@
       "@id": "source",
       "@container": "@type"
     },
-    "Destination": {
-      "@id": "destination",
-      "@container": "@type"
-    },
     "Contacts": "ceterms:ContactPoint",
     "Organization": {
       "@id": "ceterms:CredentialOrganization"
@@ -39,87 +33,70 @@
     "LocalOrganizationID": "ceterms:identifier",
     "LocalOrganizationIDCode": "ceterms:identifierValueCode",
     "LocalOrganizationIDQualifier": "ceterms:identifierTypeName",
-    "URL": "@nest",
+    "Address": "@nest",
     "URLAddress": "ceterms:subjectWebpage",
-    "Email": "@nest",
+    "City": "ceterms:Locality",
+    "AddressLine": "ceterms:streetAddress",
+    "PostalCode": "ceterms:postalCode",
+    "StateProvinceCode": "ceterms:addressRegion",
     "EmailAddress": "ceterms:email",
     "Accreditation": "ceterms:accreditedBy",
     "AccreditingBodyName": "ceterms:name"
   },
-  "ColTrn:CollegeTranscript": {
-    "TransmissionData": {
-      "DocumentID": "050330001",
-      "CreatedDateTime": "2005-02-02T10:04:29-05:00",
-      "DocumentTypeCode": "RequestedRecord",
-      "TransmissionType": "Original",
-      "Source": {
-        "Organization": {
-          "ATP": "006882",
-          "LocalOrganizationID": {
-            "LocalOrganizationIDCode": "123456",
-            "LocalOrganizationIDQualifier": "TX"
-          },
-          "OrganizationName": [
-            "THE UNIVERSITY OF TEXAS AT AUSTIN"
-          ],
-          "Contacts": [
-            {
-              "Address": [
-                {
-                  "AddressLine": [
-                    "Office of the Registrar"
-                  ],
-                  "City": "Austin",
-                  "StateProvinceCode": "TX",
-                  "PostalCode": "78712",
-                  "AttentionLine": [
-                    "Jane Shaugness"
-                  ]
-                }
-              ],
-              "Phone": [
-                {
-                  "AreaCityCode": "512",
-                  "PhoneNumber": "4757638"
-                }
-              ],
-              "FaxPhone": [
-                {
-                  "AreaCityCode": "512",
-                  "PhoneNumber": "4757600"
-                }
-              ],
-              "Email": [
-                {
-                  "EmailAddress": "Registrar@mail.utexas.edu"
-                }
-              ],
-              "URL": [
-                {
-                  "URLAddress": "www.utexas.edu"
-                }
-              ]
-            }
-          ],
-          "Accreditation": {
-            "AccreditingBodyCode": "SACS",
-            "AccreditingBodyName": "Southern Association of Colleges and Schools"
+  "CollegeTranscript": {
+    "DocumentID": "050330001",
+    "CreatedDateTime": "2005-02-02T10:04:29-05:00",
+    "DocumentTypeCode": "RequestedRecord",
+    "Source": {
+      "Organization": {
+        "ATP": "006882",
+        "LocalOrganizationID": {
+          "LocalOrganizationIDCode": "123456",
+          "LocalOrganizationIDQualifier": "TX"
+        },
+        "OrganizationName": [
+          "THE UNIVERSITY OF TEXAS AT AUSTIN"
+        ],
+        "Contacts": [
+          {
+            "Address": [
+              {
+                "AddressLine": [
+                  "Office of the Registrar"
+                ],
+                "City": "Austin",
+                "StateProvinceCode": "TX",
+                "PostalCode": "78712",
+                "AttentionLine": [
+                  "Jane Shaugness"
+                ]
+              }
+            ],
+            "Phone": [
+              {
+                "AreaCityCode": "512",
+                "PhoneNumber": "4757638"
+              }
+            ],
+            "FaxPhone": [
+              {
+                "AreaCityCode": "512",
+                "PhoneNumber": "4757600"
+              }
+            ],
+            "EmailAddress": [
+              "Registrar@mail.utexas.edu"
+            ],
+            "URLAddress": [
+              "www.utexas.edu"
+            ]
           }
+        ],
+        "Accreditation": {
+          "AccreditingBodyCode": "SACS",
+          "AccreditingBodyName": "Southern Association of Colleges and Schools"
         }
-      },
-      "Destination": {
-        "Organization": {
-          "FICE": "001506",
-          "LocalOrganizationID": {
-            "LocalOrganizationIDCode": "1234",
-            "LocalOrganizationIDQualifier": "FL"
-          },
-          "OrganizationName": [
-            "Miami Dade College"
-          ]
-        }
-      },
-      "RequestTrackingID": "23456778009"
+      }
     },
     "Student": {}
   }

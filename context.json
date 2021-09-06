@@ -3,13 +3,11 @@
     "schema": "http://schema.org/",
     "ceterms": "https://purl.org/ctdl/terms/",
     "@vocab": "http://example.org/vocab/",
-    "ColTrn": "http://example.org/vocab/",
     "@base": "http://example.edu/entities/",
     "type": {
       "@id": "@type",
       "@type": "@id"
     },
-    "TransmissionData": "@nest",
     "DocumentID": {
       "@id": "@id",
       "@type": "@id"
@@ -25,10 +23,6 @@
       "@id": "source",
       "@container": "@type"
     },
-    "Destination": {
-      "@id": "destination",
-      "@container": "@type"
-    },
     "Contacts": "ceterms:ContactPoint",
     "Organization": {
       "@id": "ceterms:CredentialOrganization"
@@ -39,9 +33,12 @@
     "LocalOrganizationID": "ceterms:identifier",
     "LocalOrganizationIDCode": "ceterms:identifierValueCode",
     "LocalOrganizationIDQualifier": "ceterms:identifierTypeName",
-    "URL": "@nest",
+    "Address": "@nest",
     "URLAddress": "ceterms:subjectWebpage",
-    "Email": "@nest",
+    "City": "ceterms:Locality",
+    "AddressLine": "ceterms:streetAddress",
+    "PostalCode": "ceterms:postalCode",
+    "StateProvinceCode": "ceterms:addressRegion",
     "EmailAddress": "ceterms:email",
     "Accreditation": "ceterms:accreditedBy",
     "AccreditingBodyName": "ceterms:name"
