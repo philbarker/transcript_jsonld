@@ -23,7 +23,7 @@
       "@id": "source",
       "@container": "@type"
     },
-    "Contacts": "ceterms:ContactPoint",
+    "Contacts": "schema:address",
     "Organization": {
       "@id": "ceterms:CredentialOrganization"
     },
