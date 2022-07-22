@@ -1,0 +1,1530 @@
+0,shapeID,propertyID,propertyLabel,mandatory,repeatable,valueNodeType,valueDataType,valueConstraint,valueConstraintType,valueShape,Rec Usage,note
+235,AcademicAwardProgramShape,pesc:programCIPCode,Program CIP Code,FALSE,FALSE,Literal,xsd:string,6..20,lengthRange,,Not Recommended,
+237,AcademicAwardProgramShape,pesc:programHEGISCode,Program HEGIS Code,FALSE,FALSE,Literal,xsd:string,6..20,lengthRange,,Recommended,
+239,AcademicAwardProgramShape,pesc:programCSISCode,Program CSIS Code,FALSE,FALSE,Literal,xsd:string,5..5,lengthRange,,Optional,
+241,AcademicAwardProgramShape,pesc:programUSISCode,Program USIS Code,FALSE,FALSE,Literal,xsd:string,5..5,lengthRange,,Optional,
+243,AcademicAwardProgramShape,pesc:programESISCode,Program ESIS Code,FALSE,FALSE,Literal,xsd:string,1..20,lengthRange,,Optional,
+245,AcademicAwardProgramShape,pesc:programLocalCode,Program Local Code,FALSE,FALSE,Literal,xsd:string,1..20,lengthRange,,Not Recommended,
+250,AcademicAwardProgramShape,pesc:academicProgramName,Academic Program Name,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Recommended,
+233,AcademicAwardProgramShape,pesc:programSecondarySchoolCode,Program Secondary School Code,FALSE,FALSE,IRI,,"pescSecondarySchoolCodes:CareerPrep
+pescSecondarySchoolCodes:CollegePrep
+pescSecondarySchoolCodes:CollegePrepOrCollegeTechPrep
+pescSecondarySchoolCodes:CollegeTechPrep
+pescSecondarySchoolCodes:General
+pescSecondarySchoolCodes:Occupational
+pescSecondarySchoolCodes:Vocational",picklist,,Not Recommended,
+247,AcademicAwardProgramShape,pesc:academicProgramType,Academic Program Type,FALSE,FALSE,IRI,,"pescAcademicProgramTypes:Concentration
+pescAcademicProgramTypes:Focus
+pescAcademicProgramTypes:Major
+pescAcademicProgramTypes:Minor
+pescAcademicProgramTypes:SecondMajor
+pescAcademicProgramTypes:Specialization",picklist,,Recommended,
+213,AcademicAwardProgramShape,pesc:userDefinedExtensions,User Defined Extensions,FALSE,FALSE,IRI BNODE,,,,__UserDefinedExtensionsShape,Optional,
+251,AcademicAwardProgramShape,pesc:_ProgramSummary,Program Summary,FALSE,FALSE,IRI BNODE,,,,ProgramSummaryShape,Optional,
+224,AcademicAwardShape,pesc:academicAwardTitle,Academic Award Title,FALSE,FALSE,Literal,xsd:string,400,maxLength,,Recommended,
+222,AcademicAwardShape,pesc:academicAwardLevel,Academic Award Level,FALSE,FALSE,IRI,,"pescAcademicAwardLevels:1.1
+pescAcademicAwardLevels:1.2
+pescAcademicAwardLevels:2.0
+pescAcademicAwardLevels:2.1
+pescAcademicAwardLevels:2.2
+pescAcademicAwardLevels:2.3
+pescAcademicAwardLevels:2.4
+pescAcademicAwardLevels:2.5
+pescAcademicAwardLevels:2.6
+pescAcademicAwardLevels:2.7
+pescAcademicAwardLevels:3.1
+pescAcademicAwardLevels:3.2
+pescAcademicAwardLevels:4.1
+pescAcademicAwardLevels:4.2
+pescAcademicAwardLevels:4.3
+pescAcademicAwardLevels:4.4
+pescAcademicAwardLevels:4.5
+pescAcademicAwardLevels:FrenchBaccalaureate
+pescAcademicAwardLevels:CEGEP",picklist,,Recommended,
+223,AcademicAwardShape,pesc:academicAwardDate,Academic Award Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,ccyy-mm-dd
+225,AcademicAwardShape,pesc:academicCompletionIndicator,Academic Completion Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,Recommended,true/false
+226,AcademicAwardShape,pesc:academicCompletionDate,Academic Completion Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,ccyy-mm-dd
+227,AcademicAwardShape,pesc:_AcademicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,Recommended,
+232,AcademicAwardShape,pesc:_AcademicAwardProgram,Academic Award Program,FALSE,TRUE,IRI BNODE,,,,AcademicAwardProgramShape,Recommended,
+277,AcademicAwardShape,pesc:_AcademicDegreeRequirement,Academic Degree Requirement,FALSE,TRUE,IRI BNODE,,,,AcademicDegreeRequirementShape,Recommended,
+136,AcademicDegreeRequirementShape,pesc:urlAddress,URL Address,FALSE,FALSE,Literal,xsd:anyURI,512,maxLength,,Recommended,URL of thesis / dissertation. Consider renaming this class
+278,AcademicDegreeRequirementShape,pesc:thesisDIssertationTitle,Thesis Dissertation Title,FALSE,FALSE,Literal,xsd:string,400,maxLength,,Recommended,
+279,AcademicDegreeRequirementShape,pesc:thesisDissertationAdvisor,Thesis Dissertation Advisor,FALSE,FALSE,Literal,xsd:string,45,maxLength,,Optional,
+280,AcademicDegreeRequirementShape,pesc:_URLAddress,URL Address 2,FALSE,FALSE,Literal,xsd:anyURI,512,maxLength,,Recommended,
+230,AcademicHonorsShape,pesc:HonorsTitle,Honors Title,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Recommended,
+231,AcademicHonorsShape,pesc:honorsLevel,Honors Level,FALSE,FALSE,IRI,,"pescHonorsLevels:FirstHighest
+pescHonorsLevels:SecondHighest
+pescHonorsLevels:ThirdHighest",picklist,,Recommended,
+236,AcademicProgramShape,pesc:programCIPCode,Program CIP Code,FALSE,FALSE,Literal,xsd:string,5..7,lengthRange,,Recommended,
+238,AcademicProgramShape,pesc:programHEGISCode,Program HEGIS Code,FALSE,FALSE,Literal,xsd:string,6..20,lengthRange,,Recommended,
+240,AcademicProgramShape,pesc:programCSISCode,Program CSIS Code,FALSE,FALSE,Literal,xsd:string,5..5,lengthRange,,Optional,
+242,AcademicProgramShape,pesc:programUSISCode,Program USIS Code,FALSE,FALSE,Literal,xsd:string,5..5,lengthRange,,Optional,
+244,AcademicProgramShape,pesc:programESISCode,Program ESIS Code,FALSE,FALSE,Literal,xsd:string,1..20,lengthRange,,Recommended,
+246,AcademicProgramShape,pesc:programLocalCode,Program Local Code,FALSE,FALSE,Literal,xsd:string,1..20,lengthRange,,Not Recommended,
+249,AcademicProgramShape,pesc:academicProgramName,Academic Program Name,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Optional,
+234,AcademicProgramShape,pesc:programSecondarySchoolCode,Program Secondary School Code,FALSE,FALSE,IRI,,"pescSecondarySchoolCodes:CareerPrep
+pescSecondarySchoolCodes:CollegePrep
+pescSecondarySchoolCodes:CollegePrepOrCollegeTechPrep
+pescSecondarySchoolCodes:CollegeTechPrep
+pescSecondarySchoolCodes:General
+pescSecondarySchoolCodes:Occupational
+pescSecondarySchoolCodes:Vocational",picklist,,Not Recommended,
+248,AcademicProgramShape,pesc:academicProgramType,Academic Program Type,FALSE,FALSE,IRI,,"pescAcademicProgramTypes:Concentration
+pescAcademicProgramTypes:Focus
+pescAcademicProgramTypes:Major
+pescAcademicProgramTypes:Minor
+pescAcademicProgramTypes:SecondMajor
+pescAcademicProgramTypes:Specialization",picklist,,Recommended,
+217,AcademicProgramShape,pesc:userDefinedExtensions,User Defined Extensions,FALSE,FALSE,IRI BNODE,,,,__UserDefinedExtensionsShape,Optional,
+198,AcademicRecordShape,pesc:cohortGraduationYear,Cohort Graduation Year,FALSE,FALSE,Literal,xsd:date,,maxLength,,Not Recommended,ccyy
+199,AcademicRecordShape,pesc:school,School,FALSE,FALSE,IRI BNODE,,,,SchoolShape,Optional,
+201,AcademicRecordShape,pesc:studentLevel,Student Level,FALSE,FALSE,IRI,,"pescStudentLevelCodes:Postsecondary
+pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear
+pescStudentLevelCodes:NonDegree
+pescStudentLevelCodes:Grade13
+pescStudentLevelCodes:Ungraded
+pescStudentLevelCodes:CollegeFirstYear
+pescStudentLevelCodes:CollegeFirstYearAttendedBefore
+pescStudentLevelCodes:CollegeSophomore
+pescStudentLevelCodes:CollegeJunior
+pescStudentLevelCodes:CollegeSenior
+pescStudentLevelCodes:CollegeFifthYear
+pescStudentLevelCodes:PostBaccalaureate
+pescStudentLevelCodes:GraduateNonDegree
+pescStudentLevelCodes:GraduateFirstYear
+pescStudentLevelCodes:GraduateSecondYear
+pescStudentLevelCodes:GraduateThirdYear
+pescStudentLevelCodes:GraduateBeyondThirdYear
+pescStudentLevelCodes:Professional
+pescStudentLevelCodes:ProfessionalFirstYear
+pescStudentLevelCodes:ProfessionalSecondYear
+pescStudentLevelCodes:ProfessionalThirdYear
+pescStudentLevelCodes:ProfessionalBeyondThirdYear
+pescStudentLevelCodes:MastersQualifying
+pescStudentLevelCodes:Masters
+pescStudentLevelCodes:Doctoral
+pescStudentLevelCodes:Postdoctoral",picklist,,Recommended,
+204,AcademicRecordShape,pesc:academicAward,Academic Award,FALSE,TRUE,IRI BNODE,,,,AcademicAwardShape,Recommended,
+206,AcademicRecordShape,pesc:academicSummary,Academic Summary,FALSE,TRUE,IRI BNODE,,,,AcademicSummaryShape,Recommended,
+208,AcademicRecordShape,pesc:academicSession,Academic Session,FALSE,TRUE,IRI BNODE,,,,AcademicSessionShape,Recommended,
+209,AcademicRecordShape,pesc:course,Course,FALSE,TRUE,IRI BNODE,,,,CourseShape,Optional,
+211,AcademicRecordShape,pesc:additionalStudentAchievements,Additional Student Achievements,FALSE,TRUE,IRI BNODE,,,,AdditionalStudentAchievmentShape,Optional,
+212,AcademicRecordShape,pesc:userDefinedExtensions,User Defined Extensions,FALSE,FALSE,IRI BNODE,,,,__UserDefinedExtensionsShape,Optional,
+284,AcademicSessionDetailShape,pesc:sessionDesignatorSuffix,Session Designator Suffix,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
+285,AcademicSessionDetailShape,pesc:sessionName,Session Name,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Recommended,
+286,AcademicSessionDetailShape,pesc:sessionType,Session Type,FALSE,FALSE,IRI,,"pescSessionTypes:FullYear
+pescSessionTypes:Semester
+pescSessionTypes:Trimester
+pescSessionTypes:Quarter
+pescSessionTypes:Quinmester
+pescSessionTypes:MiniTerm
+pescSessionTypes:SummerSession
+pescSessionTypes:Intersession
+pescSessionTypes:LongSession
+pescSessionTypes:FallSession
+pescSessionTypes:FourOneFourPlan
+pescSessionTypes:Continuous
+pescSessionTypes:DiffersByProgram
+pescSessionTypes:Other
+pescSessionTypes:TwelveMonth",picklist,,Recommended,
+283,AcademicSessionDetailShape,pesc:sessionDesignator,Session Designator,TRUE,FALSE,Literal,xsd:date,,,,Required,
+287,AcademicSessionDetailShape,pesc:sessionSchoolYear,Session School Year,FALSE,FALSE,Literal,xsd:date,,,,Optional,ccyy-ccyy
+288,AcademicSessionDetailShape,pesc:sessionBeginDate,Session Begin Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
+289,AcademicSessionDetailShape,pesc:sessionEndDate,Session End Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
+200,AcademicSessionShape,pesc:school,School,FALSE,FALSE,IRI BNODE,,,,SchoolShape,Optional,
+202,AcademicSessionShape,pesc:studentLevel,Student Level,FALSE,FALSE,IRI,,"pescStudentLevelCodes:Postsecondary
+pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear
+pescStudentLevelCodes:NonDegree
+pescStudentLevelCodes:Grade13
+pescStudentLevelCodes:Ungraded
+pescStudentLevelCodes:CollegeFirstYear
+pescStudentLevelCodes:CollegeFirstYearAttendedBefore
+pescStudentLevelCodes:CollegeSophomore
+pescStudentLevelCodes:CollegeJunior
+pescStudentLevelCodes:CollegeSenior
+pescStudentLevelCodes:CollegeFifthYear
+pescStudentLevelCodes:PostBaccalaureate
+pescStudentLevelCodes:GraduateNonDegree
+pescStudentLevelCodes:GraduateFirstYear
+pescStudentLevelCodes:GraduateSecondYear
+pescStudentLevelCodes:GraduateThirdYear
+pescStudentLevelCodes:GraduateBeyondThirdYear
+pescStudentLevelCodes:Professional
+pescStudentLevelCodes:ProfessionalFirstYear
+pescStudentLevelCodes:ProfessionalSecondYear
+pescStudentLevelCodes:ProfessionalThirdYear
+pescStudentLevelCodes:ProfessionalBeyondThirdYear
+pescStudentLevelCodes:MastersQualifying
+pescStudentLevelCodes:Masters
+pescStudentLevelCodes:Doctoral
+pescStudentLevelCodes:Postdoctoral",,,Optional,
+205,AcademicSessionShape,pesc:academicAward,Academic Award,FALSE,TRUE,IRI BNODE,,,,AcademicAwardShape,Optional,
+207,AcademicSessionShape,pesc:academicSummary,Academic Summary,FALSE,TRUE,IRI BNODE,,,,AcademicSummaryShape,Optional,
+210,AcademicSessionShape,pesc:course,Course,FALSE,TRUE,IRI BNODE,,,,CourseShape,Recommended,
+216,AcademicSessionShape,pesc:userDefinedExtensions,User Defined Extensions,FALSE,FALSE,IRI BNODE,,,,__UserDefinedExtensionsShape,Optional,
+282,AcademicSessionShape,pesc:_AcademicSessionDetail,Academic Session Detail,TRUE,FALSE,IRI BNODE,,,,AcademicSessionDetailShape,Required,
+259,AcademicSummaryShape,pesc:classRank,Class Rank,FALSE,FALSE,Literal,xsd:string,4,maxLength,,Not Recommended,
+354,AcademicSummaryShape,pesc:exitReasonCode,Exit Reason Code,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Not Recommended,
+355,AcademicSummaryShape,pesc:classRankSessionCount,Class Rank Session count,FALSE,FALSE,Literal,xsd:string,4,maxLength,,Not Recommended,
+255,AcademicSummaryShape,pesc:academicSummaryType,Academic Summary Type,FALSE,FALSE,IRI,,"pescAcademicSummaryTypes:All
+pescAcademicSummaryTypes:SenderOnly
+pescAcademicSummaryTypes:TransferOnly
+pescAcademicSummaryTypes:AllNotRepeated
+pescAcademicSummaryTypes:SenderNotRepeated
+pescAcademicSummaryTypes:TransferNotRepeated
+pescAcademicSummaryTypes:AcademicRenewal
+pescAcademicSummaryTypes:CarryoverCredit
+pescAcademicSummaryTypes:DegreeApplicable
+pescAcademicSummaryTypes:NonDegreeApplicable
+pescAcademicSummaryTypes:ConvertedFrom
+pescAcademicSummaryTypes:ConvertedTo
+pescAcademicSummaryTypes:UserDefined
+pescAcademicSummaryTypes:Weighted
+pescAcademicSummaryTypes:NonWeighted
+pescAcademicSummaryTypes:Cumulative",picklist,,Optional,
+257,AcademicSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescAcademicSummaryLevels:LowerDivision
+pescAcademicSummaryLevels:UpperDivision
+pescAcademicSummaryLevels:Vocational
+pescAcademicSummaryLevels:TechnicalPreparatory
+pescAcademicSummaryLevels:Graduate
+pescAcademicSummaryLevels:Professional
+pescAcademicSummaryLevels:Dual
+pescAcademicSummaryLevels:Ungraded
+pescAcademicSummaryLevels:DualHighSchoolCollege
+pescAcademicSummaryLevels:Grade13
+pescAcademicSummaryLevels:DualGraduateUndergraduate
+pescAcademicSummaryLevels:GraduateProfessional",picklist,,Recommended,
+215,AcademicSummaryShape,pesc:userDefinedExtensions,User Defined Extensions,FALSE,FALSE,IRI BNODE,,,,__UserDefinedExtensionsShape,Optional,
+229,AcademicSummaryShape,pesc:_AcademicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,Recommended,
+253,AcademicSummaryShape,pesc:highSchoolCreditSummary,High School Credit Summary,FALSE,FALSE,Literal,rdf:langString,,,,Not Recommended,
+264,AcademicSummaryShape,pesc:exitDate,Exit Date,FALSE,FALSE,,,,,,,no exit date in Academic Summary
+266,AcademicSummaryShape,pesc:_GPA,GPA,FALSE,FALSE,IRI BNODE,,,,GPAShape,Recommended,
+281,AcademicSummaryShape,pesc:_AcademicProgram,Academic Program,FALSE,FALSE,IRI BNODE,,,,AcademicProgramShape,Not Recommended,
+352,AcademicSummaryShape,pesc:entryDate,Entry Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
+353,AcademicSummaryShape,pesc:exitDate,Exit Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
+356,AcademicSummaryShape,pesc:classRankDate,Class Rank Date,FALSE,FALSE,Literal,xsd:date,,,,Not Recommended,
+357,AcademicSummaryShape,pesc:classRankYear,Class Rank Year,FALSE,FALSE,Literal,xsd:date,,,,Not Recommended,
+358,AcademicSummaryShape,pesc:classRankYearMonth,Class Rank Year Month,FALSE,FALSE,Literal,xsd:date,,,,Not Recommended,
+12,AccreditationShape,pesc:__NoteMessage,__ Note Message,FALSE,TRUE,Literal,,1..80,lengthRange,,Not Recommended,
+138,AccreditationShape,pesc:accreditingBodyName,Accrediting Body Name,FALSE,FALSE,Literal,xsd:string,80,maxLength,,Optional,
+137,AccreditationShape,pesc:accreditationBodyCode,Accrediation Body Code,FALSE,FALSE,Literal,xsd:string,MSA NCA-HLC NCA-CASI NEASC-CIHE NEASC-CTCI NWCCU SACS WASC-ACCJC WASC-ACSCU Other,picklist,,Optional,"pesc.core.AccreditationBodyName   Keep as text, will probably change how this is modelled so that you cna point to an organization"
+7,AddressShape,pesc:__NoteMessage,__ Note Message,FALSE,TRUE,Literal,,1..80,lengthRange,,Not Recommended,
+123,AddressShape,pesc:attentionLine,Attention Line,FALSE,TRUE,Literal,xsd:string,45,maxLength,,Optional,
+110,AddressShape,pesc:addressLine,Address Line,TRUE,TRUE,Literal,xsd:string,,,,Required,pesc:core:CommonAddressDetailsGroup
+111,AddressShape,pesc:city,City,TRUE,FALSE,Literal,xsd:string,,,,Required,pesc:core:CommonAddressDetailsGroup
+112,AddressShape,pesc:stateProvinceCode,State Province Code,TRUE,FALSE,Literal,xsd:string,,,,Required,"pesc:core:DomesticAddressDetailsGroup
+pesc:core:InternationalAddressDetailsGroup"
+115,AddressShape,pesc:postalCode,Postal Code,FALSE,FALSE,Literal,xsd:string,,,,Required,"pesc:core:DomesticAddressDetailsGroup
+pesc:core:InternationalAddressDetailsGroup"
+116,AddressShape,pesc:countryCode,Country Code,TRUE,FALSE,Literal,xsd:string,,,,Required,pesc:core:InternationalAddressDetailsGroup
+119,AddressShape,pesc:effeciveDate,Effective Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
+120,AddressShape,pesc:expirationDate,Expiration Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
+153,AgencyIdentifierShape,pesc:agencyName,Agency Name,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Required,
+152,AgencyIdentifierShape,pesc:agencyCode,Agency Code,FALSE,FALSE,IRI,,"pescAgencyCodes:District
+pescAgencyCodes:Migrant
+pescAgencyCodes:MutuallyDefined
+pescAgencyCodes:National
+pescAgencyCodes:Regional
+pescAgencyCodes:State",picklist,,Required,
+113,AgencyIdentifierShape,pesc:stateProvinceCode,State Province Code,FALSE,FALSE,Literal,xsd:string,,,,Optional,"pesc:core:DomesticAddressDetailsGroup
+pesc:core:InternationalAddressDetailsGroup"
+117,AgencyIdentifierShape,pesc:countryCode,Country Code,FALSE,FALSE,Literal,xsd:string,,,,Optional,pesc:core:InternationalAddressDetailsGroup
+166,AlternateNameShape,pesc:namePrefix,Name Prefix,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Recommended,
+168,AlternateNameShape,pesc:firstName,First Name,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Recommended,
+170,AlternateNameShape,pesc:middleName,Middle Name,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Recommended,
+172,AlternateNameShape,pesc:lastName,Last Name,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Recommended,
+176,AlternateNameShape,pesc:nameTitle,Name Title,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Not Recommended,
+178,AlternateNameShape,pesc:compositeName,Composite Name,FALSE,FALSE,Literal,xsd:string,45,maxLength,,Not Recommended,
+174,AlternateNameShape,pesc:nameSuffix,Name Suffix,FALSE,FALSE,Literal,xsd:string,"JR
+SR
+I
+II
+III
+IV
+V
+VI
+VII
+VIII
+IX
+X",picklist,,Recommended,
+3,CollegeTranscriptShape,pesc:__NoteMessage,__ Note Message,FALSE,TRUE,Literal,,1..80,lengthRange,,Not Recommended,
+1,CollegeTranscriptShape,pesc:__TransmissionData,__ Transmission Data,TRUE,FALSE,IRI BNODE,,,,TransmissionDataShape,Required,
+2,CollegeTranscriptShape,pesc:student,student,TRUE,FALSE,IRI BNODE,,,,StudentShape,Required,
+15,CollegeTranscriptShape,pesc:__UserDefinedExtension,__ User Defined Extension,FALSE,FALSE,IRI BNODE,,,,__UserDefinedExtensionsShape,Optional,"Need a property name different from the class name.
+Used singular-form instead of plural-form for consistency."
+6,ContactsShape,sdo:contactType,Contact Type,FALSE,TRUE,Literal,xsd:string,1..80,lengthRange,,Optional,
+104,ContactsShape,pesc:__Address,__ Address,FALSE,TRUE,IRI BNODE,,,,AddressShape,Recommended,Change property to Address and class name to PostalAddress
+106,ContactsShape,pesc:_Phone,_Phone,FALSE,TRUE,IRI BNODE,,,,PhoneShape,Optional,
+107,ContactsShape,pesc:_FAXPhone,_FAXPhone,FALSE,TRUE,IRI BNODE,,,,PhoneShape,Optional,
+108,ContactsShape,pesc:email,Email Address,FALSE,TRUE,Literal,xsd:string,,,,Optional,
+109,ContactsShape,pesc:url,URL,FALSE,TRUE,Literal,xsd:anyURI,,,,Optional,
+304,CourseShape,pesc:courseSCEDcode,Course SCED Code,FALSE,FALSE,Literal,xsd:string,12..12,lengthRange,,Not Recommended,
+305,CourseShape,pesc:courseFiveDigitSCEDCode,Course Five Digit SCED Code,FALSE,FALSE,Literal,xsd:string,5..5,lengthRange,,Optional,
+296,CourseShape,pesc:courseAcademicGrade,Course Academic Grade,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Recommended,
+298,CourseShape,pesc:courseNarrativeExplanationGrade,Course Narrative Explanation Grade,FALSE,FALSE,Literal,xsd:string,200,maxLength,,Not Recommended,
+300,CourseShape,pesc:courseCIPCode,Course CIP Code,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
+301,CourseShape,pesc:courseCSISCode,Course CSIS Code,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
+302,CourseShape,pesc:courseUSISCode,Course USIS Code,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
+303,CourseShape,pesc:courseNCESCode,Course NCES Code,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Not Recommended,
+310,CourseShape,pesc:courseSubjectAbbreviation,Course Subject Abbreviation,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
+311,CourseShape,pesc:courseNumber,Course Number,FALSE,FALSE,Literal,xsd:string,15,maxLength,,Recommended,
+312,CourseShape,pesc:courseSectionNumber,Course Section Number,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
+313,CourseShape,pesc:originalCourseID,Original Course ID,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Recommended,
+314,CourseShape,pesc:agencyCourseID,Agency Course ID,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Optional,
+315,CourseShape,pesc:courseTitle,Course Title,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Recommended,
+319,CourseShape,pesc:overrideSchoolCourseNumber,Override School Course Number,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Optional,
+324,CourseShape,pesc:courseInstructionSiteName,Course Instruction Site Name,FALSE,FALSE,Literal,xsd:string,30,maxLength,,,
+290,CourseShape,pesc:courseCreditBasis,Course Credit Basis,TRUE,FALSE,IRI,,"pescCreditBasis:Regular
+pescCreditBasis:AcademicRenewal
+pescCreditBasis:AdvancedPlacement
+pescCreditBasis:AdvancedStanding
+pescCreditBasis:ContinuingEducation
+pescCreditBasis:Correspondence
+pescCreditBasis:Exemption
+pescCreditBasis:Equivalence
+pescCreditBasis:InternationalBaccalaureate
+pescCreditBasis:Military
+pescCreditBasis:Remedial
+pescCreditBasis:CreditByExam
+pescCreditBasis:HighSchoolTransferCredit
+pescCreditBasis:HighSchoolCreditOnly
+pescCreditBasis:HighSchoolDualCredit
+pescCreditBasis:JuniorHighSchoolCredit
+pescCreditBasis:Major
+pescCreditBasis:AdultBasic",picklist,,Required,
+291,CourseShape,pesc:courseCreditUnits,Course Credit Units,FALSE,FALSE,IRI,,"pescCreditUnits:NoCredit
+pescCreditUnits:Quarter
+pescCreditUnits:Semester
+pescCreditUnits:Units
+pescCreditUnits:ClockHours
+pescCreditUnits:CarnegieUnits
+pescCreditUnits:ContinuingEducationUnits
+pescCreditUnits:Unreported
+pescCreditUnits:Other",picklist,,Recommended,
+292,CourseShape,pesc:courseCreditLevel,Course Credit Level,FALSE,FALSE,IRI,,"pescCreditLevels:Undergraduate
+pescCreditLevels:LowerDivision
+pescCreditLevels:UpperDivision
+pescCreditLevels:Vocational
+pescCreditLevels:TechnicalPreparatory
+pescCreditLevels:Graduate
+pescCreditLevels:Professional
+pescCreditLevels:Dual
+pescCreditLevels:Grade13
+pescCreditLevels:DualGraduateUndergraduate
+pescCreditLevels:GraduateProfessional
+pescCreditLevels:Ungraded",picklist,,Recommended,
+295,CourseShape,pesc:courseAcademicGradeScaleCode,Course Academic Grade Scale Code,FALSE,FALSE,Literal,xsd:string,,picklist,,Recommended,"pesc:Appendix H Very long list. Need to handle out of spreadsheet, maybe use regular expression for valid codes"
+297,CourseShape,pesc:courseAcademicGradeStatusCode,Course Academic Grade Status Code,FALSE,FALSE,IRI,,"pescGradeStatusCodes:AuditedCourse
+pescGradeStatusCodes:HonorsGrade
+pescGradeStatusCodes:Incomplete
+pescGradeStatusCodes:IncompleteNotResolvedFail
+pescGradeStatusCodes:InProgress
+pescGradeStatusCodes:NotYetReported
+pescGradeStatusCodes:OtherFail
+pescGradeStatusCodes:OtherPass
+pescGradeStatusCodes:PassFailFail
+pescGradeStatusCodes:PassFailPass
+pescGradeStatusCodes:TransferNoGrade
+pescGradeStatusCodes:Withdrew
+pescGradeStatusCodes:WithdrewFailing
+pescGradeStatusCodes:WithdrewNoPenalty
+pescGradeStatusCodes:WithdrewPassing",picklist,,Recommended,
+299,CourseShape,pesc:courseRepeatCode,Course Repeat Code,FALSE,FALSE,IRI,,"pescRepeatCodes:RepeatCounted
+pescRepeatCodes:RepeatNotCounted
+pescRepeatCodes:ReplacementCounted
+pescRepeatCodes:ReplacedNotCounted
+pescRepeatCodes:RepeatOtherInstitution
+pescRepeatCodes:NotCountedOther",picklist,,Recommended,
+306,CourseShape,pesc:courseSubjectAreaCode,Course Subject Area Code,FALSE,FALSE,IRI,,"pescSubjectCodes:EnglishLanguageLiterature
+pescSubjectCodes:Mathematics
+pescSubjectCodes:LifePhysicalSciences
+pescSubjectCodes:SocialSciencesHistory
+pescSubjectCodes:FinePerformingArts
+pescSubjectCodes:ForeignLanguageLiterature
+pescSubjectCodes:ReligiousEducationTheology
+pescSubjectCodes:PhysicalHealthSafetyEducation
+pescSubjectCodes:MilitaryScience
+pescSubjectCodes:ComputerInformationSciences
+pescSubjectCodes:CommunicationsAudioVisualTechnology
+pescSubjectCodes:BusinessMarketing
+pescSubjectCodes:Manufacturing
+pescSubjectCodes:HealthCareSciences
+pescSubjectCodes:PublicProtectiveGovernmentService
+pescSubjectCodes:HospitalityTourism
+pescSubjectCodes:ArchitectureConstruction
+pescSubjectCodes:AgriculturefoodNaturalResources
+pescSubjectCodes:HumanServices
+pescSubjectCodes:TransportationDistributionLogistics
+pescSubjectCodes:EngineeringTechnology
+pescSubjectCodes:Miscellaneous
+pescSubjectCodes:SpecialExceptionalEducationServices",picklist,,Optional,
+308,CourseShape,pesc:courseLevel,Course Level,FALSE,FALSE,IRI,,"pescCourseLevels:Accelerated
+pescCourseLevels:AdultBasic
+pescCourseLevels:AdvancedPlacement
+pescCourseLevels:Basic
+pescCourseLevels:InternationalBaccalaureate
+pescCourseLevels:CollegeLevel
+pescCourseLevels:CollegePreparatory
+pescCourseLevels:Dual
+pescCourseLevels:GiftedTalented
+pescCourseLevels:GraduateProfessional
+pescCourseLevels:Honors
+pescCourseLevels:LowerDivision
+pescCourseLevels:NonAcademic
+pescCourseLevels:Regents
+pescCourseLevels:Remedial
+pescCourseLevels:SpecialEducation
+pescCourseLevels:TechnicalPreparatory
+pescCourseLevels:UpperDivision
+pescCourseLevels:Vocational",picklist,,Recommended,
+309,CourseShape,pesc:courseGPAAplicabilityCode,Course GPA Applicability Code,FALSE,FALSE,IRI,,"pescGPAAplicabilityCodes:Applicable
+pescGPAAplicabilityCodes:NotApplicable
+pescGPAAplicabilityCodes:Weighted",picklist,,Optional,
+320,CourseShape,pesc:courseApplicability,Course Applicability,FALSE,FALSE,IRI,,"pescCourseApplicabilityCodes:NotApplicable
+pescCourseApplicabilityCodes:FirstProgram
+pescCourseApplicabilityCodes:SecondProgram
+pescCourseApplicabilityCodes:BothPrograms",picklist,,Not Recommended,
+323,CourseShape,pesc:courseInstructionSite,Course Instruction Site,FALSE,FALSE,IRI,,"pescInstructionSiteCodes:OnCampus
+pescInstructionSiteCodes:OffCampus
+pescInstructionSiteCodes:Extension
+pescInstructionSiteCodes:StudyAbroad
+pescInstructionSiteCodes:Correctional
+pescInstructionSiteCodes:Millitary
+pescInstructionSiteCodes:Telecommunication
+pescInstructionSiteCodes:Auxiliary
+pescInstructionSiteCodes:ClinicHospital",picklist,,Optional,
+218,CourseShape,pesc:userDefinedExtensions,User Defined Extensions,FALSE,FALSE,IRI BNODE,,,,__UserDefinedExtensionsShape,Optional,
+293,CourseShape,pesc:courseCreditValue,Course Credit Value,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
+294,CourseShape,pesc:courseCreditEarned,Course Credit Earned,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
+307,CourseShape,pesc:courseQualityPointsEarned,Course Quality Points Earned,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
+316,CourseShape,pesc:courseAddDate,Course Add Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
+317,CourseShape,pesc:courseDropDate,Course Drop Date,FALSE,FALSE,Literal,xsd:date,,,,,
+318,CourseShape,pesc:courseOverrideSchool,Course Override School,FALSE,FALSE,IRI BNODE,,,,OrganizationShape,Optional,
+321,CourseShape,pesc:courseBeginDate,Course Begin Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
+322,CourseShape,pesc:courseEndDate,Course End Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
+325,CourseShape,pesc:courseSupplementalGrade,Course Supplemental Grade,FALSE,FALSE,IRI BNODE,,,,CourseSupplementalGradeShape,Required,
+331,CourseShape,pesc:Requirement,Requirement,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
+332,CourseShape,pesc:Attribute,Attribute,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
+333,CourseShape,pesc:Proficiency,Proficiency,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
+349,CourseShape,pesc:licensure,Licensure,FALSE,TRUE,IRI BNODE,,,,LicensureShape,Optional,
+327,CourseSupplementalGradeShape,pesc:supplementalSubSession,Supplemental Grade Sub Session,FALSE,FALSE,Literal,xsd:string,3,maxLength,,Optional,numeric count of the subsession of a course
+328,CourseSupplementalGradeShape,pesc:courseAcademicSupplementalGradeScaleCode,Course Academic Supplemental Grade Scale Code,FALSE,FALSE,Literal,xsd:string,3,maxLength,,Optional,
+330,CourseSupplementalGradeShape,pesc:courseAcademicSupplementalGrade,Course Academic Supplemental Grade,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
+326,CourseSupplementalGradeShape,pesc:supplementalGradeCode,Supplemental Grade Code,FALSE,FALSE,IRI,,"pescSupplementalGradeCodes:BiCourseGrade
+pescSupplementalGradeCodes:BlendedFinalGrade
+pescSupplementalGradeCodes:ExamGrade
+pescSupplementalGradeCodes:InstructorAssignedGrade
+pescSupplementalGradeCodes:SubSessionGrade
+pescSupplementalGradeCodes:TriCourseGrade",picklist,,Recommended,
+329,CourseSupplementalGradeShape,pesc:courseAcademicSupplementalGradeStatusCode,Course Academic Supplemental Grade Status Code,FALSE,FALSE,IRI,,"pescGradeStatusCodes:AuditedCourse
+pescGradeStatusCodes:HonorsGrade
+pescGradeStatusCodes:Incomplete
+pescGradeStatusCodes:IncompleteNotResolvedFail
+pescGradeStatusCodes:InProgress
+pescGradeStatusCodes:NotYetReported
+pescGradeStatusCodes:OtherFail
+pescGradeStatusCodes:OtherPass
+pescGradeStatusCodes:PassFailFail
+pescGradeStatusCodes:PassFailPass
+pescGradeStatusCodes:TransferNoGrade
+pescGradeStatusCodes:Withdrew
+pescGradeStatusCodes:WithdrewFailing
+pescGradeStatusCodes:WithdrewNoPenalty
+pescGradeStatusCodes:WithdrewPassing",picklist,,Optional,
+9,FAXPhoneShape,pesc:__NoteMessage,__ Note Message,FALSE,TRUE,Literal,,1..80,lengthRange,,Not Recommended,
+127,FAXPhoneShape,pesc:countryPrefixCode,Country Prefix Code,FALSE,FALSE,Literal,xsd:string,3,maxLength,,Optional,
+129,FAXPhoneShape,pesc:areaCityCode,Area City Code,FALSE,FALSE,Literal,xsd:string,5,maxLength,,Recommended,
+131,FAXPhoneShape,pesc:phoneNumber,Phone Number,TRUE,FALSE,Literal,xsd:string,11,maxLength,,Required,
+133,FAXPhoneShape,pesc:phoneNumberExtension,Phone Number Extension,FALSE,FALSE,Literal,xsd:string,5,maxLength,,Optional,
+122,FAXPhoneShape,pesc:expirationDate,Expiration Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
+125,FAXPhoneShape,pesc:attentionLine,Attention Line,,,,,,,,,no attention line in Phone or FAXPhone
+271,GPAShape,pesc:creditUnit,Credit Unit,FALSE,FALSE,IRI,,"pescCreditUnits:NoCredit
+pescCreditUnits:Quarter
+pescCreditUnits:Semester
+pescCreditUnits:Units
+pescCreditUnits:ClockHours
+pescCreditUnits:CarnegieUnits
+pescCreditUnits:ContinuingEducationUnits
+pescCreditUnits:Unreported
+pescCreditUnits:Other",picklist,,,
+267,GPAShape,pesc:creditHoursAttempted,Credit Hours Attempted,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
+268,GPAShape,pesc:creditHoursEarned,Credit Hours Earned,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
+269,GPAShape,pesc:creditHoursRequired,Credit Hours Required,FALSE,FALSE,Literal,xsd:decimal,,,,Not Recommended,decimal
+270,GPAShape,pesc:creditHoursDeficient,Credit Hours Deficient,FALSE,FALSE,Literal,xsd:decimal,,,,Not Recommended,decimal
+272,GPAShape,pesc:gradePointAverage,Grade Point Average,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
+273,GPAShape,pesc:totalQualityPoints,Total Quality Points,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
+274,GPAShape,pesc:creditHoursGPA,Credit Hours GPA,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
+275,GPAShape,pesc:gpaRangeMinimum,GPA Range Minimum,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
+276,GPAShape,pesc:gpaRangeMaximum,GPA Range Maximum,FALSE,FALSE,Literal,xsd:decimal,,,,Recommended,decimal
+361,ImmunizationsShape,pesc:immunizationCode,Immunization Code,FALSE,FALSE,Literal,xsd:string,20,maxLength,,Recommended,
+362,ImmunizationsShape,pesc:immunizationStateCode,Immunization Status Code,FALSE,FALSE,IRI,,"pescImmunizationStateCodes:FirstInnoculation
+pescImmunizationStateCodes:SecondInnoculation
+pescImmunizationStateCodes:ThirdInnoculation
+pescImmunizationStateCodes:FourthInnoculation
+pescImmunizationStateCodes:FifthInnoculation
+pescImmunizationStateCodes:SixthInnoculation
+pescImmunizationStateCodes:SeventhInnoculation
+pescImmunizationStateCodes:EighthInnoculation
+pescImmunizationStateCodes:NinthInnoculation
+pescImmunizationStateCodes:HadTheDisease
+pescImmunizationStateCodes:MedicalExemption
+pescImmunizationStateCodes:PersonalExemption
+pescImmunizationStateCodes:ReligiousExemption",picklist,,Recommended,
+360,ImmunizationsShape,pesc:immunizationDate,Immunization Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,
+193,LanguageOfInstructionShape,pesc:languageCode,Language Code,FALSE,FALSE,Literal,xsd:string,,picklist,,Recommended,pesc:appendix C1 or pesc:appendix C2
+197,LanguageOfInstructionShape,pesc:languageUsage,Language Usage,FALSE,FALSE,IRI,,"pescLanguageUsageCodes:FirstSpokenlanguage
+pescLanguageUsageCodes:Native
+pescLanguageUsageCodes:Reading
+pescLanguageUsageCodes:Speaking
+pescLanguageUsageCodes:SpokenAtHome
+pescLanguageUsageCodes:Writing
+pescLanguageUsageCodes:WrittenCommunication",picklist,,Recommended,
+195,LanguageOfInstructionShape,pesc:languageProficiency,Language Proficiency,FALSE,FALSE,,,,,,,no language proficiency in Language of Instruction
+192,LanguageShape,pesc:languageCode,Language Code,FALSE,FALSE,Literal,xsd:string,,picklist,,Optional,pesc:appendix C1 or pesc:appendix C2
+194,LanguageShape,pesc:languageProficiency,Language Proficiency,FALSE,FALSE,IRI,,"pescLanguageProficiencyCodes:EnglishOnly
+pescLanguageProficiencyCodes:FullyEnglishProficient
+pescLanguageProficiencyCodes:LimitedEnglishProficiency
+pescLanguageProficiencyCodes:NonEnglishSpeaking
+pescLanguageProficiencyCodes:RedesignatedFluentEnglishProficient
+pescLanguageProficiencyCodes:Excellent
+pescLanguageProficiencyCodes:Good
+pescLanguageProficiencyCodes:Fair
+pescLanguageProficiencyCodes:Poor
+pescLanguageProficiencyCodes:Unacceptable
+pescLanguageProficiencyCodes:Unknown",picklist,,Optional,
+196,LanguageShape,pesc:languageUsage,Language Usage,FALSE,FALSE,IRI,,"pescLanguageUsageCodes:FirstSpokenlanguage
+pescLanguageUsageCodes:Native
+pescLanguageUsageCodes:Reading
+pescLanguageUsageCodes:Speaking
+pescLanguageUsageCodes:SpokenAtHome
+pescLanguageUsageCodes:Writing
+pescLanguageUsageCodes:WrittenCommunication",picklist,,Optional,
+350,LicensureShape,pesc:licensureName,Licensure Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Recommended,
+351,LicensureShape,pesc:licensurePassageDate,Licensure Passage Date,FALSE,TRUE,Literal,xsd:date,,,,Optional,
+100,LocalOrganizationIDShape,pesc:localOrganizationIDCode,Local Organization ID Code,TRUE,FALSE,Literal,xsd:string,35,maxLength,,Required,
+102,LocalOrganizationIDShape,pesc:localOrganizationIDQualifier,Local Organization ID Qualifier,TRUE,FALSE,Literal,xsd:string,,,,Required,pesc:LocalOrganizationIDQualifierCategory
+165,NameShape,pesc:namePrefix,Name Prefix,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Not Recommended,
+167,NameShape,pesc:firstName,First Name,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Recommended,
+169,NameShape,pesc:middleName,Middle Name,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Recommended,
+171,NameShape,pesc:lastName,Last Name,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Recommended,
+175,NameShape,pesc:nameTitle,Name Title,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Not Recommended,
+177,NameShape,pesc:compositeName,Composite Name,FALSE,FALSE,Literal,xsd:string,45,maxLength,,Not Recommended,
+164,NameShape,pesc:nameCode,Name Code,FALSE,FALSE,Literal,xsd:string,Casual Formal Former LawSchoolApplicationSource Legal MedicalSchoolApplicationSource Nickname Other,picklist,,Recommended,
+173,NameShape,pesc:nameSuffix,Name Sufficix,FALSE,FALSE,Literal,xsd:string,"JR
+SR
+I
+II
+III
+IV
+V
+VI
+VII
+VIII
+IX
+X",picklist,,Recommended,
+5,OrganizationShape,pesc:__NoteMessage,__ Note Message,FALSE,TRUE,Literal,,1..80,lengthRange,,Not Recommended,
+27,OrganizationShape,pesc:opeID,OPE ID,FALSE,FALSE,Literal,xsd:string,3..8,lengthRange,,Recommended,
+31,OrganizationShape,pesc:nchelpID,NCHELP ID,FALSE,FALSE,Literal,xsd:string,3..8,lengthRange,,Recommended,
+35,OrganizationShape,pesc:ipedsID,IPEDS ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Recommended,"Used ""IPEDS ID"" instead of just ""IPEDS"""
+39,OrganizationShape,pesc:atpID,ATP ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Recommended,"Used ""ATP ID"" instead of just ""ATP"""
+43,OrganizationShape,pesc:ficeID,FICE ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Recommended,"Used ""FICE ID"" instead of just ""FICE"""
+47,OrganizationShape,pesc:actID,ACT ID,FALSE,FALSE,Literal,xsd:string,4..4,lengthRange,,Recommended,"Used ""ACT ID"" instead of just ""ACT"""
+51,OrganizationShape,pesc:ccdID,CCD ID,FALSE,FALSE,Literal,xsd:string,12..12,lengthRange,,Not Recommended,"Used ""CCD ID"" instead of just ""CCD"""
+55,OrganizationShape,pesc:pssID,PSS ID,FALSE,FALSE,Literal,xsd:string,8..8,lengthRange,,Not Recommended,"Used ""PSS ID"" instead of just ""PSS"""
+59,OrganizationShape,pesc:ceebactID,CEEBACT ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Not Recommended,"Used ""CEEBACT ID"" instead of just ""CEEBACT"""
+63,OrganizationShape,pesc:csisID,CSIS ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Not Recommended,"Used ""CSIS ID"" instead of just ""CSIS"""
+67,OrganizationShape,pesc:usisID,USIS ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Not Recommended,"Used ""USIS ID"" instead of just ""USIS"""
+71,OrganizationShape,pesc:esisID,ESIS ID,FALSE,FALSE,Literal,xsd:string,8..8,lengthRange,,Not Recommended,"Used ""ESIS ID"" instead of just ""ESIS"""
+75,OrganizationShape,pesc:psisID,PSIS ID,FALSE,FALSE,Literal,xsd:string,8..8,lengthRange,,Optional,"Used ""PSIS ID"" instead of just ""PSIS"""
+79,OrganizationShape,pesc:dunsID,DUNS ID,FALSE,FALSE,Literal,xsd:string,9..9,lengthRange,,Not Recommended,"Used ""DUNS ID"" instead of just ""DUNS"""
+83,OrganizationShape,pesc:mutuallyDefinedID,Mutually Defined ID,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Optional,"Used ""Mutually Defined ID"" instead of just ""Mutually Defined"""
+91,OrganizationShape,pesc:organizationName,Organization Name,FALSE,TRUE,Literal,rdf:langString,60,maxLength,,Recommended,"Consider using a ""Name"" property that can be reused by many objects instead of a specific ""Organization Name"" property"
+87,OrganizationShape,pesc:__LocalOrganizationID,__ Local Organization ID,FALSE,FALSE,IRI BNODE,,,,LocalOrganizationIDShape,Optional,
+95,OrganizationShape,pesc:__Contacts,__ Contact,FALSE,TRUE,IRI BNODE,,,,ContactsShape,Recommended,
+99,OrganizationShape,pesc:__Accreditation,__ Accreditation,FALSE,FALSE,IRI BNODE,,,,AccreditationShape,Recommended,
+8,PhoneShape,pesc:__NoteMessage,__ Note Message,FALSE,TRUE,Literal,,1..80,lengthRange,,Not Recommended,
+126,PhoneShape,pesc:countryPrefixCode,Country Prefix Code,FALSE,FALSE,Literal,xsd:string,3,maxLength,,Optional,
+128,PhoneShape,pesc:areaCityCode,Area City Code,FALSE,FALSE,Literal,xsd:string,5,maxLength,,Recommended,
+130,PhoneShape,pesc:phoneNumber,Phone Number,TRUE,FALSE,Literal,xsd:string,11,maxLength,,Required,
+132,PhoneShape,pesc:phoneNumberExtension,Phone Number Extension,FALSE,FALSE,Literal,xsd:string,5,maxLength,,Optional,
+121,PhoneShape,pesc:expirationDate,Expiration Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
+124,PhoneShape,pesc:attentionLine,Attention Line,,,,,,,,,no attention line in Phone or FAXPhone
+258,ProgramSummaryShape,pesc:classRank,Class Rank,FALSE,FALSE,Literal,xsd:string,4,maxLength,,Not Recommended,
+260,ProgramSummaryShape,pesc:classSize,Class Size,FALSE,FALSE,Literal,xsd:string,4,maxLength,,Not Recommended,
+261,ProgramSummaryShape,pesc:classSize,Class Size,FALSE,FALSE,Literal,xsd:string,4,maxLength,,Not Recommended,
+254,ProgramSummaryShape,pesc:academicSummaryType,Academic Summary Type,FALSE,FALSE,IRI,,"pescAcademicSummaryTypes:All
+pescAcademicSummaryTypes:SenderOnly
+pescAcademicSummaryTypes:TransferOnly
+pescAcademicSummaryTypes:AllNotRepeated
+pescAcademicSummaryTypes:SenderNotRepeated
+pescAcademicSummaryTypes:TransferNotRepeated
+pescAcademicSummaryTypes:AcademicRenewal
+pescAcademicSummaryTypes:CarryoverCredit
+pescAcademicSummaryTypes:DegreeApplicable
+pescAcademicSummaryTypes:NonDegreeApplicable
+pescAcademicSummaryTypes:ConvertedFrom
+pescAcademicSummaryTypes:ConvertedTo
+pescAcademicSummaryTypes:UserDefined
+pescAcademicSummaryTypes:Weighted
+pescAcademicSummaryTypes:NonWeighted
+pescAcademicSummaryTypes:Cumulative",picklist,,Recommended,
+256,ProgramSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescAcademicSummaryLevels:Dual
+pescAcademicSummaryLevels:DualGraduateUndergraduate
+pescAcademicSummaryLevels:Grade13
+pescAcademicSummaryLevels:Ungraded
+pescAcademicSummaryLevels:DualHighSchoolCollege
+pescAcademicSummaryLevels:Graduate
+pescAcademicSummaryLevels:GraduateProfessional
+pescAcademicSummaryLevels:LowerDivisionProfessional
+pescAcademicSummaryLevels:Secondary
+pescAcademicSummaryLevels:TechnicalPreparatory
+pescAcademicSummaryLevels:Undergraduate
+pescAcademicSummaryLevels:UpperDivision
+pescAcademicSummaryLevels:Vocational",picklist,,Not Recommended,
+262,ProgramSummaryShape,pesc:deliquencies,Delinquencies,FALSE,TRUE,IRI,,"pescDeliquencyCodes:ExclusionAcademic
+pescDeliquencyCodes:ExclusionDiscipline
+pescDeliquencyCodes:GoodStanding
+pescDeliquencyCodes:ProbationGPA
+pescDeliquencyCodes:ProbationHours
+pescDeliquencyCodes:SuspensionGPA
+pescDeliquencyCodes:SuspensionHours
+pescDeliquencyCodes:ProbationDiscipline
+pescDeliquencyCodes:SuspensionDiscipline
+pescDeliquencyCodes:Unknown
+pescDeliquencyCodes:Other",picklist,,Not Recommended,
+214,ProgramSummaryShape,pesc:userDefinedExtensions,User Defined Extensions,FALSE,FALSE,IRI BNODE,,,,__UserDefinedExtensionsShape,Optional,
+228,ProgramSummaryShape,pesc:_AcademicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,Recommended,
+252,ProgramSummaryShape,pesc:highSchoolCreditSummary,High School Credit Summary,FALSE,FALSE,Literal,rdf:langString,,,,Not Recommended,
+263,ProgramSummaryShape,pesc:exitDate,Exit Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,
+265,ProgramSummaryShape,pesc:_GPA,GPA,FALSE,FALSE,IRI BNODE,,,,GPAShape,Optional,
+184,ResidencyShape,pesc:countyCode,County Code,FALSE,FALSE,Literal,xsd:string,3..3,lengthRange,,Optional,
+183,ResidencyShape,pesc:stateProvince,State Province,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Optional,
+185,ResidencyShape,pesc:county,County,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Optional,
+187,ResidencyShape,pesc:country,Country,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Optional,
+182,ResidencyShape,pesc:stateProvinceCode,State Province Code,FALSE,FALSE,Literal,xsd:string,,picklist,,Recommended,pesc:appendixA Keep as string for now
+186,ResidencyShape,pesc:countryCode,Country Code,FALSE,FALSE,Literal,xsd:string,,picklist,,Optional,pesc.AppendixB1 or pesc.AppendixB2 Keep as string for now
+188,ResidencyShape,pesc:residencyStatusCode,Residency Status Code,FALSE,FALSE,IRI,,"pescResidencyStatusCodes:InCity
+pescResidencyStatusCodes:InCounty
+pescResidencyStatusCodes:InDistrict
+pescResidencyStatusCodes:InState
+pescResidencyStatusCodes:NonResident
+pescResidencyStatusCodes:NotReported
+pescResidencyStatusCodes:OtherResident
+pescResidencyStatusCodes:Resident",picklist,,Optional,
+114,ResidencyShape,pesc:stateProvinceCode,State Province Code,FALSE,FALSE,Literal,xsd:string,,,,Recommended,"pesc:core:DomesticAddressDetailsGroup
+pesc:core:InternationalAddressDetailsGroup"
+118,ResidencyShape,pesc:countryCode,Country Code,FALSE,FALSE,Literal,xsd:string,,,,Optional,pesc:core:InternationalAddressDetailsGroup
+29,SchoolShape,pesc:opeID,OPE ID,FALSE,FALSE,Literal,xsd:string,3..8,lengthRange,,Recommended,
+33,SchoolShape,pesc:nchelpID,NCHELP ID,FALSE,FALSE,Literal,xsd:string,3..8,lengthRange,,Recommended,
+37,SchoolShape,pesc:ipedsID,IPEDS ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Recommended,"Used ""IPEDS ID"" instead of just ""IPEDS"""
+41,SchoolShape,pesc:atpID,ATP ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Recommended,"Used ""ATP ID"" instead of just ""ATP"""
+45,SchoolShape,pesc:ficeID,FICE ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Recommended,"Used ""FICE ID"" instead of just ""FICE"""
+49,SchoolShape,pesc:actID,ACT ID,FALSE,FALSE,Literal,xsd:string,4..4,lengthRange,,Recommended,"Used ""ACT ID"" instead of just ""ACT"""
+53,SchoolShape,pesc:ccdID,CCD ID,FALSE,FALSE,Literal,xsd:string,12..12,lengthRange,,Not Recommended,"Used ""CCD ID"" instead of just ""CCD"""
+57,SchoolShape,pesc:pssID,PSS ID,FALSE,FALSE,Literal,xsd:string,8..8,lengthRange,,Not Recommended,"Used ""PSS ID"" instead of just ""PSS"""
+61,SchoolShape,pesc:ceebactID,CEEBACT ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Not Recommended,"Used ""CEEBACT ID"" instead of just ""CEEBACT"""
+65,SchoolShape,pesc:csisID,CSIS ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Not Recommended,"Used ""CSIS ID"" instead of just ""CSIS"""
+69,SchoolShape,pesc:usisID,USIS ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Not Recommended,"Used ""USIS ID"" instead of just ""USIS"""
+73,SchoolShape,pesc:esisID,ESIS ID,FALSE,FALSE,Literal,xsd:string,8..8,lengthRange,,Not Recommended,"Used ""ESIS ID"" instead of just ""ESIS"""
+77,SchoolShape,pesc:psisID,PSIS ID,FALSE,FALSE,Literal,xsd:string,8..8,lengthRange,,Optional,"Used ""PSIS ID"" instead of just ""PSIS"""
+81,SchoolShape,pesc:dunsID,DUNS ID,FALSE,FALSE,Literal,xsd:string,9..9,lengthRange,,Not Recommended,"Used ""DUNS ID"" instead of just ""DUNS"""
+85,SchoolShape,pesc:mutuallyDefinedID,Mutually Defined ID,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Optional,"Used ""Mutually Defined ID"" instead of just ""Mutually Defined"""
+93,SchoolShape,pesc:organizationName,Organization Name,FALSE,TRUE,Literal,rdf:langString,60,maxLength,,Recommended,"Consider using a ""Name"" property that can be reused by many objects instead of a specific ""Organization Name"" property"
+101,SchoolShape,pesc:localOrganizationIDCode,Local Organization ID Code,TRUE,FALSE,Literal,xsd:string,35,maxLength,,Required,
+219,SchoolShape,pesc:schoolOverrideCode,School Override Code,FALSE,FALSE,IRI,,"pescSchoolOverrideCodes:Institutional
+pescSchoolOverrideCodes:Multicampus
+pescSchoolOverrideCodes:Transfer
+pescSchoolOverrideCodes:StudyAbroad
+pescSchoolOverrideCodes:Coop
+pescSchoolOverrideCodes:Reciprocal
+pescSchoolOverrideCodes:Internship",picklist,,Recommended,
+220,SchoolShape,pesc:schoolLevel,School Level,FALSE,FALSE,IRI,,"pescSchoolLevels:Elementary
+pescSchoolLevels:HighSchool
+pescSchoolLevels:JuniorHigh
+pescSchoolLevels:Middle
+pescSchoolLevels:Other
+pescSchoolLevels:Postsecondary
+pescSchoolLevels:Secondary",picklist,,Recommended,
+89,SchoolShape,pesc:__LocalOrganizationID,__ Local Organization ID,FALSE,FALSE,IRI BNODE,,,,LocalOrganizationIDShape,Optional,
+97,SchoolShape,pesc:__Contacts,__ Contact,FALSE,TRUE,IRI BNODE,,,,ContactsShape,Not Recommended,
+103,SchoolShape,pesc:localOrganizationIDQualifier,Local Organization ID Qualifier,TRUE,FALSE,Literal,xsd:string,,,,Required,pesc:LocalOrganizationIDQualifierCategory
+105,SchoolShape,pesc:__Address,__ Address,FALSE,TRUE,IRI BNODE,,,,SchoolShape,Optional,
+13,StudentShape,pesc:__NoteMessage,__ Note Message,FALSE,TRUE,Literal,,1..80,lengthRange,,Not Recommended,
+14,StudentShape,pesc:__NoteMessage,__ Note Message,FALSE,TRUE,Literal,,1..80,lengthRange,,Not Recommended,
+28,StudentShape,pesc:opeID,OPE ID,FALSE,FALSE,Literal,xsd:string,3..8,lengthRange,,Recommended,
+32,StudentShape,pesc:nchelpID,NCHELP ID,FALSE,FALSE,Literal,xsd:string,3..8,lengthRange,,Recommended,
+36,StudentShape,pesc:ipedsID,IPEDS ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Recommended,"Used ""IPEDS ID"" instead of just ""IPEDS"""
+40,StudentShape,pesc:atpID,ATP ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Recommended,"Used ""ATP ID"" instead of just ""ATP"""
+44,StudentShape,pesc:ficeID,FICE ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Recommended,"Used ""FICE ID"" instead of just ""FICE"""
+48,StudentShape,pesc:actID,ACT ID,FALSE,FALSE,Literal,xsd:string,4..4,lengthRange,,Recommended,"Used ""ACT ID"" instead of just ""ACT"""
+52,StudentShape,pesc:ccdID,CCD ID,FALSE,FALSE,Literal,xsd:string,12..12,lengthRange,,Not Recommended,"Used ""CCD ID"" instead of just ""CCD"""
+56,StudentShape,pesc:pssID,PSS ID,FALSE,FALSE,Literal,xsd:string,8..8,lengthRange,,Not Recommended,"Used ""PSS ID"" instead of just ""PSS"""
+60,StudentShape,pesc:ceebactID,CEEBACT ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Not Recommended,"Used ""CEEBACT ID"" instead of just ""CEEBACT"""
+64,StudentShape,pesc:csisID,CSIS ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Not Recommended,"Used ""CSIS ID"" instead of just ""CSIS"""
+68,StudentShape,pesc:usisID,USIS ID,FALSE,FALSE,Literal,xsd:string,6..6,lengthRange,,Not Recommended,"Used ""USIS ID"" instead of just ""USIS"""
+72,StudentShape,pesc:esisID,ESIS ID,FALSE,FALSE,Literal,xsd:string,8..8,lengthRange,,Not Recommended,"Used ""ESIS ID"" instead of just ""ESIS"""
+76,StudentShape,pesc:psisID,PSIS ID,FALSE,FALSE,Literal,xsd:string,8..8,lengthRange,,Optional,"Used ""PSIS ID"" instead of just ""PSIS"""
+80,StudentShape,pesc:dunsID,DUNS ID,FALSE,FALSE,Literal,xsd:string,9..9,lengthRange,,Not Recommended,"Used ""DUNS ID"" instead of just ""DUNS"""
+145,StudentShape,pesc:sin,SIN,FALSE,FALSE,Literal,xsd:string,9..9,lengthRange,,Not Recommended,
+151,StudentShape,pesc:partialSSN,Partial SSN,FALSE,FALSE,Literal,xsd:string,4..4,lengthRange,,Recommended,
+161,StudentShape,pesc:age,Age,FALSE,FALSE,Literal,xsd:string,3,maximum,,Not Recommended,positive integer
+158,StudentShape,pesc:birthCity,Birth City,FALSE,FALSE,Literal,xsd:string,25,maxLength,,Optional,
+84,StudentShape,pesc:mutuallyDefinedID,Mutually Defined ID,FALSE,FALSE,Literal,xsd:string,60,maxLength,,Optional,"Used ""Mutually Defined ID"" instead of just ""Mutually Defined"""
+92,StudentShape,pesc:organizationName,Organization Name,FALSE,TRUE,Literal,rdf:langString,60,maxLength,,Recommended,"Consider using a ""Name"" property that can be reused by many objects instead of a specific ""Organization Name"" property"
+144,StudentShape,pesc:schoolAssignedPersonID,School Assigned Person ID,FALSE,FALSE,Literal,xsd:string,20,maxLength,,Recommended,
+146,StudentShape,pesc:nsn,NSN,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Optional,
+147,StudentShape,pesc:agencyAssignedID,Agency Assigned ID,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Required,
+149,StudentShape,pesc:recipientAssignedID,Recipient Assigned ID,FALSE,FALSE,Literal,xsd:string,20,maxLength,,Recommended,
+150,StudentShape,pesc:ssn,SSN,FALSE,FALSE,Literal,xsd:string,9,maxLength,,Recommended,
+159,StudentShape,pesc:birthStateProvinceCode,Birth State Province Code,FALSE,FALSE,Literal,xsd:string,,picklist,,Optional,pesc.appendixA Keep as string for now
+160,StudentShape,pesc:birthCountry,Birth Country,FALSE,FALSE,Literal,xsd:string,,picklist,,Optional,pesc.AppendixB1 or pesc.AppendixB2 Keep as string for now
+180,StudentShape,pesc:genderCode,Gender Code,FALSE,FALSE,IRI,,"pescGenderCodes:Female
+pescGenderCodes:Male
+pescGenderCodes:Unreported",picklist,,Required,
+155,StudentShape,pesc:birthDate,Birth Date,FALSE,FALSE,Literal,xsd:date,,,,Recommended,
+156,StudentShape,pesc:birthday,Birthday,FALSE,FALSE,Literal,xsd:date,,,,Optional,
+157,StudentShape,pesc:birthYear,Birth Year,FALSE,FALSE,Literal,xsd:date,,,,Not Recommended,
+88,StudentShape,pesc:__LocalOrganizationID,__ Local Organization ID,FALSE,FALSE,IRI BNODE,,,,LocalOrganizationIDShape,Optional,
+96,StudentShape,pesc:__Contacts,__ Contact,FALSE,TRUE,IRI BNODE,,,,ContactsShape,Recommended,
+140,StudentShape,pesc:__AcademicRecord,Academic Record,TRUE,TRUE,IRI BNODE,,,,AcademicRecordShape,Required,
+142,StudentShape,pesc:_Tests,Tests,FALSE,TRUE,IRI BNODE,,,,TestsShape,Optional,
+143,StudentShape,pesc:_userDefinedExtensions,User Defined Extensions,FALSE,FALSE,IRI BNODE,,,,__UserDefinedExtensionsShape,Optional,
+148,StudentShape,pesc:agencyIdentifier,Agency Identifier,FALSE,TRUE,IRI BNODE,,,,,Recommended,
+162,StudentShape,pesc:_Name,Name,TRUE,FALSE,IRI BNODE,,,,NameShape,Required,
+163,StudentShape,pesc:_AlternateName,Alternate Name,FALSE,TRUE,IRI BNODE,,,,NameShape,,
+181,StudentShape,pesc:_Residency,Residency,FALSE,FALSE,IRI BNODE,,,,,Optional,
+190,StudentShape,pesc:deceasedIndicator,Deceased Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,Required,true/false
+191,StudentShape,pesc:_language,Language,FALSE,TRUE,IRI BNODE,,,,LanguageShape,Optional,
+359,StudentShape,pesc:Immunizations,Immunizations,FALSE,TRUE,IRI BNODE,,,,ImmunizationsShape,Recommended,
+370,SubTestShape,pesc:subTestCode,Sub Test Code,TRUE,FALSE,Literal,xsd:string,,picklist,,Not Recommended,pesc:Appendix F
+371,SubTestShape,pesc:educationSubTestCode,Education Sub Test Code,TRUE,FALSE,Literal,xsd:string,,picklist,,Recommended,pesc:Appendix G
+372,SubTestShape,pesc:subTestName,Sub Test Name,FALSE,FALSE,Literal,xsd:string,,picklist,,Recommended,pesc:Appendix F or pesc:Appendix G
+373,SubTestShape,pesc:testScores,Test Scores,FALSE,TRUE,IRI BNODE,,,,TestScoresShape,Required,
+374,TestScoresShape,pesc:scoreValue,Score Value,TRUE,FALSE,Literal,xsd:string,80,maxLength,,Required,
+375,TestScoresShape,pesc:testScoreMethod,Test Score Method,FALSE,FALSE,IRI,,"pescTestScoreMethods:Scaled
+pescTestScoreMethods:Graded
+pescTestScoreMethods:Standard
+pescTestScoreMethods:Raw
+pescTestScoreMethods:Percent
+pescTestScoreMethods:Mastery
+pescTestScoreMethods:Adjective
+pescTestScoreMethods:Stanine
+pescTestScoreMethods:Percentile
+pescTestScoreMethods:NormalCurve
+pescTestScoreMethods:Equated
+pescTestScoreMethods:Local",picklist,,Optional,
+376,TestScoresShape,pesc:scoreRevisedIndicator,Score Revised Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,Optional,true/false
+377,TestScoresShape,pesc:scoreInvalidatedIndicator,Score Invalidated Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,Optional,true/false
+378,TestScoresShape,pesc:scoreSelfRportedIndicator,Score Self Reported Indicator,FALSE,FALSE,Literal,xsd:boolean,,,,Optional,true/false
+363,TestsShape,pesc:testCode,Test Code,TRUE,FALSE,Literal,xsd:string,,picklist,,Not Recommended,pesc:Appendix D
+364,TestsShape,pesc:educationTestCode,Education Test Code,TRUE,FALSE,Literal,xsd:string,,picklist,,Recommended,pesc:Appendix E
+365,TestsShape,pesc:testName,Test Name,FALSE,FALSE,Literal,xsd:string,,picklist,,Recommended,pesc:Appendix D or pesc:Appendix E
+203,TestsShape,pesc:studentLevel,Student Level,FALSE,FALSE,IRI,,"pescStudentLevelCodes:Postsecondary
+pescStudentLevelCodes:PostsecondaryBachelorPreliminaryYear
+pescStudentLevelCodes:NonDegree
+pescStudentLevelCodes:Grade13
+pescStudentLevelCodes:Ungraded
+pescStudentLevelCodes:CollegeFirstYear
+pescStudentLevelCodes:CollegeFirstYearAttendedBefore
+pescStudentLevelCodes:CollegeSophomore
+pescStudentLevelCodes:CollegeJunior
+pescStudentLevelCodes:CollegeSenior
+pescStudentLevelCodes:CollegeFifthYear
+pescStudentLevelCodes:PostBaccalaureate
+pescStudentLevelCodes:GraduateNonDegree
+pescStudentLevelCodes:GraduateFirstYear
+pescStudentLevelCodes:GraduateSecondYear
+pescStudentLevelCodes:GraduateThirdYear
+pescStudentLevelCodes:GraduateBeyondThirdYear
+pescStudentLevelCodes:Professional
+pescStudentLevelCodes:ProfessionalFirstYear
+pescStudentLevelCodes:ProfessionalSecondYear
+pescStudentLevelCodes:ProfessionalThirdYear
+pescStudentLevelCodes:ProfessionalBeyondThirdYear
+pescStudentLevelCodes:MastersQualifying
+pescStudentLevelCodes:Masters
+pescStudentLevelCodes:Doctoral
+pescStudentLevelCodes:Postdoctoral",picklist,,Optional,
+366,TestsShape,pesc:testDate,Test Date,FALSE,FALSE,Literal,xsd:date,,,,Required,
+367,TestsShape,pesc:testYearMonth,Test Year Month,FALSE,FALSE,Literal,xsd:date,,,,Required,
+368,TestsShape,pesc:testYear,Test Year,FALSE,FALSE,Literal,xsd:date,,,,Required,
+369,TestsShape,pesc:subTests,Sub Tests,TRUE,TRUE,IRI BNODE,,,,SubTestShape,Required,
+4,TransmissionDataShape,pesc:__NoteMessage,__ Note Message,FALSE,TRUE,Literal,,1..80,lengthRange,,Not Recommended,
+17,TransmissionDataShape,pesc:documentID,Document ID,TRUE,FALSE,Literal,xsd:string,1..35,lengthRange,,Required,
+26,TransmissionDataShape,pesc:requestTrackingID,Request Tracking ID,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Optional,
+19,TransmissionDataShape,pesc:documentTypeCode,Document type Code,TRUE,FALSE,IRI,,"pescDocumentTypeCodes:Cancel
+pescDocumentTypeCodes:Change
+pescDocumentTypeCodes:InstitutionRequest
+pescDocumentTypeCodes:RequestedRecord
+pescDocumentTypeCodes:Response
+pescDocumentTypeCodes:StudentRequest
+pescDocumentTypeCodes:TermEnroll
+pescDocumentTypeCodes:TermGrade
+pescDocumentTypeCodes:ThirdPartyRequest",picklist,,Required,
+20,TransmissionDataShape,pesc:transmissionType,Transmission Type,TRUE,FALSE,IRI,,"pescTransmissionTypes:Original
+pescTransmissionTypes:Replace
+pescTransmissionTypes:Duplicate
+pescTransmissionTypes:Resubmission
+pescTransmissionTypes:Reissue
+pescTransmissionTypes:MutuallyDefined",picklist,,Required,
+23,TransmissionDataShape,pesc:documentProcessCode,Document Process Code,FALSE,FALSE,IRI,,"pescDocumentProcessCodes:TEST
+pescDocumentProcessCodes:PRODUCTION",picklist,,Required,
+24,TransmissionDataShape,pesc:documentOfficialCode,Document Official Code,FALSE,FALSE,IRI,,"pescDocumentOfficialCodes:Official
+pescDocumentOfficialCodes:Unofficial",picklist,,Required,
+25,TransmissionDataShape,pesc:documentCompleteCode,Document Complete Code,FALSE,FALSE,IRI,,"pescDocumentCompleteCodes:Partial
+pescDocumentCompleteCodes:Complete",picklist,,Required,
+16,TransmissionDataShape,pesc:__UserDefinedExtension,__ User Defined Extension,FALSE,FALSE,IRI BNODE,,,,__UserDefinedExtensionsShape,Not Recommended,
+18,TransmissionDataShape,pesc:createdDateTime,Created Date Time,TRUE,FALSE,Literal,xsd:dateTime,,,,Required,
+21,TransmissionDataShape,pesc:source,Source,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,Required,
+22,TransmissionDataShape,pesc:destination,Destination,TRUE,FALSE,IRI BNODE,,,,OrganizationShape,Required,Not sure what this property points to
+379,RAPShape,pesc:rapCode,RAP Code,FALSE,TRUE,Literal,xsd:string,3,maxLength,,Recommended,
+380,RAPShape,pesc:rapName,RAP Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Recommended,
+381,RAPShape,pesc:rapSubName,RAP Sub Name,FALSE,TRUE,Literal,xsd:string,60,maxLength,,Optional,
+382,RAPShape,pesc:conditionsMetCode,Conditions Met Code,FALSE,TRUE,IRI,,"pescConditionsMetCodes:Yes
+pescConditionsMetCodes:No
+pescConditionsMetCodes:Conditional
+pescConditionsMetCodes:MutuallyDefined",picklist,,Recommended,
+383,RAPShape,,Conditions Met Date,FALSE,TRUE,Literal,xsd:date,,,,Optional,
+384,AdditionalStudentAchievmentShape,pesc:requirement,Requirement,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
+385,AdditionalStudentAchievmentShape,pesc:attribute,Attribute,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
+386,AdditionalStudentAchievmentShape,pesc:proficiency,Proficiency,FALSE,TRUE,IRI BNODE,,,,RAPShape,Optional,
+387,AdditionalStudentAchievmentShape,pesc:_language,Language,FALSE,TRUE,IRI BNODE,,,,LanguageShape,Optional,
+388,,,,,,,,,,,,
+389,,,,,,,,,,,,
+390,,,,,,,,,,,,
+391,,,,,,,,,,,,
+392,,,,,,,,,,,,
+393,,,,,,,,,,,,
+394,,,,,,,,,,,,
+395,,,,,,,,,,,,
+396,,,,,,,,,,,,
+397,,,,,,,,,,,,
+398,,,,,,,,,,,,
+399,,,,,,,,,,,,
+400,,,,,,,,,,,,
+401,,,,,,,,,,,,
+402,,,,,,,,,,,,
+403,,,,,,,,,,,,
+404,,,,,,,,,,,,
+405,,,,,,,,,,,,
+406,,,,,,,,,,,,
+407,,,,,,,,,,,,
+408,,,,,,,,,,,,
+409,,,,,,,,,,,,
+410,,,,,,,,,,,,
+411,,,,,,,,,,,,
+412,,,,,,,,,,,,
+413,,,,,,,,,,,,
+414,,,,,,,,,,,,
+415,,,,,,,,,,,,
+416,,,,,,,,,,,,
+417,,,,,,,,,,,,
+418,,,,,,,,,,,,
+419,,,,,,,,,,,,
+420,,,,,,,,,,,,
+421,,,,,,,,,,,,
+422,,,,,,,,,,,,
+423,,,,,,,,,,,,
+424,,,,,,,,,,,,
+425,,,,,,,,,,,,
+426,,,,,,,,,,,,
+427,,,,,,,,,,,,
+428,,,,,,,,,,,,
+429,,,,,,,,,,,,
+430,,,,,,,,,,,,
+431,,,,,,,,,,,,
+432,,,,,,,,,,,,
+433,,,,,,,,,,,,
+434,,,,,,,,,,,,
+435,,,,,,,,,,,,
+436,,,,,,,,,,,,
+437,,,,,,,,,,,,
+438,,,,,,,,,,,,
+439,,,,,,,,,,,,
+440,,,,,,,,,,,,
+441,,,,,,,,,,,,
+442,,,,,,,,,,,,
+443,,,,,,,,,,,,
+444,,,,,,,,,,,,
+445,,,,,,,,,,,,
+446,,,,,,,,,,,,
+447,,,,,,,,,,,,
+448,,,,,,,,,,,,
+449,,,,,,,,,,,,
+450,,,,,,,,,,,,
+451,,,,,,,,,,,,
+452,,,,,,,,,,,,
+453,,,,,,,,,,,,
+454,,,,,,,,,,,,
+455,,,,,,,,,,,,
+456,,,,,,,,,,,,
+457,,,,,,,,,,,,
+458,,,,,,,,,,,,
+459,,,,,,,,,,,,
+460,,,,,,,,,,,,
+461,,,,,,,,,,,,
+462,,,,,,,,,,,,
+463,,,,,,,,,,,,
+464,,,,,,,,,,,,
+465,,,,,,,,,,,,
+466,,,,,,,,,,,,
+467,,,,,,,,,,,,
+468,,,,,,,,,,,,
+469,,,,,,,,,,,,
+470,,,,,,,,,,,,
+471,,,,,,,,,,,,
+472,,,,,,,,,,,,
+473,,,,,,,,,,,,
+474,,,,,,,,,,,,
+475,,,,,,,,,,,,
+476,,,,,,,,,,,,
+477,,,,,,,,,,,,
+478,,,,,,,,,,,,
+479,,,,,,,,,,,,
+480,,,,,,,,,,,,
+481,,,,,,,,,,,,
+482,,,,,,,,,,,,
+483,,,,,,,,,,,,
+484,,,,,,,,,,,,
+485,,,,,,,,,,,,
+486,,,,,,,,,,,,
+487,,,,,,,,,,,,
+488,,,,,,,,,,,,
+489,,,,,,,,,,,,
+490,,,,,,,,,,,,
+491,,,,,,,,,,,,
+492,,,,,,,,,,,,
+493,,,,,,,,,,,,
+494,,,,,,,,,,,,
+495,,,,,,,,,,,,
+496,,,,,,,,,,,,
+497,,,,,,,,,,,,
+498,,,,,,,,,,,,
+499,,,,,,,,,,,,
+502,,,,,,,,,,,,
+503,,,,,,,,,,,,
+504,,,,,,,,,,,,
+505,,,,,,,,,,,,
+506,,,,,,,,,,,,
+507,,,,,,,,,,,,
+508,,,,,,,,,,,,
+509,,,,,,,,,,,,
+510,,,,,,,,,,,,
+511,,,,,,,,,,,,
+512,,,,,,,,,,,,
+513,,,,,,,,,,,,
+514,,,,,,,,,,,,
+515,,,,,,,,,,,,
+516,,,,,,,,,,,,
+517,,,,,,,,,,,,
+518,,,,,,,,,,,,
+519,,,,,,,,,,,,
+520,,,,,,,,,,,,
+521,,,,,,,,,,,,
+522,,,,,,,,,,,,
+523,,,,,,,,,,,,
+524,,,,,,,,,,,,
+525,,,,,,,,,,,,
+526,,,,,,,,,,,,
+527,,,,,,,,,,,,
+528,,,,,,,,,,,,
+529,,,,,,,,,,,,
+530,,,,,,,,,,,,
+531,,,,,,,,,,,,
+532,,,,,,,,,,,,
+533,,,,,,,,,,,,
+534,,,,,,,,,,,,
+535,,,,,,,,,,,,
+536,,,,,,,,,,,,
+537,,,,,,,,,,,,
+538,,,,,,,,,,,,
+539,,,,,,,,,,,,
+540,,,,,,,,,,,,
+541,,,,,,,,,,,,
+542,,,,,,,,,,,,
+543,,,,,,,,,,,,
+544,,,,,,,,,,,,
+545,,,,,,,,,,,,
+546,,,,,,,,,,,,
+547,,,,,,,,,,,,
+548,,,,,,,,,,,,
+549,,,,,,,,,,,,
+550,,,,,,,,,,,,
+551,,,,,,,,,,,,
+552,,,,,,,,,,,,
+553,,,,,,,,,,,,
+554,,,,,,,,,,,,
+555,,,,,,,,,,,,
+556,,,,,,,,,,,,
+557,,,,,,,,,,,,
+558,,,,,,,,,,,,
+559,,,,,,,,,,,,
+560,,,,,,,,,,,,
+561,,,,,,,,,,,,
+562,,,,,,,,,,,,
+563,,,,,,,,,,,,
+564,,,,,,,,,,,,
+565,,,,,,,,,,,,
+566,,,,,,,,,,,,
+567,,,,,,,,,,,,
+568,,,,,,,,,,,,
+569,,,,,,,,,,,,
+570,,,,,,,,,,,,
+571,,,,,,,,,,,,
+572,,,,,,,,,,,,
+573,,,,,,,,,,,,
+574,,,,,,,,,,,,
+575,,,,,,,,,,,,
+576,,,,,,,,,,,,
+577,,,,,,,,,,,,
+578,,,,,,,,,,,,
+579,,,,,,,,,,,,
+580,,,,,,,,,,,,
+581,,,,,,,,,,,,
+582,,,,,,,,,,,,
+583,,,,,,,,,,,,
+584,,,,,,,,,,,,
+585,,,,,,,,,,,,
+586,,,,,,,,,,,,
+587,,,,,,,,,,,,
+588,,,,,,,,,,,,
+589,,,,,,,,,,,,
+590,,,,,,,,,,,,
+591,,,,,,,,,,,,
+592,,,,,,,,,,,,
+593,,,,,,,,,,,,
+594,,,,,,,,,,,,
+595,,,,,,,,,,,,
+596,,,,,,,,,,,,
+597,,,,,,,,,,,,
+598,,,,,,,,,,,,
+599,,,,,,,,,,,,
+600,,,,,,,,,,,,
+601,,,,,,,,,,,,
+602,,,,,,,,,,,,
+603,,,,,,,,,,,,
+604,,,,,,,,,,,,
+605,,,,,,,,,,,,
+606,,,,,,,,,,,,
+607,,,,,,,,,,,,
+608,,,,,,,,,,,,
+609,,,,,,,,,,,,
+610,,,,,,,,,,,,
+611,,,,,,,,,,,,
+612,,,,,,,,,,,,
+613,,,,,,,,,,,,
+614,,,,,,,,,,,,
+615,,,,,,,,,,,,
+616,,,,,,,,,,,,
+617,,,,,,,,,,,,
+618,,,,,,,,,,,,
+619,,,,,,,,,,,,
+620,,,,,,,,,,,,
+621,,,,,,,,,,,,
+622,,,,,,,,,,,,
+623,,,,,,,,,,,,
+624,,,,,,,,,,,,
+625,,,,,,,,,,,,
+626,,,,,,,,,,,,
+627,,,,,,,,,,,,
+628,,,,,,,,,,,,
+629,,,,,,,,,,,,
+630,,,,,,,,,,,,
+631,,,,,,,,,,,,
+632,,,,,,,,,,,,
+633,,,,,,,,,,,,
+634,,,,,,,,,,,,
+635,,,,,,,,,,,,
+636,,,,,,,,,,,,
+637,,,,,,,,,,,,
+638,,,,,,,,,,,,
+639,,,,,,,,,,,,
+640,,,,,,,,,,,,
+641,,,,,,,,,,,,
+642,,,,,,,,,,,,
+643,,,,,,,,,,,,
+644,,,,,,,,,,,,
+645,,,,,,,,,,,,
+646,,,,,,,,,,,,
+647,,,,,,,,,,,,
+648,,,,,,,,,,,,
+649,,,,,,,,,,,,
+650,,,,,,,,,,,,
+651,,,,,,,,,,,,
+652,,,,,,,,,,,,
+653,,,,,,,,,,,,
+654,,,,,,,,,,,,
+655,,,,,,,,,,,,
+656,,,,,,,,,,,,
+657,,,,,,,,,,,,
+658,,,,,,,,,,,,
+659,,,,,,,,,,,,
+660,,,,,,,,,,,,
+661,,,,,,,,,,,,
+662,,,,,,,,,,,,
+663,,,,,,,,,,,,
+664,,,,,,,,,,,,
+665,,,,,,,,,,,,
+666,,,,,,,,,,,,
+667,,,,,,,,,,,,
+668,,,,,,,,,,,,
+669,,,,,,,,,,,,
+670,,,,,,,,,,,,
+671,,,,,,,,,,,,
+672,,,,,,,,,,,,
+673,,,,,,,,,,,,
+674,,,,,,,,,,,,
+675,,,,,,,,,,,,
+676,,,,,,,,,,,,
+677,,,,,,,,,,,,
+678,,,,,,,,,,,,
+679,,,,,,,,,,,,
+680,,,,,,,,,,,,
+681,,,,,,,,,,,,
+682,,,,,,,,,,,,
+683,,,,,,,,,,,,
+684,,,,,,,,,,,,
+685,,,,,,,,,,,,
+686,,,,,,,,,,,,
+687,,,,,,,,,,,,
+688,,,,,,,,,,,,
+689,,,,,,,,,,,,
+690,,,,,,,,,,,,
+691,,,,,,,,,,,,
+692,,,,,,,,,,,,
+693,,,,,,,,,,,,
+694,,,,,,,,,,,,
+695,,,,,,,,,,,,
+696,,,,,,,,,,,,
+697,,,,,,,,,,,,
+698,,,,,,,,,,,,
+699,,,,,,,,,,,,
+700,,,,,,,,,,,,
+701,,,,,,,,,,,,
+702,,,,,,,,,,,,
+703,,,,,,,,,,,,
+704,,,,,,,,,,,,
+705,,,,,,,,,,,,
+706,,,,,,,,,,,,
+707,,,,,,,,,,,,
+708,,,,,,,,,,,,
+709,,,,,,,,,,,,
+710,,,,,,,,,,,,
+711,,,,,,,,,,,,
+712,,,,,,,,,,,,
+713,,,,,,,,,,,,
+714,,,,,,,,,,,,
+715,,,,,,,,,,,,
+716,,,,,,,,,,,,
+717,,,,,,,,,,,,
+718,,,,,,,,,,,,
+719,,,,,,,,,,,,
+720,,,,,,,,,,,,
+721,,,,,,,,,,,,
+722,,,,,,,,,,,,
+723,,,,,,,,,,,,
+724,,,,,,,,,,,,
+725,,,,,,,,,,,,
+726,,,,,,,,,,,,
+727,,,,,,,,,,,,
+728,,,,,,,,,,,,
+729,,,,,,,,,,,,
+730,,,,,,,,,,,,
+731,,,,,,,,,,,,
+732,,,,,,,,,,,,
+733,,,,,,,,,,,,
+734,,,,,,,,,,,,
+735,,,,,,,,,,,,
+736,,,,,,,,,,,,
+737,,,,,,,,,,,,
+738,,,,,,,,,,,,
+739,,,,,,,,,,,,
+740,,,,,,,,,,,,
+741,,,,,,,,,,,,
+742,,,,,,,,,,,,
+743,,,,,,,,,,,,
+744,,,,,,,,,,,,
+745,,,,,,,,,,,,
+746,,,,,,,,,,,,
+747,,,,,,,,,,,,
+748,,,,,,,,,,,,
+749,,,,,,,,,,,,
+750,,,,,,,,,,,,
+751,,,,,,,,,,,,
+752,,,,,,,,,,,,
+753,,,,,,,,,,,,
+754,,,,,,,,,,,,
+755,,,,,,,,,,,,
+756,,,,,,,,,,,,
+757,,,,,,,,,,,,
+758,,,,,,,,,,,,
+759,,,,,,,,,,,,
+760,,,,,,,,,,,,
+761,,,,,,,,,,,,
+762,,,,,,,,,,,,
+763,,,,,,,,,,,,
+764,,,,,,,,,,,,
+765,,,,,,,,,,,,
+766,,,,,,,,,,,,
+767,,,,,,,,,,,,
+768,,,,,,,,,,,,
+769,,,,,,,,,,,,
+770,,,,,,,,,,,,
+771,,,,,,,,,,,,
+772,,,,,,,,,,,,
+773,,,,,,,,,,,,
+774,,,,,,,,,,,,
+775,,,,,,,,,,,,
+776,,,,,,,,,,,,
+777,,,,,,,,,,,,
+778,,,,,,,,,,,,
+779,,,,,,,,,,,,
+780,,,,,,,,,,,,
+781,,,,,,,,,,,,
+782,,,,,,,,,,,,
+783,,,,,,,,,,,,
+784,,,,,,,,,,,,
+785,,,,,,,,,,,,
+786,,,,,,,,,,,,
+787,,,,,,,,,,,,
+788,,,,,,,,,,,,
+789,,,,,,,,,,,,
+790,,,,,,,,,,,,
+791,,,,,,,,,,,,
+792,,,,,,,,,,,,
+793,,,,,,,,,,,,
+794,,,,,,,,,,,,
+795,,,,,,,,,,,,
+796,,,,,,,,,,,,
+797,,,,,,,,,,,,
+798,,,,,,,,,,,,
+799,,,,,,,,,,,,
+800,,,,,,,,,,,,
+801,,,,,,,,,,,,
+802,,,,,,,,,,,,
+803,,,,,,,,,,,,
+804,,,,,,,,,,,,
+805,,,,,,,,,,,,
+806,,,,,,,,,,,,
+807,,,,,,,,,,,,
+808,,,,,,,,,,,,
+809,,,,,,,,,,,,
+810,,,,,,,,,,,,
+811,,,,,,,,,,,,
+812,,,,,,,,,,,,
+813,,,,,,,,,,,,
+814,,,,,,,,,,,,
+815,,,,,,,,,,,,
+816,,,,,,,,,,,,
+817,,,,,,,,,,,,
+818,,,,,,,,,,,,
+819,,,,,,,,,,,,
+820,,,,,,,,,,,,
+821,,,,,,,,,,,,
+822,,,,,,,,,,,,
+823,,,,,,,,,,,,
+824,,,,,,,,,,,,
+825,,,,,,,,,,,,
+826,,,,,,,,,,,,
+827,,,,,,,,,,,,
+828,,,,,,,,,,,,
+829,,,,,,,,,,,,
+830,,,,,,,,,,,,
+831,,,,,,,,,,,,
+832,,,,,,,,,,,,
+833,,,,,,,,,,,,
+834,,,,,,,,,,,,
+835,,,,,,,,,,,,
+836,,,,,,,,,,,,
+837,,,,,,,,,,,,
+838,,,,,,,,,,,,
+839,,,,,,,,,,,,
+840,,,,,,,,,,,,
+841,,,,,,,,,,,,
+842,,,,,,,,,,,,
+843,,,,,,,,,,,,
+844,,,,,,,,,,,,
+845,,,,,,,,,,,,
+846,,,,,,,,,,,,
+847,,,,,,,,,,,,
+848,,,,,,,,,,,,
+849,,,,,,,,,,,,
+850,,,,,,,,,,,,
+851,,,,,,,,,,,,
+852,,,,,,,,,,,,
+853,,,,,,,,,,,,
+854,,,,,,,,,,,,
+855,,,,,,,,,,,,
+856,,,,,,,,,,,,
+857,,,,,,,,,,,,
+858,,,,,,,,,,,,
+859,,,,,,,,,,,,
+860,,,,,,,,,,,,
+861,,,,,,,,,,,,
+862,,,,,,,,,,,,
+863,,,,,,,,,,,,
+864,,,,,,,,,,,,
+865,,,,,,,,,,,,
+866,,,,,,,,,,,,
+867,,,,,,,,,,,,
+868,,,,,,,,,,,,
+869,,,,,,,,,,,,
+870,,,,,,,,,,,,
+871,,,,,,,,,,,,
+872,,,,,,,,,,,,
+873,,,,,,,,,,,,
+874,,,,,,,,,,,,
+875,,,,,,,,,,,,
+876,,,,,,,,,,,,
+877,,,,,,,,,,,,
+878,,,,,,,,,,,,
+879,,,,,,,,,,,,
+880,,,,,,,,,,,,
+881,,,,,,,,,,,,
+882,,,,,,,,,,,,
+883,,,,,,,,,,,,
+884,,,,,,,,,,,,
+885,,,,,,,,,,,,
+886,,,,,,,,,,,,
+887,,,,,,,,,,,,
+888,,,,,,,,,,,,
+889,,,,,,,,,,,,
+890,,,,,,,,,,,,
+891,,,,,,,,,,,,
+892,,,,,,,,,,,,
+893,,,,,,,,,,,,
+894,,,,,,,,,,,,
+895,,,,,,,,,,,,
+896,,,,,,,,,,,,
+897,,,,,,,,,,,,
+898,,,,,,,,,,,,
+899,,,,,,,,,,,,
+900,,,,,,,,,,,,
+901,,,,,,,,,,,,
+902,,,,,,,,,,,,
+903,,,,,,,,,,,,
+904,,,,,,,,,,,,
+905,,,,,,,,,,,,
+906,,,,,,,,,,,,
+907,,,,,,,,,,,,
+908,,,,,,,,,,,,
+909,,,,,,,,,,,,
+910,,,,,,,,,,,,
+911,,,,,,,,,,,,
+912,,,,,,,,,,,,
+913,,,,,,,,,,,,
+914,,,,,,,,,,,,
+915,,,,,,,,,,,,
+916,,,,,,,,,,,,
+917,,,,,,,,,,,,
+918,,,,,,,,,,,,
+919,,,,,,,,,,,,
+920,,,,,,,,,,,,
+921,,,,,,,,,,,,
+922,,,,,,,,,,,,
+923,,,,,,,,,,,,
+924,,,,,,,,,,,,
+925,,,,,,,,,,,,
+926,,,,,,,,,,,,
+927,,,,,,,,,,,,
+928,,,,,,,,,,,,
+929,,,,,,,,,,,,
+930,,,,,,,,,,,,
+931,,,,,,,,,,,,
+932,,,,,,,,,,,,
+933,,,,,,,,,,,,
+934,,,,,,,,,,,,
+935,,,,,,,,,,,,
+936,,,,,,,,,,,,
+937,,,,,,,,,,,,
+938,,,,,,,,,,,,
+939,,,,,,,,,,,,
+940,,,,,,,,,,,,
+941,,,,,,,,,,,,
+942,,,,,,,,,,,,
+943,,,,,,,,,,,,
+944,,,,,,,,,,,,
+945,,,,,,,,,,,,
+946,,,,,,,,,,,,
+947,,,,,,,,,,,,
+948,,,,,,,,,,,,
+949,,,,,,,,,,,,
+950,,,,,,,,,,,,
+951,,,,,,,,,,,,
+952,,,,,,,,,,,,
+953,,,,,,,,,,,,
+954,,,,,,,,,,,,
+955,,,,,,,,,,,,
+956,,,,,,,,,,,,
+957,,,,,,,,,,,,
+958,,,,,,,,,,,,
+959,,,,,,,,,,,,
+960,,,,,,,,,,,,
+961,,,,,,,,,,,,
+962,,,,,,,,,,,,
+963,,,,,,,,,,,,
+964,,,,,,,,,,,,
+965,,,,,,,,,,,,
+966,,,,,,,,,,,,
+967,,,,,,,,,,,,
+968,,,,,,,,,,,,
+969,,,,,,,,,,,,
+970,,,,,,,,,,,,
+971,,,,,,,,,,,,
+972,,,,,,,,,,,,
+973,,,,,,,,,,,,
+974,,,,,,,,,,,,
+975,,,,,,,,,,,,
+976,,,,,,,,,,,,
+977,,,,,,,,,,,,
+978,,,,,,,,,,,,
+979,,,,,,,,,,,,
+980,,,,,,,,,,,,
+981,,,,,,,,,,,,
+982,,,,,,,,,,,,
+983,,,,,,,,,,,,
+984,,,,,,,,,,,,
+985,,,,,,,,,,,,
+986,,,,,,,,,,,,
+987,,,,,,,,,,,,
+988,,,,,,,,,,,,
+989,,,,,,,,,,,,
+990,,,,,,,,,,,,
+991,,,,,,,,,,,,
+992,,,,,,,,,,,,
+993,,,,,,,,,,,,
+994,,,,,,,,,,,,
+995,,,,,,,,,,,,
+996,,,,,,,,,,,,
+997,,,,,,,,,,,,
+998,,,,,,,,,,,,
+999,,,,,,,,,,,,
+1000,,,,,,,,,,,,
+1001,,,,,,,,,,,,
+1002,,,,,,,,,,,,
+1003,,,,,,,,,,,,
+1004,,,,,,,,,,,,
+1005,,,,,,,,,,,,
+1006,,,,,,,,,,,,
+1007,,,,,,,,,,,,
+1008,,,,,,,,,,,,
+1009,,,,,,,,,,,,
+1010,,,,,,,,,,,,
+1011,,,,,,,,,,,,
+1012,,,,,,,,,,,,
+1013,,,,,,,,,,,,
+1014,,,,,,,,,,,,
+1015,,,,,,,,,,,,
+1016,,,,,,,,,,,,
+1017,,,,,,,,,,,,
+1018,,,,,,,,,,,,
+1019,,,,,,,,,,,,
+1020,,,,,,,,,,,,
+1021,,,,,,,,,,,,
+1022,,,,,,,,,,,,
+1023,,,,,,,,,,,,
+1024,,,,,,,,,,,,
+1025,,,,,,,,,,,,
+1026,,,,,,,,,,,,
+1027,,,,,,,,,,,,
+1028,,,,,,,,,,,,
+1029,,,,,,,,,,,,
+1030,,,,,,,,,,,,
+1031,,,,,,,,,,,,
+1032,,,,,,,,,,,,
+1033,,,,,,,,,,,,
+1034,,,,,,,,,,,,
+1035,,,,,,,,,,,,
+1036,,,,,,,,,,,,
+1037,,,,,,,,,,,,
+1038,,,,,,,,,,,,
+1039,,,,,,,,,,,,
+1040,,,,,,,,,,,,
+1041,,,,,,,,,,,,
+1042,,,,,,,,,,,,
+1043,,,,,,,,,,,,
+1044,,,,,,,,,,,,
+1045,,,,,,,,,,,,
+1046,,,,,,,,,,,,
+1047,,,,,,,,,,,,
+1048,,,,,,,,,,,,
+1049,,,,,,,,,,,,
+1050,,,,,,,,,,,,
+1051,,,,,,,,,,,,
+1052,,,,,,,,,,,,
+1053,,,,,,,,,,,,
+1054,,,,,,,,,,,,
+1055,,,,,,,,,,,,
+1056,,,,,,,,,,,,
+1057,,,,,,,,,,,,
+1058,,,,,,,,,,,,
+1059,,,,,,,,,,,,
+1060,,,,,,,,,,,,
+1061,,,,,,,,,,,,
+1062,,,,,,,,,,,,
+1063,,,,,,,,,,,,
+1064,,,,,,,,,,,,
+1065,,,,,,,,,,,,
+1066,,,,,,,,,,,,
+1067,,,,,,,,,,,,
+1068,,,,,,,,,,,,
+1069,,,,,,,,,,,,
+1070,,,,,,,,,,,,
+1071,,,,,,,,,,,,
+1072,,,,,,,,,,,,
+1073,,,,,,,,,,,,
+1074,,,,,,,,,,,,
+1075,,,,,,,,,,,,
+1076,,,,,,,,,,,,
+1077,,,,,,,,,,,,
+1078,,,,,,,,,,,,
+1079,,,,,,,,,,,,
+1080,,,,,,,,,,,,
+1081,,,,,,,,,,,,
+1082,,,,,,,,,,,,
+1083,,,,,,,,,,,,
+1084,,,,,,,,,,,,
+1085,,,,,,,,,,,,
+1086,,,,,,,,,,,,
+1087,,,,,,,,,,,,
+1088,,,,,,,,,,,,
+1089,,,,,,,,,,,,
+1090,,,,,,,,,,,,
+1091,,,,,,,,,,,,
+1092,,,,,,,,,,,,
+1093,,,,,,,,,,,,
+1094,,,,,,,,,,,,
+1095,,,,,,,,,,,,
+1096,,,,,,,,,,,,
+1097,,,,,,,,,,,,
+1098,,,,,,,,,,,,
+1099,,,,,,,,,,,,
+1100,,,,,,,,,,,,
+1101,,,,,,,,,,,,
+1102,,,,,,,,,,,,
+1103,,,,,,,,,,,,
+1104,,,,,,,,,,,,
+1105,,,,,,,,,,,,
+1106,,,,,,,,,,,,
+1107,,,,,,,,,,,,
+1108,,,,,,,,,,,,
+1109,,,,,,,,,,,,
+1110,,,,,,,,,,,,
+1111,,,,,,,,,,,,
+1112,,,,,,,,,,,,
+1113,,,,,,,,,,,,
+1114,,,,,,,,,,,,
+1115,,,,,,,,,,,,
+1116,,,,,,,,,,,,
+1117,,,,,,,,,,,,
+1118,,,,,,,,,,,,
+1119,,,,,,,,,,,,
+1120,,,,,,,,,,,,
+1121,,,,,,,,,,,,
+1122,,,,,,,,,,,,
+1123,,,,,,,,,,,,
+1124,,,,,,,,,,,,
+1125,,,,,,,,,,,,
+1126,,,,,,,,,,,,
+1127,,,,,,,,,,,,
+#VALUE!,,,,,,,,,,,,
