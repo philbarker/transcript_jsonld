@@ -1,8 +1,6 @@
 {
   "@context": {
-    "schema": "http://schema.org/",
-    "ceterms": "https://purl.org/ctdl/terms/",
-    "@vocab": "http://example.org/vocab/",
+    "@vocab": "http://pesc.org/terms/",
     "@base": "http://example.edu/entities/",
     "type": {
       "@id": "@type",
