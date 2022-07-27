@@ -2,43 +2,22 @@
   "@context": {
     "@vocab": "http://pesc.org/terms/",
     "@base": "http://example.edu/entities/",
-    "type": {
-      "@id": "@type",
-      "@type": "@id"
-    },
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
     "DocumentID": {
-      "@id": "@id",
-      "@type": "@id"
-    },
-    "DocumentTypeCode": {
-      "@id": "@type",
-      "@type": "@id"
-    },
-    "CreatedDateTime": {
-      "@id": "ceterms:dateCreated"
+      "@id": "documentID",
+      "@type": "xsd:string"
     },
     "Source": {
-      "@id": "source",
-      "@container": "@type"
+      "@id": "source"
     },
-    "Contacts": "schema:address",
-    "Organization": {
-      "@id": "ceterms:CredentialOrganization"
+    "Destination": {
+      "@id": "destination"
     },
-    "OrganizationName": {
-      "@id": "ceterms:name"
-    },
-    "LocalOrganizationID": "ceterms:identifier",
-    "LocalOrganizationIDCode": "ceterms:identifierValueCode",
-    "LocalOrganizationIDQualifier": "ceterms:identifierTypeName",
-    "Address": "@nest",
-    "URLAddress": "ceterms:subjectWebpage",
-    "City": "ceterms:Locality",
-    "AddressLine": "ceterms:streetAddress",
-    "PostalCode": "ceterms:postalCode",
-    "StateProvinceCode": "ceterms:addressRegion",
-    "EmailAddress": "ceterms:email",
-    "Accreditation": "ceterms:accreditedBy",
-    "AccreditingBodyName": "ceterms:name"
+    "DocumentTypeCode": {
+      "@type": "@id",
+      "@context": {
+        "@base": "https://pesc.org/vocabs/DocumentTypeCodes"
+      }
+    }
   }
 }
