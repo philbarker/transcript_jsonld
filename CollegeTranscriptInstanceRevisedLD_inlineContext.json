@@ -3,97 +3,100 @@
     "@vocab": "http://pesc.org/terms/",
     "@base": "http://example.edu/entities/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "DocumentID": {
-      "@id": "documentID",
+    "pesc": "http://pesc.org/terms/",
+    "documentID": {
       "@type": "xsd:string"
     },
-    "Source": {
+    "source": {
       "@id": "source"
     },
-    "Destination": {
+    "destination": {
       "@id": "destination"
     },
-    "DocumentTypeCode": {
+    "documentTypeCode": {
       "@type": "@id",
       "@context": {
         "@base": "https://pesc.org/vocabs/DocumentTypeCodes"
+      }
+    },
+    "transmissionType": {
+      "@type": "@id",
+      "@context": {
+        "@base": "https://pesc.org/vocabs/TransmissionTypeCodes"
       }
     }
   },
   "CollegeTranscript": {
     "@type": "CollegeTranscript",
-    "TransmissionData": {
+    "__TransmissionData": {
       "@type": "TransmissionData",
-      "DocumentID": "050330001",
-      "CreatedDateTime": "2005-02-02T10:04:29-05:00",
-      "DocumentTypeCode": "#RequestedRecord",
-      "TransmissionType": "#Original",
-      "Source": {
+      "documentID": "050330001",
+      "createdDateTime": "2005-02-02T10:04:29-05:00",
+      "documentTypeCode": "#RequestedRecord",
+      "transmissionType": "#Original",
+      "source": {
         "@type": "Organization",
-        "ATP": "006882",
-        "LocalOrganizationID": {
-          "LocalOrganizationIDCode": "123456",
-          "LocalOrganizationIDQualifier": "TX"
+        "atpID": "006882",
+        "__LocalOrganizationID": {
+          "@type": "LocalOrganizationID",
+          "localOrganizationIDCode": "123456",
+          "localOrganizationIDQualifier": "TX"
         },
-        "OrganizationName": [
+        "organizationName": [
           "THE UNIVERSITY OF TEXAS AT AUSTIN"
         ],
-        "Contacts": [
+        "__Contacts": [
           {
-            "Address": [
+            "@type": "Contact",
+            "__Address": {
+              "@type": "Address",
+              "addressLine": [
+                "Office of the Registrar"
+              ],
+              "city": "Austin",
+              "stateProvinceCode": "TX",
+              "postalCode": "78712",
+              "attentionLine": [
+                "Jane Shaugness"
+              ]
+            },
+            "_Phone": [
               {
-                "AddressLine": [
-                  "Office of the Registrar"
-                ],
-                "City": "Austin",
-                "StateProvinceCode": "TX",
-                "PostalCode": "78712",
-                "AttentionLine": [
-                  "Jane Shaugness"
-                ]
+                "@type": "Phone",
+                "areaCityCode": "512",
+                "phoneNumber": "4757638"
               }
             ],
-            "Phone": [
+            "_FaxPhone": [
               {
-                "AreaCityCode": "512",
-                "PhoneNumber": "4757638"
+                "@type": "FAXPhone",
+                "areaCityCode": "512",
+                "phoneNumber": "4757600"
               }
             ],
-            "FaxPhone": [
-              {
-                "AreaCityCode": "512",
-                "PhoneNumber": "4757600"
-              }
-            ],
-            "Email": [
-              {
-                "EmailAddress": "Registrar@mail.utexas.edu"
-              }
-            ],
-            "URL": [
-              {
-                "URLAddress": "www.utexas.edu"
-              }
-            ]
+            "email": "Registrar@mail.utexas.edu",
+            "url": "www.utexas.edu"
           }
         ],
-        "Accreditation": {
-          "AccreditingBodyCode": "SACS",
-          "AccreditingBodyName": "\n\t\t\t\t\t\tSouthern Association of Colleges and Schools\n\t\t\t\t\t"
+        "__Accreditation": {
+          "@type": "Accreditation",
+          "accreditingBodyCode": "SACS",
+          "accreditingBodyName": "Southern Association of Colleges and Schools"
         }
       },
-      "Destination": {
+      "destination": {
         "@type": "Organization",
-        "FICE": "001506",
-        "LocalOrganizationID": {
-          "LocalOrganizationIDCode": "1234",
-          "LocalOrganizationIDQualifier": "FL"
+        "ficeID": "001506",
+        "__LocalOrganizationID": {
+          "@type": "LocalOrganizationID",
+          "localOrganizationIDCode": "1234",
+          "localOrganizationIDQualifier": "FL"
         },
-        "OrganizationName": [
+        "organizationName": [
           "Miami Dade College"
         ]
       },
-      "RequestTrackingID": "23456778009"
+      "requestTrackingID": "23456778009"
     },
     "Student": {
       "Person": {
