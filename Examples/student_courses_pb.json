@@ -29,7 +29,7 @@
       "@id": "Session"
     },
     "studentCourses": {
-      "@id": "StudentCourses"
+      "@id": "StudentCourse"
     }
   },
   "transcript": {
