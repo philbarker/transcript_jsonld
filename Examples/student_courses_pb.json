@@ -20,16 +20,18 @@
     },
     "transcript": {
       "@container": "@type",
-      "@id": "@graph"
-    },
-    "courses": {
-      "@id": "Course"
-    },
-    "session": {
-      "@id": "Session"
-    },
-    "studentCourses": {
-      "@id": "StudentCourses"
+      "@id": "@graph",
+      "@context": {
+        "courses": {
+          "@id": "Course"
+        },
+        "session": {
+          "@id": "Session"
+        },
+        "studentCourses": {
+          "@id": "StudentCourses"
+        }
+      }
     }
   },
   "transcript": {
