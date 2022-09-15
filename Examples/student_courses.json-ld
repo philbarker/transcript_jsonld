@@ -1,0 +1,94 @@
+{
+  "@context": {
+    "@vocab": "http://pesc.org/terms/",
+    "pesc": "http://pesc.org/terms/",
+    "uiCourses": "http://uiowa.edu/courses/",
+    "uiSessions": "http://uiowa.edu/sessions/",
+    "uiStudents": "http://uiowa.edu/students/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "startDate": {
+      "@type": "xsd:date"
+    },
+    "endDate": {
+      "@type": "xsd:date"
+    },
+    "includesCourses": {
+      "@type": "@id"
+    },
+    "course": {
+      "@type": "@id"
+    },
+    "session": {
+      "@type": "@id"
+    },
+    "student": {
+      "@type": "@id"
+    }
+  },
+  "courses": [
+    {
+      "@id": "uiCourses:CS/360",
+      "@type": "Course",
+      "courseCreditBasis": "Regular",
+      "courseCreditUnits": "Semester",
+      "courseCreditLevel": "LowerDivision",
+      "courseCreditValue": 4.25,
+      "courseAcademicGradeScaleCode": "25",
+      "courseCIPCode": "11.0101",
+      "courseLevel": "LowerDivision",
+      "courseGPAApplicabilityCode": "Applicable",
+      "courseSubjectAbbreviation": "CISC",
+      "courseNumber": "360",
+      "courseTitle": "Information Technology 360",
+      "courseInstructionMethodType": "Lecture"
+    },
+    {
+      "@id": "uiCourses:CS/370",
+      "@type": "Course",
+      "courseCreditBasis": "Regular",
+      "courseCreditUnits": "Semester",
+      "courseCreditLevel": "LowerDivision",
+      "courseCreditValue": 4.00,
+      "courseAcademicGradeScaleCode": "25",
+      "courseCIPCode": "11.0103",
+      "courseLevel": "LowerDivision",
+      "courseGPAApplicabilityCode": "Applicable",
+      "courseSubjectAbbreviation": "CISC",
+      "courseNumber": "370",
+      "courseTitle": "Information Technology 370",
+      "courseInstructionMethodType": "Lecture"
+    }
+  ],
+  "sessions": [
+    {
+      "@type": "Session",
+      "@id": "uiSessions:FALL20-21",
+      "startDate": "2021-08-16",
+      "endDate": "2021-12-22"
+    },
+    {
+      "@type": "Session",
+      "@id": "uiSessions:SPRING21-22",
+      "startDate": "2022-01-01",
+      "endDate": "2022-05-23"
+    }
+  ],
+  "studentCourses": [
+    {
+      "@type": "StudentCourse",
+      "student": "uiStudents:20-15674634",
+      "course": "uiCourses:CS/370",
+      "grade": "C-",
+      "numericGrade": 75,
+      "session": "uiSessions:FALL20-21"
+    },
+    {
+      "@type": "StudentCourse",
+      "student": "uiStudents:20-15674634",
+      "course": "uiCourses:CS/360",
+      "grade": "B+",
+      "numericGrade": 80,
+      "session": "uiSessions:SPRING21-22"
+    }
+  ]
+}

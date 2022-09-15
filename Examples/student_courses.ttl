@@ -1,0 +1,99 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix pesc: <http://pesc.org/terms/> .
+
+pesc:CourseShape
+    a sh:NodeShape ;
+    sh:targetClass pesc:Course ;
+    sh:property [
+        sh:path pesc:courseCreditBasis ;
+        sh:datatype xsd:string ;
+        sh:in ("Regular"  
+                "AcademicRenewal"
+                "AdvancedPlacement"
+                "AdvancedStanding"
+                "ContinuingEducation"
+                "Correspondence"
+                "Exemption"
+                "Equivalence"
+                "InternationalBaccalaureate"
+                "Military"
+                "Remedial"
+                "CreditByExam"
+                "HighSchoolTransferCredit"
+                "HighSchoolCreditOnly"
+                "HighSchoolDualCredit"
+                "JuniorHighSchoolCredit"
+                "LifeExperience"
+                "Major"
+                "AdultBasic") ;
+    ] ;
+    sh:property [
+        sh:path pesc:courseCreditValue ;
+        sh:datatype xsd:double ;
+        sh:maxInclusive 5.25 ;
+        sh:minInclusive 0.0 ;
+    ] ;
+    sh:property [
+        sh:path pesc:courseAcademicGradeScaleCode ;
+        sh:datatype xsd:string ;
+        sh:minLength 1 ;
+        sh:maxLength 3 ;
+        sh:minCount 1 ;
+   ] ;
+    sh:property [
+        sh:path pesc:courseCIPCode ;
+        sh:datatype xsd:string ;
+        sh:pattern "^[0-9]{2}.[0-9]{4}$" ;
+   ] .
+
+pesc:CoursesShape
+    a sh:NodeShape ;
+    sh:targetClass pesc:Courses ;
+    sh:property [
+      sh:path pesc:courses ;
+    ] .
+
+pesc:SessionShape
+    a sh:NodeShape ;
+    sh:targetClass pesc:Session ;
+    sh:property [
+        sh:path pesc:startDate ;
+        sh:datatype xsd:date ;
+        sh:lessThan pesc:endDate ;
+    ] ;
+    sh:property [
+        sh:path pesc:endDate ;
+        sh:datatype xsd:date ;
+
+    ]  .
+pesc:StudentCourseShape
+    a sh:NodeShape ;
+    sh:targetClass pesc:StudentCourse ;
+    sh:property [
+        sh:path pesc:course ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class pesc:Course ;
+    ] ;
+    sh:property pesc:GradePropertyShape ;
+    sh:property [
+        sh:path pesc:numericGrade ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 60 ;
+        sh:maxInclusive 95 ;
+    ] ;
+    sh:property [
+        sh:path pesc:session ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class pesc:Session ;
+    ] .
+
+pesc:GradePropertyShape
+    a sh:PropertyShape ;
+    sh:path pesc:grade ;
+    sh:datatype xsd:string ;
+    sh:in ("F" "D-" "D" "D+" "C-" "C" "C+" "B-" "B" "B+" "A-" "A" "A+") .
+
+
