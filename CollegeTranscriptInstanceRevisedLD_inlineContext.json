@@ -779,39 +779,29 @@
         "organizationName": [
           "THE UNIVERSITY OF TEXAS AT AUSTIN"
         ],
-        "__Contacts": [
-          {
-            "@type": "Contact",
-            "__Address": {
-              "@type": "Address",
-              "addressLine": [
-                "Office of the Registrar"
-              ],
-              "city": "Austin",
-              "stateProvinceCode": "TX",
-              "postalCode": "78712",
-              "attentionLine": [
-                "Jane Shaugness"
-              ]
-            },
-            "_Phone": [
-              {
-                "@type": "Phone",
-                "areaCityCode": "512",
-                "phoneNumber": "4757638"
-              }
-            ],
-            "_FaxPhone": [
-              {
-                "@type": "FAXPhone",
-                "areaCityCode": "512",
-                "phoneNumber": "4757600"
-              }
-            ],
-            "email": "Registrar@mail.utexas.edu",
-            "url": "www.utexas.edu"
-          }
-        ],
+        "__Contact": {
+          "@type": "Contact",
+          "__Address": {
+            "@type": "Address",
+            "addressLine": "Office of the Registrar",
+            "city": "Austin",
+            "stateProvinceCode": "TX",
+            "postalCode": "78712",
+            "attentionLine": "Jane Shaugness"
+          },
+          "_Phone": {
+            "@type": "Phone",
+            "areaCityCode": "512",
+            "phoneNumber": "4757638"
+          },
+          "_FaxPhone": {
+            "@type": "FAXPhone",
+            "areaCityCode": "512",
+            "phoneNumber": "4757600"
+          },
+          "email": "Registrar@mail.utexas.edu",
+          "url": "www.utexas.edu"
+        },
         "__Accreditation": {
           "@type": "Accreditation",
           "accreditingBodyCode": "SACS",
@@ -826,9 +816,7 @@
           "localOrganizationIDCode": "1234",
           "localOrganizationIDQualifier": "FL"
         },
-        "organizationName": [
-          "Miami Dade College"
-        ]
+        "organizationName": "Miami Dade College"
       },
       "requestTrackingID": "23456778009"
     },
