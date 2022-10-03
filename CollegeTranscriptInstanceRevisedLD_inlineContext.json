@@ -770,6 +770,7 @@
       "transmissionType": "pescTransmissionTypes:Original",
       "source": {
         "@type": "Organization",
+        "@id": "https://www.utexas.edu/#Organization",
         "atpID": "006882",
         "__LocalOrganizationID": {
           "@type": "LocalOrganizationID",
@@ -810,6 +811,7 @@
       },
       "destination": {
         "@type": "Organization",
+        "@id": "https://www.mdc.edu/#Organization",
         "ficeID": "001506",
         "__LocalOrganizationID": {
           "@type": "LocalOrganizationID",
