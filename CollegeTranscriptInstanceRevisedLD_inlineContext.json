@@ -762,7 +762,7 @@
   },
   "CollegeTranscript": {
     "@type": "CollegeTranscript",
-    "__TransmissionData": {
+    "transmissionData": {
       "@type": "TransmissionData",
       "documentID": "050330001",
       "createdDateTime": "2005-02-02T10:04:29-05:00",
@@ -832,52 +832,51 @@
       },
       "requestTrackingID": "23456778009"
     },
-    "Student": {
-      "Person": {
-        "SSN": "100000000",
-        "Birth": {
-          "BirthDate": "1967-07-14"
-        },
-        "Name": {
-          "NameCode": "Legal",
-          "FirstName": "Test",
-          "MiddleName": [
-            "Record",
-            "Test"
-          ],
-          "LastName": "Speede",
-          "NameSuffix": "IV"
-        },
-        "HighSchool": {
-          "OrganizationName": "AUSTIN HIGH SCHOOL",
-          "CEEBACT": "440320"
-        },
-        "Contacts": [
-          {
-            "Address": [
-              {
-                "AddressLine": [
-                  "1223 University Dr"
-                ],
-                "City": "Austin",
-                "StateProvinceCode": "TX",
-                "PostalCode": "78211",
-                "ExpirationDate": "2009-06-15"
-              }
-            ],
-            "Email": [
-              {
-                "EmailAddress": "TestSpeede@aol.com"
-              }
-            ]
-          }
+    "student": {
+      "@type": "Person",
+      "SSN": "100000000",
+      "Birth": {
+        "BirthDate": "1967-07-14"
+      },
+      "Name": {
+        "NameCode": "Legal",
+        "FirstName": "Test",
+        "MiddleName": [
+          "Record",
+          "Test"
         ],
-        "Gender": {
-          "GenderCode": "Female"
-        },
-        "Deceased": {
-          "DeceasedIndicator": true
+        "LastName": "Speede",
+        "NameSuffix": "IV"
+      },
+      "HighSchool": {
+        "OrganizationName": "AUSTIN HIGH SCHOOL",
+        "CEEBACT": "440320"
+      },
+      "Contacts": [
+        {
+          "Address": [
+            {
+              "AddressLine": [
+                "1223 University Dr"
+              ],
+              "City": "Austin",
+              "StateProvinceCode": "TX",
+              "PostalCode": "78211",
+              "ExpirationDate": "2009-06-15"
+            }
+          ],
+          "Email": [
+            {
+              "EmailAddress": "TestSpeede@aol.com"
+            }
+          ]
         }
+      ],
+      "Gender": {
+        "GenderCode": "Female"
+      },
+      "Deceased": {
+        "DeceasedIndicator": true
       },
       "AcademicRecord": [
         {
