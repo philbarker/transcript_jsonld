@@ -766,8 +766,8 @@
       "@type": "TransmissionData",
       "documentID": "050330001",
       "createdDateTime": "2005-02-02T10:04:29-05:00",
-      "documentTypeCode": "#RequestedRecord",
-      "transmissionType": "#Original",
+      "documentTypeCode": "pescDocumentTypeCodes:RequestedRecord",
+      "transmissionType": "pescTransmissionTypes:Original",
       "source": {
         "@type": "Organization",
         "atpID": "006882",
