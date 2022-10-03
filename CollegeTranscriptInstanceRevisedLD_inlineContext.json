@@ -822,11 +822,9 @@
     },
     "student": {
       "@type": "Person",
-      "SSN": "100000000",
-      "Birth": {
-        "BirthDate": "1967-07-14"
-      },
-      "Name": {
+      "ssn": "100000000",
+      "birthDate": "1967-07-14",
+      "_Name": {
         "NameCode": "Legal",
         "FirstName": "Test",
         "MiddleName": [
