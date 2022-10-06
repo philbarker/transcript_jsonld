@@ -824,6 +824,7 @@
     },
     "student": {
       "@type": "Person",
+      "@id": "https://people.pjjk.net/test",
       "ssn": "100000000",
       "birthDate": "1967-07-14",
       "_Name": {
