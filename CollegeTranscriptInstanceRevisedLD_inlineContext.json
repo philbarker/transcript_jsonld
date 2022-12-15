@@ -28,6 +28,7 @@
     "pescInstructionSiteCodes": "https://pesc.org/vocabs/InstructionSiteCodes#",
     "pescLanguageProficiencyCodes": "https://pesc.org/vocabs/LanguageProficiencyCodes#",
     "pescLanguageUsageCodes": "https://pesc.org/vocabs/LanguageUsageCodes#",
+    "pescNameCodes": "https://pesc.org/vocabs/NameCodes#",
     "pescRepeatCodes": "https://pesc.org/vocabs/RepeatCodes#",
     "pescResidencyStatusCodes": "https://pesc.org/vocabs/ResidencyStatusCodes#",
     "pescSchoolLevels": "https://pesc.org/vocabs/SchoolLevels#",
@@ -936,7 +937,7 @@
                   "en": "TEXAS A and M UNIVERSITY COLLEGE STATION"
                 },
                 "atpID": "006003",
-                "schoolOverrideCode": "pescSchoolOverrideCode:Transfer"
+                "schoolOverrideCode": "pescSchoolOverrideCodes:Transfer"
               },
               "academicAchievement": [
                 {
