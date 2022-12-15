@@ -777,7 +777,9 @@
           "localOrganizationIDCode": "123456",
           "localOrganizationIDQualifier": "TX"
         },
-        "organizationName": "THE UNIVERSITY OF TEXAS AT AUSTIN",
+        "organizationName": {
+          "en": "THE UNIVERSITY OF TEXAS AT AUSTIN"
+        },
         "contact": {
           "@type": "ContactPoint",
           "address": {
@@ -816,7 +818,9 @@
           "localOrganizationIDCode": "1234",
           "localOrganizationIDQualifier": "FL"
         },
-        "organizationName": "Miami Dade College"
+        "organizationName": {
+          "en": "Miami Dade College"
+        }
       },
       "requestTrackingID": "23456778009"
     },
@@ -879,7 +883,9 @@
           "school": {
             "@type": "Organization",
             "@id": "https://example.edu/AustinCommunityCollege",
-            "organizationName": "AUSTIN COMMUNITY COLLEGE",
+            "organizationName": {
+              "en": "AUSTIN COMMUNITY COLLEGE"
+            },
             "atpID": "006759",
             "schoolOverrideCode": "pescSchoolOverrideCodes:Transfer",
             "schoolLevel": "Postsecondary"
@@ -891,7 +897,9 @@
           "school": {
             "@type": "Organization",
             "@id": "https://example.edu/TexasA+MCollegeStation",
-            "organizationName": "TEXAS A and M UNIVERSITY COLLEGE STATION",
+            "organizationName": {
+              "en": "TEXAS A and M UNIVERSITY COLLEGE STATION"
+            },
             "atpID": "006003",
             "SchoolOverrideCode": "pescSchoolOverrideCodes:Transfer",
             "SchoolLevel": "Postsecondary"
@@ -924,7 +932,9 @@
               "school": {
                 "@type": "Organization",
                 "@id": "https://example.edu/TexasA+MCollegeStation",
-                "organizationName": "TEXAS A and M UNIVERSITY COLLEGE STATION ",
+                "organizationName": {
+                  "en": "TEXAS A and M UNIVERSITY COLLEGE STATION"
+                },
                 "atpID": "006003",
                 "schoolOverrideCode": "pescSchoolOverrideCode:Transfer"
               },
@@ -979,7 +989,9 @@
               "school": {
                 "@type": "Organization",
                 "@id": "https://example.edu/TexasA+MCollegeStation",
-                "organizationName": "TEXAS A and M UNIVERSITY COLLEGE STATION",
+                "organizationName": {
+                  "en": "TEXAS A and M UNIVERSITY COLLEGE STATION"
+                },
                 "atpID": "006003",
                 "schoolOverrideCode": "pescSchoolOverrideCodes:Transfer"
               },
@@ -1194,7 +1206,9 @@
                   "courseOverrideSchool": {
                     "@type": "Organization",
                     "@id": "https://example.edu/AustinCommunityCollege",
-                    "organizationName": "AUSTIN COMMUNITY COLLEGE",
+                    "organizationName": {
+                      "en": "AUSTIN COMMUNITY COLLEGE"
+                    },
                     "atpID": "006759"
                   }
                 }
