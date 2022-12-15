@@ -7,9 +7,9 @@ You can [view the work in progress](https://tinyurl.com/ydocp59a) using the JSON
 ## Outline
 CollegeTranscriptInstanceRevised.json is example data in json, automatically converted from XML
 
-context.json is a context block generated from tabular application profile in the TAP+SHACL directory.
+CollegeTranscriptInstanceRevisedLD_inlineContext.json is the same example data but in json, but as JSON-LD and recast to the schema described in the TAP+SHACL directory. This is the main file used for development.
 
-CollegeTranscriptInstanceRevisedLD_inlineContext.json and CollegeTranscriptInstanceRevisedLD_remoteContext.json are the same example data but in json, but as JSON-LD and recast to the schema described in the TAP+SHACL directory.
+context.json is a context block generated from tabular application profile in the TAP+SHACL directory, and CollegeTranscriptInstanceRevisedLD_remoteContext.json is the JSON block + a remote reference to this. These files are often some revisions behind the _inlineContext file.
 
 TAP+SHACL directory contains the schema described in graphical format, as a Tabular Application Profile (TAP),  and in SHACL derived from the TAP.
 
