@@ -895,7 +895,7 @@
             },
             "atpID": "006759",
             "schoolOverrideCode": "pescSchoolOverrideCodes:Transfer",
-            "schoolLevel": "Postsecondary"
+            "schoolLevel": "pescSchoolLevels:Postsecondary"
           },
           "noteMessage": "ATTENDED: 19880601-19880831"
         },
@@ -909,7 +909,7 @@
             },
             "atpID": "006003",
             "SchoolOverrideCode": "pescSchoolOverrideCodes:Transfer",
-            "SchoolLevel": "Postsecondary"
+            "SchoolLevel": "pescSchoolLevels:Postsecondary"
           },
           "NoteMessage": "ATTENDED: 19980901-19981231"
         },
@@ -1642,7 +1642,7 @@
               "AcademicSummary": [
                 {
                   "@type": "AcademicSummary",
-                  "academicSummaryLevel": "Undergraduate",
+                  "academicSummaryLevel": "pescAcademicSummaryLevels:Undergraduate",
                   "gpaSummary": {
                     "creditHoursAttempted": 12,
                     "creditHoursEarned": 12,
