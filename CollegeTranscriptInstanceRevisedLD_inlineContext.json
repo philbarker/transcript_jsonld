@@ -923,7 +923,7 @@
               "@type": "GPA",
               "creditHoursAttempted": 159,
               "creditHoursEarned": 136,
-              "creditUnit": "Semester",
+              "creditUnit": "pescCreditUnits:Semester",
               "gradePointAverage": 3.0915,
               "creditHoursGPA": 153
             }
