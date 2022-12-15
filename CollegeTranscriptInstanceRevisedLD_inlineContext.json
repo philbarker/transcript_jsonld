@@ -1068,7 +1068,7 @@
                   "courseCreditEarned": 0,
                   "inCourse": {
                     "@type": "Course",
-                    "@id": "https://example.edu/course/310L",
+                    "@id": "https://example.edu/course/309K",
                     "courseCreditValue": 3,
                     "courseCreditBasis": "pescCreditBasis:Regular",
                     "courseCreditUnits": "pescCreditUnits:Semester",
@@ -1488,7 +1488,7 @@
                   "courseAcademicGrade": "A",
                   "inCourse": {
                     "@type": "Course",
-                    "@id": "https://example.edu/course/365N",
+                    "@id": "https://example.edu/course/311",
                     "courseCreditBasis": "pescCreditBasis:Regular",
                     "courseCreditUnits": "pescCreditUnits:Semester",
                     "courseCreditLevel": "pescCreditLevels:LowerDivision",
@@ -1607,7 +1607,7 @@
                   "courseAcademicGrade": "B",
                   "inCourse": {
                     "@type": "Course",
-                    "@id": "https://example.edu/course/387J",
+                    "@id": "https://example.edu/course/389K",
                     "courseCreditBasis": "pescCreditBasis:Regular",
                     "courseCreditUnits": "pescCreditUnits:Semester",
                     "courseCreditLevel": "pescCreditLevels:Graduate",
