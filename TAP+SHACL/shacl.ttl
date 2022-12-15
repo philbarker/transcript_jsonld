@@ -1538,7 +1538,6 @@
 
 <nameshapeMiddleName> a sh:PropertyShape ;
     sh:datatype xsd:string ;
-    sh:maxCount 1 ;
     sh:maxLength 35 ;
     sh:name "Middle Name"@en-US ;
     sh:nodeKind sh:Literal ;

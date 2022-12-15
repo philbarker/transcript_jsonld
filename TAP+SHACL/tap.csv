@@ -486,7 +486,7 @@ pescLanguageUsageCodes:WrittenCommunication",picklist,,Optional,
 177,NameShape,pesc:compositeName,Composite Name,FALSE,FALSE,Literal,xsd:string,45,maxLength,,Not Recommended,
 167,NameShape,pesc:firstName,First Name,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Recommended,
 171,NameShape,pesc:lastName,Last Name,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Recommended,
-169,NameShape,pesc:middleName,Middle Name,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Recommended,
+169,NameShape,pesc:middleName,Middle Name,FALSE,TRUE,Literal,xsd:string,35,maxLength,,Recommended,
 164,NameShape,pesc:nameCode,Name Code,FALSE,FALSE,IRI,,"pescNameCodes:Casual
 pescNameCodes:Formal
 pescNameCodes:Former
