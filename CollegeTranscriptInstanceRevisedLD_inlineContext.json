@@ -1350,7 +1350,7 @@
                   "courseAcademicGrade": "A",
                   "inCourse": {
                     "@type": "Course",
-                    "@id": "https://example.edu/course/357M",
+                    "@id": "https://example.edu/course/358",
                     "courseCreditBasis": "pescCreditBasis:Regular",
                     "courseCreditUnits": "pescCreditUnits:Semester",
                     "courseCreditLevel": "pescAcademicSummaryLevels:UpperDivision",
