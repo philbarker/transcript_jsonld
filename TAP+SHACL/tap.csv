@@ -241,7 +241,7 @@ pesc:core:InternationalAddressDetailsGroup"
 178,AlternateNameShape,pesc:compositeName,Composite Name,FALSE,FALSE,Literal,xsd:string,45,maxLength,,Not Recommended,
 168,AlternateNameShape,pesc:firstName,First Name,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Recommended,
 172,AlternateNameShape,pesc:lastName,Last Name,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Recommended,
-170,AlternateNameShape,pesc:middleName,Middle Name,FALSE,FALSE,Literal,xsd:string,35,maxLength,,Recommended,
+170,AlternateNameShape,pesc:middleName,Middle Name,FALSE,TRUE,Literal,xsd:string,35,maxLength,,Recommended,
 166,AlternateNameShape,pesc:namePrefix,Name Prefix,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Recommended,
 174,AlternateNameShape,pesc:nameSuffix,Name Suffix,FALSE,FALSE,Literal,xsd:string,"JR
 SR
