@@ -5,10 +5,14 @@ Work in progress. Not endorsed. Do not re-use without permission.
 You can [view the work in progress](https://tinyurl.com/ydocp59a) using the JSON-LD playground.
 
 ## Outline
-CollegeTranscriptInstanceRevised.json is example data in json
+CollegeTranscriptInstanceRevised.json is example data in json, automatically converted from XML
 
- context.json is an attempt at a context block to map the keys in the example to RDF (mostly CTDL)
+context.json is a context block generated from tabular application profile in the TAP+SHACL directory.
 
- TransmissionData-ld_inlineContext.json and  TransmissionData-ld_inlineContext.json include the context at the top of the example data (inline and linked).
+CollegeTranscriptInstanceRevisedLD_inlineContext.json and CollegeTranscriptInstanceRevisedLD_remoteContext.json are the same example data but in json, but as JSON-LD and recast to the schema described in the TAP+SHACL directory.
 
- ctdlBasedContext.json is a simple context that can be used to reframe the JSON-LD example data against the CTDL context. This has the effect of producing more readable JSON-LD, with prefixes for the keys rather than full URIs.
+TAP+SHACL directory contains the schema described in graphical format, as a Tabular Application Profile (TAP),  and in SHACL derived from the TAP.
+
+Examples directory contains small proof of concept examples, mostly dated.
+
+Archive directory contains false starts and other bits and bobs.

@@ -906,7 +906,7 @@
             "@type": "AcademicSummary",
             "academicSummaryType": "pescAcademicSummaryTypes:All",
             "academicSummaryLevel": "pescAcademicSummaryLevels:Undergraduate",
-            "_GPA": {
+            "gpaSummary": {
               "@type": "GPA",
               "creditHoursAttempted": 159,
               "creditHoursEarned": 136,
