@@ -740,7 +740,7 @@
     sh:path pesc:_AcademicProgram .
 
 <academicsummaryshapeAcademicSummaryLevel> a sh:PropertyShape ;
-    sh:in ( pescAcademicSummaryLevels:LowerDivision pescAcademicSummaryLevels:UpperDivision pescAcademicSummaryLevels:Vocational pescAcademicSummaryLevels:TechnicalPreparatory pescAcademicSummaryLevels:Graduate pescAcademicSummaryLevels:Professional pescAcademicSummaryLevels:Dual pescAcademicSummaryLevels:Ungraded pescAcademicSummaryLevels:DualHighSchoolCollege pescAcademicSummaryLevels:Grade13 pescAcademicSummaryLevels:DualGraduateUndergraduate pescAcademicSummaryLevels:GraduateProfessional ) ;
+    sh:in ( pescAcademicSummaryLevels:Dual pescAcademicSummaryLevels:DualGraduate pescAcademicSummaryLevels:Undergraduate pescAcademicSummaryLevels:Grade13 pescAcademicSummaryLevels:Ungraded pescAcademicSummaryLevels:DualHighSchoolCollege pescAcademicSummaryLevels:Graduate pescAcademicSummaryLevels:GraduateProfessional pescAcademicSummaryLevels:LowerDivision pescAcademicSummaryLevels:Professional pescAcademicSummaryLevels:Secondary pescAcademicSummaryLevels:TechnicalPreparatory pescAcademicSummaryLevels:UpperDivision pescAcademicSummaryLevels:Vocational ) ;
     sh:maxCount 1 ;
     sh:name "Academic Summary Level"@en-US ;
     sh:nodeKind sh:IRI ;

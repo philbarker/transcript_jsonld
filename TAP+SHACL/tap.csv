@@ -167,18 +167,21 @@ pescStudentLevelCodes:Postdoctoral",,,Optional,
 216,AcademicSessionShape,pesc:userDefinedExtensions,User Defined Extensions,FALSE,FALSE,IRI BNODE,,,,__UserDefinedExtensionsShape,Optional,
 229,AcademicSummaryShape,pesc:_AcademicHonors,Academic Honors,FALSE,TRUE,IRI BNODE,,,,AcademicHonorsShape,Recommended,
 281,AcademicSummaryShape,pesc:_AcademicProgram,Academic Program,FALSE,FALSE,IRI BNODE,,,,AcademicProgramShape,Not Recommended,
-257,AcademicSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescAcademicSummaryLevels:LowerDivision
-pescAcademicSummaryLevels:UpperDivision
-pescAcademicSummaryLevels:Vocational
-pescAcademicSummaryLevels:TechnicalPreparatory
-pescAcademicSummaryLevels:Graduate
-pescAcademicSummaryLevels:Professional
-pescAcademicSummaryLevels:Dual
+257,AcademicSummaryShape,pesc:academicSummaryLevel,Academic Summary Level,FALSE,FALSE,IRI,,"pescAcademicSummaryLevels:Dual
+pescAcademicSummaryLevels:DualGraduate
+pescAcademicSummaryLevels:Undergraduate
+pescAcademicSummaryLevels:Grade13
 pescAcademicSummaryLevels:Ungraded
 pescAcademicSummaryLevels:DualHighSchoolCollege
-pescAcademicSummaryLevels:Grade13
-pescAcademicSummaryLevels:DualGraduateUndergraduate
-pescAcademicSummaryLevels:GraduateProfessional",picklist,,Recommended,
+pescAcademicSummaryLevels:Graduate
+pescAcademicSummaryLevels:GraduateProfessional
+pescAcademicSummaryLevels:LowerDivision
+pescAcademicSummaryLevels:Professional
+pescAcademicSummaryLevels:Secondary
+pescAcademicSummaryLevels:TechnicalPreparatory
+pescAcademicSummaryLevels:Undergraduate
+pescAcademicSummaryLevels:UpperDivision
+pescAcademicSummaryLevels:Vocational",picklist,,Recommended,
 255,AcademicSummaryShape,pesc:academicSummaryType,Academic Summary Type,FALSE,FALSE,IRI,,"pescAcademicSummaryTypes:All
 pescAcademicSummaryTypes:SenderOnly
 pescAcademicSummaryTypes:TransferOnly
