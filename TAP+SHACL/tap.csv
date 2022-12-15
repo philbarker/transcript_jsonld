@@ -113,7 +113,7 @@ pescStudentLevelCodes:Doctoral
 pescStudentLevelCodes:Postdoctoral",picklist,,Recommended,
 212,AcademicRecordShape,pesc:userDefinedExtensions,User Defined Extensions,FALSE,FALSE,IRI BNODE,,,,__UserDefinedExtensionsShape,Optional,
 288,AcademicSessionDetailShape,pesc:sessionBeginDate,Session Begin Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
-283,AcademicSessionDetailShape,pesc:sessionDesignator,Session Designator,TRUE,FALSE,Literal,xsd:date,,,,Required,
+283,AcademicSessionDetailShape,pesc:sessionDesignator,Session Designator,TRUE,FALSE,Literal,xsd:gYearMonth,,,,Required,
 284,AcademicSessionDetailShape,pesc:sessionDesignatorSuffix,Session Designator Suffix,FALSE,FALSE,Literal,xsd:string,10,maxLength,,Optional,
 289,AcademicSessionDetailShape,pesc:sessionEndDate,Session End Date,FALSE,FALSE,Literal,xsd:date,,,,Optional,
 285,AcademicSessionDetailShape,pesc:sessionName,Session Name,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Recommended,

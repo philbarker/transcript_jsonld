@@ -635,7 +635,7 @@
     sh:path pesc:sessionBeginDate .
 
 <academicsessiondetailshapeSessionDesignator> a sh:PropertyShape ;
-    sh:datatype xsd:date ;
+    sh:datatype xsd:gYear ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Session Designator"@en-US ;
@@ -2880,4 +2880,3 @@
     sh:description "Probably not needed"@en ;
     sh:name "User Defined Extensions"@en ;
     sh:targetClass <__UserDefinedExtensions> .
-

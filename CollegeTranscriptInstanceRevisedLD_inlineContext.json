@@ -658,7 +658,7 @@
       "@type": "xsd:date"
     },
     "sessionDesignator": {
-      "@type": "xsd:date"
+      "@type": "xsd:gYearMonth"
     },
     "sessionDesignatorSuffix": {
       "@type": "xsd:string"
