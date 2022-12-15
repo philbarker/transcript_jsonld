@@ -1,9 +1,9 @@
 {
   "@context": {
-    "@vocab": "http://pesc.org/terms/",
+    "@vocab": "https://pesc.org/terms/",
     "@base": "http://example.edu/entities/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "pesc": "http://pesc.org/terms/",
+    "pesc": "https://pesc.org/terms/",
     "pescAcademicSummaryLevels": "https://pesc.org/vocabs/AcademicSummaryLevels#",
     "pescAcademicSummaryTypes": "https://pesc.org/vocabs/AcademicSummaryTypes#",
     "pescAcademicProgramTypes": "https://pesc.org/vocabs/AcademicProgramTypes#",
@@ -66,9 +66,6 @@
     "_AcademicProgram": {
       "@type": "@id"
     },
-    "_AcademicSessionDetail": {
-      "@type": "@id"
-    },
     "_AlternateName": {
       "@type": "@id"
     },
@@ -96,19 +93,10 @@
     "_URLAddress": {
       "@type": "xsd:anyURI"
     },
-    "__ Contact": {
-      "@type": "@id"
-    },
     "__AcademicRecord": {
       "@type": "@id"
     },
     "__Accreditation": {
-      "@type": "@id"
-    },
-    "__Address": {
-      "@type": "@id"
-    },
-    "__Contacts": {
       "@type": "@id"
     },
     "__LocalOrganizationID": {
@@ -144,6 +132,9 @@
     "academicCompletionIndicator": {
       "@type": "xsd:boolean"
     },
+    "academicProgram": {
+      "@type": "@id"
+    },
     "academicProgramName": {
       "@type": "xsd:string"
     },
@@ -151,6 +142,9 @@
       "@type": "@id"
     },
     "academicSession": {
+      "@type": "@id"
+    },
+    "academicSessionDetail": {
       "@type": "@id"
     },
     "academicSummary": {
@@ -162,9 +156,6 @@
     "academicSummaryType": {
       "@type": "@id"
     },
-    "accreditationBodyCode": {
-      "@type": "xsd:string"
-    },
     "accreditingBodyName": {
       "@type": "xsd:string"
     },
@@ -172,6 +163,9 @@
       "@type": "xsd:string"
     },
     "additionalStudentAchievements": {
+      "@type": "@id"
+    },
+    "address": {
       "@type": "@id"
     },
     "addressLine": {
@@ -199,9 +193,6 @@
       "@type": "xsd:string"
     },
     "atpID": {
-      "@type": "xsd:string"
-    },
-    "attentionLine": {
       "@type": "xsd:string"
     },
     "attribute": {
@@ -263,6 +254,9 @@
     },
     "conditionsMetDate": {
       "@type": "xsd:date"
+    },
+    "contact": {
+      "@type": "@id"
     },
     "contactType": {
       "@type": "xsd:string"
@@ -420,6 +414,9 @@
     "deceasedIndicator": {
       "@type": "xsd:boolean"
     },
+    "delinquencies": {
+      "@type": "@id"
+    },
     "deliquencies": {
       "@type": "@id"
     },
@@ -462,9 +459,6 @@
     "esisID": {
       "@type": "xsd:string"
     },
-    "exitDate": {
-      "@type": "xsd:date"
-    },
     "exitReasonCode": {
       "@type": "xsd:string"
     },
@@ -486,6 +480,9 @@
     "gpaRangeMinimum": {
       "@type": "xsd:decimal"
     },
+    "gpaSummary": {
+      "@type": "@id"
+    },
     "gradePointAverage": {
       "@type": "xsd:decimal"
     },
@@ -504,14 +501,14 @@
     "immunizationStateCode": {
       "@type": "@id"
     },
+    "inCourse": {
+      "@type": "@id"
+    },
     "ipedsID": {
       "@type": "xsd:string"
     },
     "languageCode": {
       "@type": "xsd:string"
-    },
-    "languageProficiency": {
-      "@type": "@id"
     },
     "languageUsage": {
       "@type": "@id"
@@ -541,7 +538,7 @@
       "@type": "xsd:string"
     },
     "nameCode": {
-      "@type": "xsd:string"
+      "@type": "@id"
     },
     "namePrefix": {
       "@type": "xsd:string"
@@ -745,6 +742,9 @@
       "@type": "xsd:decimal"
     },
     "transmissionType": {
+      "@type": "@id"
+    },
+    "type": {
       "@type": "@id"
     },
     "url": {
