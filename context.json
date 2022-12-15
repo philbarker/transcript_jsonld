@@ -28,6 +28,7 @@
     "pescInstructionSiteCodes": "https://pesc.org/vocabs/InstructionSiteCodes#",
     "pescLanguageProficiencyCodes": "https://pesc.org/vocabs/LanguageProficiencyCodes#",
     "pescLanguageUsageCodes": "https://pesc.org/vocabs/LanguageUsageCodes#",
+    "pescNameCodes": "https://pesc.org/vocabs/NameCodes#",
     "pescRepeatCodes": "https://pesc.org/vocabs/RepeatCodes#",
     "pescResidencyStatusCodes": "https://pesc.org/vocabs/ResidencyStatusCodes#",
     "pescSchoolLevels": "https://pesc.org/vocabs/SchoolLevels#",
@@ -93,7 +94,7 @@
     "_URLAddress": {
       "@type": "xsd:anyURI"
     },
-    "__AcademicRecord": {
+    "academicRecord": {
       "@type": "@id"
     },
     "__Accreditation": {
@@ -658,7 +659,7 @@
       "@type": "xsd:date"
     },
     "sessionDesignator": {
-      "@type": "xsd:date"
+      "@type": "xsd:gYearMonth"
     },
     "sessionDesignatorSuffix": {
       "@type": "xsd:string"
@@ -759,5 +760,5 @@
     "usisID": {
       "@type": "xsd:string"
     }
-  }
+  },
 }
