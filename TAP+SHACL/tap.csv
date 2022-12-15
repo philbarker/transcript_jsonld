@@ -254,7 +254,7 @@ IX
 X",picklist,,Recommended,
 176,AlternateNameShape,pesc:nameTitle,Name Title,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Not Recommended,
 3,CollegeTranscriptShape,pesc:__NoteMessage,__ Note Message,FALSE,TRUE,Literal,,1..80,lengthRange,,Not Recommended,
-1,CollegeTranscriptShape,pesc:__TransmissionData,__ Transmission Data,TRUE,FALSE,IRI BNODE,,,,TransmissionDataShape,Required,
+1,CollegeTranscriptShape,pesc:transmissionData,Transmission Data,TRUE,FALSE,IRI BNODE,,,,TransmissionDataShape,Required,
 15,CollegeTranscriptShape,pesc:__UserDefinedExtension,__ User Defined Extension,FALSE,FALSE,IRI BNODE,,,,__UserDefinedExtensionsShape,Optional,"Need a property name different from the class name.
 Used singular-form instead of plural-form for consistency."
 2,CollegeTranscriptShape,pesc:student,student,TRUE,FALSE,IRI BNODE,,,,StudentShape,Required,

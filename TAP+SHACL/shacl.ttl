@@ -69,8 +69,8 @@
     sh:closed false ;
     sh:name "College Transcript"@en ;
     sh:property <collegetranscriptshapeStudent>,
+        <collegetranscriptshapeTransmissionData>,
         <collegetranscriptshape__NoteMessage>,
-        <collegetranscriptshape__TransmissionData>,
         <collegetranscriptshape__UserDefinedExtension> ;
     sh:targetClass pesc:CollegeTranscript .
 
@@ -979,20 +979,20 @@
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:student .
 
+<collegetranscriptshapeTransmissionData> a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Transmission Data"@en-US ;
+    sh:node <TransmissionDataShape> ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path pesc:transmissionData .
+
 <collegetranscriptshape__NoteMessage> a sh:PropertyShape ;
     sh:maxLength 80 ;
     sh:minLength 1 ;
     sh:name "__ Note Message"@en-US ;
     sh:nodeKind sh:Literal ;
     sh:path pesc:__NoteMessage .
-
-<collegetranscriptshape__TransmissionData> a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "__ Transmission Data"@en-US ;
-    sh:node <TransmissionDataShape> ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:__TransmissionData .
 
 <collegetranscriptshape__UserDefinedExtension> a sh:PropertyShape ;
     sh:maxCount 1 ;
@@ -2880,3 +2880,4 @@
     sh:description "Probably not needed"@en ;
     sh:name "User Defined Extensions"@en ;
     sh:targetClass <__UserDefinedExtensions> .
+
