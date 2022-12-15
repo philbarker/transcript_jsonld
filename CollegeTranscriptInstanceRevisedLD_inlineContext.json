@@ -1201,7 +1201,7 @@
                     "@id": "https://example.edu/course/346K",
                     "courseCreditBasis": "pescCreditBasis:CreditByExam",
                     "courseCreditUnits": "pescCreditUnits:Semester",
-                    "courseCreditLevel": "pescCourseCreditLevels:UpperDivision",
+                    "courseCreditLevel": "pescCreditLevels:UpperDivision",
                     "courseCreditValue": 3,
                     "courseAcademicGradeScaleCode": "25",
                     "courseCIPCode": "999",
