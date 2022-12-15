@@ -760,5 +760,5 @@
     "usisID": {
       "@type": "xsd:string"
     }
-  },
+  }
 }
