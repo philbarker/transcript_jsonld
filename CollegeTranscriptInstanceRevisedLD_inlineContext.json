@@ -777,9 +777,7 @@
           "localOrganizationIDCode": "123456",
           "localOrganizationIDQualifier": "TX"
         },
-        "organizationName": [
-          "THE UNIVERSITY OF TEXAS AT AUSTIN"
-        ],
+        "organizationName": "THE UNIVERSITY OF TEXAS AT AUSTIN",
         "contact": {
           "@type": "ContactPoint",
           "address": {
