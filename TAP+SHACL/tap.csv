@@ -664,7 +664,7 @@ pescRepeatCodes:NotCountedOther",picklist,,Recommended,
 388,StudentAcademicAchievementShape,pesc:inCourse,In Course,TRUE,FALSE,IRI BNODE,,,,CourseShape,Required,
 88,StudentShape,pesc:__LocalOrganizationID,__ Local Organization ID,FALSE,FALSE,IRI BNODE,,,,LocalOrganizationIDShape,Optional,
 14,StudentShape,pesc:__NoteMessage,__ Note Message,FALSE,TRUE,Literal,,1..80,lengthRange,,Not Recommended,
-140,StudentShape,pesc:__AcademicRecord,Academic Record,TRUE,TRUE,IRI BNODE,,,,AcademicRecordShape,Required,
+140,StudentShape,pesc:academicRecord,Academic Record,TRUE,TRUE,IRI BNODE,,,,AcademicRecordShape,Required,
 48,StudentShape,pesc:actID,ACT ID,FALSE,FALSE,Literal,xsd:string,4..4,lengthRange,,Recommended,"Used ""ACT ID"" instead of just ""ACT"""
 161,StudentShape,pesc:age,Age,FALSE,FALSE,Literal,xsd:string,3,maximum,,Not Recommended,positive integer
 147,StudentShape,pesc:agencyAssignedID,Agency Assigned ID,FALSE,FALSE,Literal,xsd:string,30,maxLength,,Required,

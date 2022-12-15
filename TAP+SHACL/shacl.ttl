@@ -2142,7 +2142,7 @@
     sh:name "Academic Record"@en-US ;
     sh:node <AcademicRecordShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:__AcademicRecord .
+    sh:path pesc:academicRecord .
 
 <studentshapeAge> a sh:PropertyShape ;
     sh:datatype xsd:string ;

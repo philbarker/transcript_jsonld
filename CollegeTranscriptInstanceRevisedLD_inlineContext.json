@@ -94,7 +94,7 @@
     "_URLAddress": {
       "@type": "xsd:anyURI"
     },
-    "__AcademicRecord": {
+    "academicRecord": {
       "@type": "@id"
     },
     "__Accreditation": {
@@ -845,7 +845,9 @@
       "HighSchool": {
         "@type": "Organization",
         "@id": "https://example.edu/AustinHighSchool",
-        "OrganizationName": {"en": "AUSTIN HIGH SCHOOL"},
+        "OrganizationName": {
+          "en": "AUSTIN HIGH SCHOOL"
+        },
         "CEEBACT": "440320"
       },
       "contact": {
@@ -856,7 +858,8 @@
           "city": "Austin",
           "stateProvinceCode": "TX",
           "postalCode": "78211",
-          "expirationDate": "2009-06-15"
+          "expirationDate": "2009-06-15",
+          "countryCode": "US"
         },
         "email": "TestSpeede@aol.com"
       },
@@ -868,7 +871,9 @@
           "school": {
             "@type": "Organization",
             "@id": "https://example.edu/AustinHighSchool",
-            "organizationName": {"en": "AUSTIN HIGH SCHOOL"},
+            "organizationName": {
+              "en": "AUSTIN HIGH SCHOOL"
+            },
             "ceebactID": "440320",
             "schoolLevel": "pescSchoolLevels:Secondary"
           },
