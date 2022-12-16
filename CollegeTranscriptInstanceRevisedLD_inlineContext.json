@@ -771,61 +771,8 @@
         "createdDateTime": "2005-02-02T10:04:29-05:00",
         "documentTypeCode": "pescDocumentTypeCodes:RequestedRecord",
         "transmissionType": "pescTransmissionTypes:Original",
-        "source": {
-          "@type": "Organization",
-          "@id": "https://www.utexas.edu/#Organization",
-          "atpID": "006882",
-          "__LocalOrganizationID": {
-            "@type": "LocalOrganizationID",
-            "localOrganizationIDCode": "123456",
-            "localOrganizationIDQualifier": "TX"
-          },
-          "organizationName": {
-            "en": "THE UNIVERSITY OF TEXAS AT AUSTIN"
-          },
-          "contact": {
-            "@type": "ContactPoint",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLine": "Office of the Registrar",
-              "city": "Austin",
-              "stateProvinceCode": "TX",
-              "postalCode": "78712",
-              "countryCode": "US",
-              "attentionLine": "Jane Shaugness"
-            },
-            "_Phone": {
-              "@type": "Phone",
-              "areaCityCode": "512",
-              "phoneNumber": "4757638"
-            },
-            "_FaxPhone": {
-              "@type": "FAXPhone",
-              "areaCityCode": "512",
-              "phoneNumber": "4757600"
-            },
-            "email": "Registrar@mail.utexas.edu",
-            "url": "www.utexas.edu"
-          },
-          "__Accreditation": {
-            "@type": "Accreditation",
-            "accreditingBodyCode": "SACS",
-            "accreditingBodyName": "Southern Association of Colleges and Schools"
-          }
-        },
-        "destination": {
-          "@type": "Organization",
-          "@id": "https://www.mdc.edu/#Organization",
-          "ficeID": "001506",
-          "__LocalOrganizationID": {
-            "@type": "LocalOrganizationID",
-            "localOrganizationIDCode": "1234",
-            "localOrganizationIDQualifier": "FL"
-          },
-          "organizationName": {
-            "en": "Miami Dade College"
-          }
-        },
+        "source": "https://www.utexas.edu/#Organization",
+        "destination": "https://www.mdc.edu/#Organization",
         "requestTrackingID": "23456778009"
       },
       "student": {
@@ -844,14 +791,7 @@
           "lastName": "Speede",
           "nameSuffix": "IV"
         },
-        "HighSchool": {
-          "@type": "Organization",
-          "@id": "https://example.edu/AustinHighSchool",
-          "OrganizationName": {
-            "en": "AUSTIN HIGH SCHOOL"
-          },
-          "CEEBACT": "440320"
-        },
+        "HighSchool": "https://example.edu/AustinHighSchool",
         "contact": {
           "@type": "ContactPoint",
           "address": {
@@ -871,15 +811,7 @@
           {
             "@type": "AcademicRecord",
             "@id": "transcripts/050330001#item01",
-            "school": {
-              "@type": "Organization",
-              "@id": "https://example.edu/AustinHighSchool",
-              "organizationName": {
-                "en": "AUSTIN HIGH SCHOOL"
-              },
-              "ceebactID": "440320",
-              "schoolLevel": "pescSchoolLevels:Secondary"
-            },
+            "school": "https://example.edu/AustinHighSchool",
             "__AcademicAward": {
               "@type": "AcademicAward",
               "academicAwardLevel": "pescAcademicAwardLevels:1.1",
@@ -891,31 +823,13 @@
           {
             "@type": "AcademicRecord",
             "@id": "transcripts/050330001#item02",
-            "school": {
-              "@type": "Organization",
-              "@id": "https://example.edu/AustinCommunityCollege",
-              "organizationName": {
-                "en": "AUSTIN COMMUNITY COLLEGE"
-              },
-              "atpID": "006759",
-              "schoolOverrideCode": "pescSchoolOverrideCodes:Transfer",
-              "schoolLevel": "pescSchoolLevels:Postsecondary"
-            },
+            "school": "https://example.edu/AustinCommunityCollege",
             "noteMessage": "ATTENDED: 19880601-19880831"
           },
           {
             "@type": "AcademicRecord",
             "@id": "transcripts/050330001#item03",
-            "school": {
-              "@type": "Organization",
-              "@id": "https://example.edu/TexasA+MCollegeStation",
-              "organizationName": {
-                "en": "TEXAS A and M UNIVERSITY COLLEGE STATION"
-              },
-              "atpID": "006003",
-              "SchoolOverrideCode": "pescSchoolOverrideCodes:Transfer",
-              "SchoolLevel": "pescSchoolLevels:Postsecondary"
-            },
+            "school": "https://example.edu/TexasA+MCollegeStation",
             "NoteMessage": "ATTENDED: 19980901-19981231"
           },
           {
@@ -943,15 +857,7 @@
                   "sessionDesignator": "1985-09",
                   "sessionDesignatorSuffix": "1"
                 },
-                "school": {
-                  "@type": "Organization",
-                  "@id": "https://example.edu/TexasA+MCollegeStation",
-                  "organizationName": {
-                    "en": "TEXAS A and M UNIVERSITY COLLEGE STATION"
-                  },
-                  "atpID": "006003",
-                  "schoolOverrideCode": "pescSchoolOverrideCodes:Transfer"
-                },
+                "school": "https://example.edu/TexasA+MCollegeStation",
                 "academicAchievement": [
                   {
                     "@type": "StudentAcademicAchievement",
@@ -977,15 +883,7 @@
                   "sessionDesignator": "1986-01",
                   "sessionDesignatorSuffix": "1"
                 },
-                "school": {
-                  "@type": "Organization",
-                  "@id": "https://example.edu/TexasA+MCollegeStation",
-                  "organizationName": {
-                    "en": "TEXAS A and M UNIVERSITY COLLEGE STATION"
-                  },
-                  "atpID": "006003",
-                  "schoolOverrideCode": "pescSchoolOverrideCodes:Transfer"
-                },
+                "school": "https://example.edu/TexasA+MCollegeStation",
                 "academicAchievement": {
                   "@type": "StudentAcademicAchievement",
                   "courseCreditEarned": 4,
@@ -1126,14 +1024,7 @@
                     "courseCreditEarned": 3,
                     "courseAcademicGrade": "A",
                     "inCourse": "https://example.edu/course/346K",
-                    "courseOverrideSchool": {
-                      "@type": "Organization",
-                      "@id": "https://example.edu/AustinCommunityCollege",
-                      "organizationName": {
-                        "en": "AUSTIN COMMUNITY COLLEGE"
-                      },
-                      "atpID": "006759"
-                    }
+                    "courseOverrideSchool": "https://example.edu/AustinCommunityCollege"
                   }
                 ]
               },
@@ -1686,6 +1577,87 @@
       "courseSubjectAbbreviation": "SOC",
       "courseNumber": "389K",
       "courseTitle": "3-HUMAN MORTALITY"
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://www.utexas.edu/#Organization",
+      "atpID": "006882",
+      "__LocalOrganizationID": {
+        "@type": "LocalOrganizationID",
+        "localOrganizationIDCode": "123456",
+        "localOrganizationIDQualifier": "TX"
+      },
+      "organizationName": {
+        "en": "THE UNIVERSITY OF TEXAS AT AUSTIN"
+      },
+      "contact": {
+        "@type": "ContactPoint",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLine": "Office of the Registrar",
+          "city": "Austin",
+          "stateProvinceCode": "TX",
+          "postalCode": "78712",
+          "countryCode": "US",
+          "attentionLine": "Jane Shaugness"
+        },
+        "_Phone": {
+          "@type": "Phone",
+          "areaCityCode": "512",
+          "phoneNumber": "4757638"
+        },
+        "_FaxPhone": {
+          "@type": "FAXPhone",
+          "areaCityCode": "512",
+          "phoneNumber": "4757600"
+        },
+        "email": "Registrar@mail.utexas.edu",
+        "url": "www.utexas.edu"
+      },
+      "__Accreditation": {
+        "@type": "Accreditation",
+        "accreditingBodyCode": "SACS",
+        "accreditingBodyName": "Southern Association of Colleges and Schools"
+      }
+    },{
+      "@type": "Organization",
+      "@id": "https://www.mdc.edu/#Organization",
+      "ficeID": "001506",
+      "__LocalOrganizationID": {
+        "@type": "LocalOrganizationID",
+        "localOrganizationIDCode": "1234",
+        "localOrganizationIDQualifier": "FL"
+      },
+      "organizationName": {
+        "en": "Miami Dade College"
+      }
+    },{
+      "@type": "Organization",
+      "@id": "https://example.edu/AustinHighSchool",
+      "OrganizationName": {
+        "en": "AUSTIN HIGH SCHOOL"
+      },
+      "ceebactID": "440320",
+      "schoolLevel": "pescSchoolLevels:Secondary"
+    },{
+      "@type": "Organization",
+      "@id": "https://example.edu/AustinCommunityCollege",
+      "organizationName": {
+        "en": "AUSTIN COMMUNITY COLLEGE"
+      },
+      "atpID": "006759",
+      "schoolOverrideCode": "pescSchoolOverrideCodes:Transfer",
+      "schoolLevel": "pescSchoolLevels:Postsecondary"
+    },{
+      "@type": "Organization",
+      "@id": "https://example.edu/TexasA+MCollegeStation",
+      "organizationName": {
+        "en": "TEXAS A and M UNIVERSITY COLLEGE STATION"
+      },
+      "atpID": "006003",
+      "SchoolOverrideCode": "pescSchoolOverrideCodes:Transfer",
+      "SchoolLevel": "pescSchoolLevels:Postsecondary"
     }
   ]
 }
