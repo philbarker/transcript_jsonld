@@ -762,6 +762,7 @@
     }
   },
   "collegeTranscript": {
+    "@id": "transcripts/050330001",
     "@type": "CollegeTranscript",
     "transmissionData": {
       "@type": "TransmissionData",
@@ -868,6 +869,7 @@
       "academicRecord": [
         {
           "@type": "AcademicRecord",
+          "@id": "transcripts/050330001#item01",
           "school": {
             "@type": "Organization",
             "@id": "https://example.edu/AustinHighSchool",
@@ -887,6 +889,7 @@
         },
         {
           "@type": "AcademicRecord",
+          "@id": "transcripts/050330001#item02",
           "school": {
             "@type": "Organization",
             "@id": "https://example.edu/AustinCommunityCollege",
@@ -901,6 +904,7 @@
         },
         {
           "@type": "AcademicRecord",
+          "@id": "transcripts/050330001#item03",
           "school": {
             "@type": "Organization",
             "@id": "https://example.edu/TexasA+MCollegeStation",
@@ -915,6 +919,7 @@
         },
         {
           "@type": "AcademicRecord",
+          "@id": "transcripts/050330001#item04",
           "academicSummary": {
             "@type": "AcademicSummary",
             "academicSummaryType": "pescAcademicSummaryTypes:All",
@@ -931,6 +936,7 @@
           "academicSession": [
             {
               "@type": "AcademicSession",
+              "@id": "sessions/1985-09#1",
               "academicSessionDetail": {
                 "@type": "AcademicSessionDetail",
                 "sessionDesignator": "1985-09",
@@ -988,6 +994,7 @@
             },
             {
               "@type": "AcademicSession",
+              "@id": "sessions/1986-01#1",
               "academicSessionDetail": {
                 "@type": "AcademicSessionDetail",
                 "sessionDesignator": "1986-01",
@@ -1025,8 +1032,10 @@
             },
             {
               "@type": "AcademicSession",
+              "@id": "sessions/1986-09#1",
               "academicSessionDetail": {
                 "@type": "AcademicSessionDetail",
+                "@id": "sessions/1986-09#1",
                 "sessionDesignator": "1986-09",
                 "sessionDesignatorSuffix": "1",
                 "sessionName": "FALL SEMESTER 1986",
@@ -1034,6 +1043,7 @@
               },
               "academicProgram": {
                 "@type": "AcademicProgram",
+                "@id": "programs/NatSci",
                 "academicProgramName": "NATURAL SCIENCES"
               },
               "academicSummary": [
@@ -1048,6 +1058,7 @@
             },
             {
               "@type": "AcademicSession",
+              "@id": "sessions/1986-09#2",
               "academicSessionDetail": {
                 "@type": "AcademicSessionDetail",
                 "sessionDesignator": "1986-09",
@@ -1056,6 +1067,7 @@
                 "sessionType": "pescSessionTypes:Semester"
               },
               "academicProgram": {
+                "@id": "programs/ENGN",
                 "@type": "AcademicProgram",
                 "AcademicProgramName": "ENGINERING"
               },
@@ -1131,6 +1143,7 @@
             },
             {
               "@type": "AcademicSession",
+              "@id": "sessions/1988-01#2",
               "academicSessionDetail": {
                 "@type": "AcademicSessionDetail",
                 "sessionDesignator": "1988-01",
@@ -1140,6 +1153,7 @@
               },
               "academicProgram": {
                 "@type": "AcademicProgram",
+                "@id": "programs/LIBART",
                 "AcademicProgramName": "LIBERAL ARTS"
               },
               "academicAchievement": {
@@ -1180,6 +1194,7 @@
             },
             {
               "@type": "AcademicSession",
+              "@id": "sessions/1988-06#1",
               "academicSessionDetail": {
                 "@type": "AcademicSessionDetail",
                 "sessionDesignator": "1988-06",
@@ -1189,6 +1204,7 @@
               },
               "academicProgram": {
                 "@type": "AcademicProgram",
+                "@id": "programs/LIBART",
                 "academicProgramName": "LIBERAL ARTS"
               },
               "academicAchievement": [
@@ -1223,6 +1239,7 @@
             },
             {
               "@type": "AcademicSession",
+              "@id": "sessions/1988-06#2",
               "academicSessionDetail": {
                 "@type": "AcademicSessionDetail",
                 "sessionDesignator": "1988-06",
@@ -1230,6 +1247,7 @@
               },
               "academicProgram": {
                 "@type": "AcademicProgram",
+                "@id": "programs/LIBART",
                 "AcademicProgramName": "LIBERAL ARTS"
               },
               "academicAchievement": {
@@ -1255,6 +1273,7 @@
             },
             {
               "@type": "AcademicSession",
+              "@id": "sessions/1989-01#1",
               "academicSessionDetail": {
                 "@type": "AcademicSessionDetail",
                 "sessionDesignator": "1989-01",
@@ -1264,6 +1283,7 @@
               },
               "academicProgram": {
                 "@type": "AcademicProgram",
+                "@id": "programs/LIBART",
                 "academicProgramName": "LIBERAL ARTS"
               },
               "academicAchievement": [
@@ -1319,6 +1339,7 @@
             },
             {
               "@type": "AcademicSession",
+              "@id": "sessions/1989-09#1",
               "academicSessionDetail": {
                 "@type": "AcademicSessionDetail",
                 "sessionDesignator": "1989-09",
@@ -1328,6 +1349,7 @@
               },
               "academicProgram": {
                 "@type": "AcademicProgram",
+                "@id": "programs/LIBART",
                 "academicProgramName": "LIBERAL ARTS"
               },
               "academicAchievement": [
@@ -1419,6 +1441,7 @@
             },
             {
               "@type": "AcademicSession",
+              "@id": "sessions/2001-01#1",
               "academicSessionDetail": {
                 "@type": "AcademicSessionDetail",
                 "sessionDesignator": "2001-01",
@@ -1428,6 +1451,7 @@
               },
               "academicProgram": {
                 "@type": "AcademicProgram",
+                "@id": "programs/INTEXCH",
                 "academicProgramName": "INTERNATIONAL EXCHANGE",
                 "noteMessage": [
                   "CURRIC: LIBERAL ARTS"
@@ -1436,6 +1460,7 @@
             },
             {
               "@type": "AcademicSession",
+              "@id": "sessions/2010-01#2",
               "academicSessionDetail": {
                 "sessionDesignator": "20010-01",
                 "sessionDesignatorSuffix": "2",
@@ -1444,6 +1469,7 @@
               },
               "academicProgram": {
                 "@type": "AcademicProgram",
+                "@id": "programs/FINART",
                 "AcademicProgramName": "FINE ARTS"
               },
               "academicAchievement": [
@@ -1552,6 +1578,7 @@
             },
             {
               "@type": "AcademicSession",
+              "@id": "sessions/2001-09#2",
               "academicSessionDetail": {
                 "@type": "AcademicSessionDetail",
                 "sessionDesignator": "2001-09",
@@ -1561,6 +1588,7 @@
               },
               "academicProgram": {
                 "@type": "AcademicProgram",
+                "@id": "programs/INTEXCH",
                 "AcademicProgramName": "INTERNATIONAL EXCHANGE",
                 "NoteMessage": "CURRIC: LIBERAL ARTS"
               },
@@ -1639,19 +1667,18 @@
                   }
                 }
               ],
-              "AcademicSummary": [
-                {
-                  "@type": "AcademicSummary",
-                  "academicSummaryLevel": "pescAcademicSummaryLevels:Undergraduate",
-                  "gpaSummary": {
-                    "creditHoursAttempted": 12,
-                    "creditHoursEarned": 12,
-                    "creditUnit": "pescCreditUnits:Semester",
-                    "gradePointAverage": 3.6666,
-                    "creditHoursforGPA": 9
-                  }
+              "AcademicSummary":  {
+                "@type": "AcademicSummary",
+                "academicSummaryLevel": "pescAcademicSummaryLevels:Undergraduate",
+                "gpaSummary": {
+                  "creditHoursAttempted": 12,
+                  "creditHoursEarned": 12,
+                  "creditUnit": "pescCreditUnits:Semester",
+                  "gradePointAverage": 3.6666,
+                  "creditHoursforGPA": 9
                 }
-              ]
+              }
+              
             }
           ]
         }
