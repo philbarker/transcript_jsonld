@@ -851,8 +851,8 @@
             "academicSession": [
               {
                 "@type": "AcademicSession",
-                "@id": "sessions/1985-09#1",
                 "academicSessionDetail": {
+                  "@id": "sessions/1985-09#1",
                   "@type": "AcademicSessionDetail",
                   "sessionDesignator": "1985-09",
                   "sessionDesignatorSuffix": "1"
@@ -877,8 +877,8 @@
               },
               {
                 "@type": "AcademicSession",
-                "@id": "sessions/1986-01#1",
                 "academicSessionDetail": {
+                  "@id": "sessions/1986-01#1",
                   "@type": "AcademicSessionDetail",
                   "sessionDesignator": "1986-01",
                   "sessionDesignatorSuffix": "1"
@@ -894,7 +894,6 @@
               },
               {
                 "@type": "AcademicSession",
-                "@id": "sessions/1986-09#1",
                 "academicSessionDetail": {
                   "@type": "AcademicSessionDetail",
                   "@id": "sessions/1986-09#1",
@@ -916,8 +915,8 @@
               },
               {
                 "@type": "AcademicSession",
-                "@id": "sessions/1986-09#2",
                 "academicSessionDetail": {
+                  "@id": "sessions/1986-09#2",
                   "@type": "AcademicSessionDetail",
                   "sessionDesignator": "1986-09",
                   "sessionDesignatorSuffix": "2",
@@ -959,9 +958,9 @@
               },
               {
                 "@type": "AcademicSession",
-                "@id": "sessions/1988-01#2",
                 "academicSessionDetail": {
                   "@type": "AcademicSessionDetail",
+                  "@id": "sessions/1988-01#2",
                   "sessionDesignator": "1988-01",
                   "sessionDesignatorSuffix": "2",
                   "sessionName": "SPRING SEMESTER 1988",
@@ -993,9 +992,9 @@
               },
               {
                 "@type": "AcademicSession",
-                "@id": "sessions/1988-06#1",
                 "academicSessionDetail": {
                   "@type": "AcademicSessionDetail",
+                  "@id": "sessions/1988-06#1",
                   "sessionDesignator": "1988-06",
                   "sessionDesignatorSuffix": "1",
                   "sessionName": "SUMMER SEMESTER 1988",
@@ -1014,8 +1013,8 @@
               },
               {
                 "@type": "AcademicSession",
-                "@id": "sessions/1988-06#2",
                 "academicSessionDetail": {
+                  "@id": "sessions/1988-06#2",
                   "@type": "AcademicSessionDetail",
                   "sessionDesignator": "1988-06",
                   "sessionDesignatorSuffix": "2"
@@ -1031,9 +1030,9 @@
               },
               {
                 "@type": "AcademicSession",
-                "@id": "sessions/1989-01#1",
                 "academicSessionDetail": {
                   "@type": "AcademicSessionDetail",
+                  "@id": "sessions/1989-01#1",
                   "sessionDesignator": "1989-01",
                   "sessionDesignatorSuffix": "1",
                   "sessionName": "SPRING SEMESTER 1989",
@@ -1069,8 +1068,8 @@
               },
               {
                 "@type": "AcademicSession",
-                "@id": "sessions/1989-09#1",
                 "academicSessionDetail": {
+                  "@id": "sessions/1989-09#1",
                   "@type": "AcademicSessionDetail",
                   "sessionDesignator": "1989-09",
                   "sessionDesignatorSuffix": "1",
@@ -1119,9 +1118,9 @@
               },
               {
                 "@type": "AcademicSession",
-                "@id": "sessions/2001-01#1",
                 "academicSessionDetail": {
                   "@type": "AcademicSessionDetail",
+                  "@id": "sessions/2001-01#1",
                   "sessionDesignator": "2001-01",
                   "sessionDesignatorSuffix": "1",
                   "sessionName": "SPRING SEMESTER 2001",
@@ -1131,8 +1130,8 @@
               },
               {
                 "@type": "AcademicSession",
-                "@id": "sessions/2010-01#2",
                 "academicSessionDetail": {
+                  "@id": "sessions/2010-01#2",
                   "sessionDesignator": "20010-01",
                   "sessionDesignatorSuffix": "2",
                   "sessionName": "SPRING SEMESTER 2001",
@@ -1185,8 +1184,8 @@
               },
               {
                 "@type": "AcademicSession",
-                "@id": "sessions/2001-09#2",
                 "academicSessionDetail": {
+                  "@id": "sessions/2001-09#2",
                   "@type": "AcademicSessionDetail",
                   "sessionDesignator": "2001-09",
                   "sessionDesignatorSuffix": "1",
