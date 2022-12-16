@@ -851,12 +851,7 @@
             "academicSession": [
               {
                 "@type": "AcademicSession",
-                "academicSessionDetail": {
-                  "@id": "sessions/1985-09#1",
-                  "@type": "AcademicSessionDetail",
-                  "sessionDesignator": "1985-09",
-                  "sessionDesignatorSuffix": "1"
-                },
+                "academicSessionDetail": "sessions/1985-09#1",
                 "school": "https://example.edu/TexasA+MCollegeStation",
                 "academicAchievement": [
                   {
@@ -877,12 +872,7 @@
               },
               {
                 "@type": "AcademicSession",
-                "academicSessionDetail": {
-                  "@id": "sessions/1986-01#1",
-                  "@type": "AcademicSessionDetail",
-                  "sessionDesignator": "1986-01",
-                  "sessionDesignatorSuffix": "1"
-                },
+                "academicSessionDetail": "sessions/1986-01#1",
                 "school": "https://example.edu/TexasA+MCollegeStation",
                 "academicAchievement": {
                   "@type": "StudentAcademicAchievement",
@@ -894,14 +884,7 @@
               },
               {
                 "@type": "AcademicSession",
-                "academicSessionDetail": {
-                  "@type": "AcademicSessionDetail",
-                  "@id": "sessions/1986-09#1",
-                  "sessionDesignator": "1986-09",
-                  "sessionDesignatorSuffix": "1",
-                  "sessionName": "FALL SEMESTER 1986",
-                  "sessionType": "pescSessionTypes:Semester"
-                },
+                "academicSessionDetail": "sessions/1986-09#1",
                 "academicProgram": "programs/NatSci",
                 "academicSummary": [
                   {
@@ -915,14 +898,7 @@
               },
               {
                 "@type": "AcademicSession",
-                "academicSessionDetail": {
-                  "@id": "sessions/1986-09#2",
-                  "@type": "AcademicSessionDetail",
-                  "sessionDesignator": "1986-09",
-                  "sessionDesignatorSuffix": "2",
-                  "sessionName": "FALL SEMESTER 1986",
-                  "sessionType": "pescSessionTypes:Semester"
-                },
+                "academicSessionDetail": "sessions/1986-09#2",
                 "academicProgram": "programs/ENGN",
                 "academicAchievement": [
                   {
@@ -958,14 +934,7 @@
               },
               {
                 "@type": "AcademicSession",
-                "academicSessionDetail": {
-                  "@type": "AcademicSessionDetail",
-                  "@id": "sessions/1988-01#2",
-                  "sessionDesignator": "1988-01",
-                  "sessionDesignatorSuffix": "2",
-                  "sessionName": "SPRING SEMESTER 1988",
-                  "sessionType": "pescSessionTypes:Semester"
-                },
+                "academicSessionDetail": "sessions/1988-01#2",
                 "academicProgram": "programs/LIBART",
                 "academicAchievement": {
                   "@type": "StudentAcademicAchievement",
@@ -992,14 +961,7 @@
               },
               {
                 "@type": "AcademicSession",
-                "academicSessionDetail": {
-                  "@type": "AcademicSessionDetail",
-                  "@id": "sessions/1988-06#1",
-                  "sessionDesignator": "1988-06",
-                  "sessionDesignatorSuffix": "1",
-                  "sessionName": "SUMMER SEMESTER 1988",
-                  "sessionType": "pescSessionTypes:SummerSession"
-                },
+                "academicSessionDetail": "sessions/1988-06#1",
                 "academicProgram": "programs/LIBART",
                 "academicAchievement": [
                   {
@@ -1013,12 +975,7 @@
               },
               {
                 "@type": "AcademicSession",
-                "academicSessionDetail": {
-                  "@id": "sessions/1988-06#2",
-                  "@type": "AcademicSessionDetail",
-                  "sessionDesignator": "1988-06",
-                  "sessionDesignatorSuffix": "2"
-                },
+                "academicSessionDetail": "sessions/1988-06#2",
                 "academicProgram": "programs/LIBART",
                 "academicAchievement": {
                   "@type": "StudentAcademicAchievement",
@@ -1030,14 +987,7 @@
               },
               {
                 "@type": "AcademicSession",
-                "academicSessionDetail": {
-                  "@type": "AcademicSessionDetail",
-                  "@id": "sessions/1989-01#1",
-                  "sessionDesignator": "1989-01",
-                  "sessionDesignatorSuffix": "1",
-                  "sessionName": "SPRING SEMESTER 1989",
-                  "sessionType": "pescSessionTypes:Semester"
-                },
+                "academicSessionDetail": "sessions/1989-01#1",
                 "academicProgram": "programs/LIBART",
                 "academicAchievement": [
                   {
@@ -1068,14 +1018,7 @@
               },
               {
                 "@type": "AcademicSession",
-                "academicSessionDetail": {
-                  "@id": "sessions/1989-09#1",
-                  "@type": "AcademicSessionDetail",
-                  "sessionDesignator": "1989-09",
-                  "sessionDesignatorSuffix": "1",
-                  "sessionName": "FALL SEMESTER 1989",
-                  "sessionType": "pescSessionTypes:Semester"
-                },
+                "academicSessionDetail": "sessions/1989-09#1",
                 "academicProgram": "programs/LIBART",
                 "academicAchievement": [
                   {
@@ -1118,25 +1061,12 @@
               },
               {
                 "@type": "AcademicSession",
-                "academicSessionDetail": {
-                  "@type": "AcademicSessionDetail",
-                  "@id": "sessions/2001-01#1",
-                  "sessionDesignator": "2001-01",
-                  "sessionDesignatorSuffix": "1",
-                  "sessionName": "SPRING SEMESTER 2001",
-                  "sessionType": "pescSessionTypes:Semester"
-                },
+                "academicSessionDetail": "sessions/2001-01#1",
                 "academicProgram": "programs/INTEXCH"
               },
               {
                 "@type": "AcademicSession",
-                "academicSessionDetail": {
-                  "@id": "sessions/2010-01#2",
-                  "sessionDesignator": "20010-01",
-                  "sessionDesignatorSuffix": "2",
-                  "sessionName": "SPRING SEMESTER 2001",
-                  "sessionType": "pescSessionTypes:Semester"
-                },
+                "academicSessionDetail": "sessions/2001-01#2",
                 "academicProgram": "programs/FINART",
                 "academicAchievement": [
                   {
@@ -1184,14 +1114,7 @@
               },
               {
                 "@type": "AcademicSession",
-                "academicSessionDetail": {
-                  "@id": "sessions/2001-09#2",
-                  "@type": "AcademicSessionDetail",
-                  "sessionDesignator": "2001-09",
-                  "sessionDesignatorSuffix": "1",
-                  "sessionName": "FALL SEMESTER 2001",
-                  "sessionType": "pescSessionTypes:Semester"
-                },
+                "academicSessionDetail": "sessions/2001-09#2",
                 "academicProgram": "programs/INTEXCH",
                 "academicAchievement": [
                   {
@@ -1635,6 +1558,85 @@
       "@type": "AcademicProgram",
       "@id": "programs/FINART",
       "AcademicProgramName": "FINE ARTS"
+    }
+    ,
+    {
+      "@id": "sessions/1985-09#1",
+      "@type": "AcademicSessionDetail",
+      "sessionDesignator": "1985-09",
+      "sessionDesignatorSuffix": "1"
+    },{
+      "@id": "sessions/1986-01#1",
+      "@type": "AcademicSessionDetail",
+      "sessionDesignator": "1986-01",
+      "sessionDesignatorSuffix": "1"
+    },{
+      "@type": "AcademicSessionDetail",
+      "@id": "sessions/1986-09#1",
+      "sessionDesignator": "1986-09",
+      "sessionDesignatorSuffix": "1",
+      "sessionName": "FALL SEMESTER 1986",
+      "sessionType": "pescSessionTypes:Semester"
+    },{
+      "@id": "sessions/1986-09#2",
+      "@type": "AcademicSessionDetail",
+      "sessionDesignator": "1986-09",
+      "sessionDesignatorSuffix": "2",
+      "sessionName": "FALL SEMESTER 1986",
+      "sessionType": "pescSessionTypes:Semester"
+    },{
+      "@type": "AcademicSessionDetail",
+      "@id": "sessions/1988-01#2",
+      "sessionDesignator": "1988-01",
+      "sessionDesignatorSuffix": "2",
+      "sessionName": "SPRING SEMESTER 1988",
+      "sessionType": "pescSessionTypes:Semester"
+    },{
+      "@type": "AcademicSessionDetail",
+      "@id": "sessions/1988-06#1",
+      "sessionDesignator": "1988-06",
+      "sessionDesignatorSuffix": "1",
+      "sessionName": "SUMMER SEMESTER 1988",
+      "sessionType": "pescSessionTypes:SummerSession"
+    },{
+      "@id": "sessions/1988-06#2",
+      "@type": "AcademicSessionDetail",
+      "sessionDesignator": "1988-06",
+      "sessionDesignatorSuffix": "2"
+    },{
+      "@type": "AcademicSessionDetail",
+      "@id": "sessions/1989-01#1",
+      "sessionDesignator": "1989-01",
+      "sessionDesignatorSuffix": "1",
+      "sessionName": "SPRING SEMESTER 1989",
+      "sessionType": "pescSessionTypes:Semester"
+    },{
+      "@id": "sessions/1989-09#1",
+      "@type": "AcademicSessionDetail",
+      "sessionDesignator": "1989-09",
+      "sessionDesignatorSuffix": "1",
+      "sessionName": "FALL SEMESTER 1989",
+      "sessionType": "pescSessionTypes:Semester"
+    },{
+      "@type": "AcademicSessionDetail",
+      "@id": "sessions/2001-01#1",
+      "sessionDesignator": "2001-01",
+      "sessionDesignatorSuffix": "1",
+      "sessionName": "SPRING SEMESTER 2001",
+      "sessionType": "pescSessionTypes:Semester"
+    },{
+      "@id": "sessions/2001-01#2",
+      "sessionDesignator": "2001-01",
+      "sessionDesignatorSuffix": "2",
+      "sessionName": "SPRING SEMESTER 2001",
+      "sessionType": "pescSessionTypes:Semester"
+    },{
+      "@id": "sessions/2001-09#2",
+      "@type": "AcademicSessionDetail",
+      "sessionDesignator": "2001-09",
+      "sessionDesignatorSuffix": "1",
+      "sessionName": "FALL SEMESTER 2001",
+      "sessionType": "pescSessionTypes:Semester"
     }
   ]
 }
