@@ -903,11 +903,7 @@
                   "sessionName": "FALL SEMESTER 1986",
                   "sessionType": "pescSessionTypes:Semester"
                 },
-                "academicProgram": {
-                  "@type": "AcademicProgram",
-                  "@id": "programs/NatSci",
-                  "academicProgramName": "NATURAL SCIENCES"
-                },
+                "academicProgram": "programs/NatSci",
                 "academicSummary": [
                   {
                     "@type": "AcademicSummary",
@@ -928,11 +924,7 @@
                   "sessionName": "FALL SEMESTER 1986",
                   "sessionType": "pescSessionTypes:Semester"
                 },
-                "academicProgram": {
-                  "@id": "programs/ENGN",
-                  "@type": "AcademicProgram",
-                  "AcademicProgramName": "ENGINERING"
-                },
+                "academicProgram": "programs/ENGN",
                 "academicAchievement": [
                   {
                     "@type": "StudentAcademicAchievement",
@@ -975,11 +967,7 @@
                   "sessionName": "SPRING SEMESTER 1988",
                   "sessionType": "pescSessionTypes:Semester"
                 },
-                "academicProgram": {
-                  "@type": "AcademicProgram",
-                  "@id": "programs/LIBART",
-                  "AcademicProgramName": "LIBERAL ARTS"
-                },
+                "academicProgram": "programs/LIBART",
                 "academicAchievement": {
                   "@type": "StudentAcademicAchievement",
                   "courseCreditEarned": 3,
@@ -1013,11 +1001,7 @@
                   "sessionName": "SUMMER SEMESTER 1988",
                   "sessionType": "pescSessionTypes:SummerSession"
                 },
-                "academicProgram": {
-                  "@type": "AcademicProgram",
-                  "@id": "programs/LIBART",
-                  "academicProgramName": "LIBERAL ARTS"
-                },
+                "academicProgram": "programs/LIBART",
                 "academicAchievement": [
                   {
                     "@type": "StudentAcademicAchievement",
@@ -1036,11 +1020,7 @@
                   "sessionDesignator": "1988-06",
                   "sessionDesignatorSuffix": "2"
                 },
-                "academicProgram": {
-                  "@type": "AcademicProgram",
-                  "@id": "programs/LIBART",
-                  "AcademicProgramName": "LIBERAL ARTS"
-                },
+                "academicProgram": "programs/LIBART",
                 "academicAchievement": {
                   "@type": "StudentAcademicAchievement",
                   "courseCreditEarned": 3,
@@ -1101,11 +1081,7 @@
                   "sessionName": "FALL SEMESTER 1989",
                   "sessionType": "pescSessionTypes:Semester"
                 },
-                "academicProgram": {
-                  "@type": "AcademicProgram",
-                  "@id": "programs/LIBART",
-                  "academicProgramName": "LIBERAL ARTS"
-                },
+                "academicProgram": "programs/LIBART",
                 "academicAchievement": [
                   {
                     "@type": "StudentAcademicAchievement",
@@ -1155,14 +1131,7 @@
                   "sessionName": "SPRING SEMESTER 2001",
                   "sessionType": "pescSessionTypes:Semester"
                 },
-                "academicProgram": {
-                  "@type": "AcademicProgram",
-                  "@id": "programs/INTEXCH",
-                  "academicProgramName": "INTERNATIONAL EXCHANGE",
-                  "noteMessage": [
-                    "CURRIC: LIBERAL ARTS"
-                  ]
-                }
+                "academicProgram": "programs/INTEXCH"
               },
               {
                 "@type": "AcademicSession",
@@ -1173,11 +1142,7 @@
                   "sessionName": "SPRING SEMESTER 2001",
                   "sessionType": "pescSessionTypes:Semester"
                 },
-                "academicProgram": {
-                  "@type": "AcademicProgram",
-                  "@id": "programs/FINART",
-                  "AcademicProgramName": "FINE ARTS"
-                },
+                "academicProgram": "programs/FINART",
                 "academicAchievement": [
                   {
                     "@type": "StudentAcademicAchievement",
@@ -1232,12 +1197,7 @@
                   "sessionName": "FALL SEMESTER 2001",
                   "sessionType": "pescSessionTypes:Semester"
                 },
-                "academicProgram": {
-                  "@type": "AcademicProgram",
-                  "@id": "programs/INTEXCH",
-                  "AcademicProgramName": "INTERNATIONAL EXCHANGE",
-                  "NoteMessage": "CURRIC: LIBERAL ARTS"
-                },
+                "academicProgram": "programs/INTEXCH",
                 "academicAchievement": [
                   {
                     "@type": "StudentAcademicAchievement",
@@ -1275,7 +1235,6 @@
                     "creditHoursforGPA": 9
                   }
                 }
-                
               }
             ]
           }
@@ -1658,6 +1617,29 @@
       "atpID": "006003",
       "SchoolOverrideCode": "pescSchoolOverrideCodes:Transfer",
       "SchoolLevel": "pescSchoolLevels:Postsecondary"
+    }
+    ,
+    {
+      "@type": "AcademicProgram",
+      "@id": "programs/NatSci",
+      "academicProgramName": "NATURAL SCIENCES"
+    },{
+      "@id": "programs/ENGN",
+      "@type": "AcademicProgram",
+      "AcademicProgramName": "ENGINERING"
+    },{
+      "@type": "AcademicProgram",
+      "@id": "programs/LIBART",
+      "AcademicProgramName": "LIBERAL ARTS"
+    },{
+      "@type": "AcademicProgram",
+      "@id": "programs/INTEXCH",
+      "academicProgramName": "INTERNATIONAL EXCHANGE",
+      "noteMessage": "CURRIC: LIBERAL ARTS"
+    },{
+      "@type": "AcademicProgram",
+      "@id": "programs/FINART",
+      "AcademicProgramName": "FINE ARTS"
     }
   ]
 }
