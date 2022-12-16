@@ -1039,11 +1039,7 @@
                   "sessionName": "SPRING SEMESTER 1989",
                   "sessionType": "pescSessionTypes:Semester"
                 },
-                "academicProgram": {
-                  "@type": "AcademicProgram",
-                  "@id": "programs/LIBART",
-                  "academicProgramName": "LIBERAL ARTS"
-                },
+                "academicProgram": "programs/LIBART",
                 "academicAchievement": [
                   {
                     "@type": "StudentAcademicAchievement",
