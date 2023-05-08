@@ -11,6 +11,7 @@ foaf,http://xmlns.com/foaf/0.1/,Friend of a Friend
 sdo,https://schema.org/,Schema.org
 skos,http://www.w3.org/2004/02/skos/core#,Simple Knowledge Organization System
 pesc,https://pesc.org/terms/,DOES NOT EXIST
+cred,https://www.w3.org/2018/credentials#,W3C Verifiable Credentials
 pescAcademicSummaryLevels,https://pesc.org/vocabs/AcademicSummaryLevels#,DOES NOT EXIST
 pescAcademicSummaryTypes,https://pesc.org/vocabs/AcademicSummaryTypes#,DOES NOT EXIST
 pescAcademicProgramTypes,https://pesc.org/vocabs/AcademicProgramTypes#,DOES NOT EXIST
