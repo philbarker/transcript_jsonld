@@ -2000,7 +2000,7 @@
 <studentshapeAchievement> a sh:PropertyShape ;
     sh:minCount 1 ;
     sh:name "Achievement"@en-US ;
-    sh:node <AcademicAchievementShape> ;
+    sh:node <> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path pesc:achievement .
 
@@ -2426,14 +2426,6 @@
     sh:path cred:subject .
 
 <AcademicAchievementShape> a sh:NodeShape ;
-    sh:class pesc:AcademicAchievement,
-        pesc:AcademicAward,
-        pesc:AcademicSummary,
-        pesc:AdditionalStudentAchievment,
-        pesc:CourseAchievement,
-        pesc:GPA,
-        pesc:ProgramSummary,
-        pesc:Tests ;
     sh:closed false ;
     sh:name "Academic Achievement "@en ;
     sh:property <academicachievementshapeCohortGraduationYear>,
