@@ -1521,7 +1521,7 @@
 
 <nameshapeNameSufficix> a sh:PropertyShape ;
     sh:datatype xsd:string ;
-    sh:in ( "JR" "SR" "I" "II" "III" "IV" "V" "VI" "VII" "VIII" "IX" "X" ) ;
+    sh:in ( "JR" "SR" "I" "II" "III" "IV"^^xsd:string "V" "VI" "VII" "VIII" "IX" "X" ) ;
     sh:maxCount 1 ;
     sh:name "Name Sufficix"@en-US ;
     sh:nodeKind sh:Literal ;

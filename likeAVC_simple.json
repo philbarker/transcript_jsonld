@@ -830,7 +830,7 @@
       "@id": "achievement002",
       "inCourse": "https://example.edu/Course/001",
       "inSession": "https://example.edu/Session/001",
-      "courseCreditEarned": 15,
+      "courseCreditEarned": "15",
       "courseAcademicGrade": "A",
       "school": "https://www.utexas.edu/#Organization"
     },
@@ -848,7 +848,7 @@
       "courseCreditBasis": "pescCreditBasis:Regular",
       "courseCreditUnits": "pescCreditUnits:CarnegieUnits",
       "courseCreditLevel": "pescCreditLevels:UpperDivision",
-      "courseCreditValue": 15,
+      "courseCreditValue": "15",
       "courseLevel": "pescCourseLevels:Honors",
       "offeredBy": "https://www.utexas.edu/#Organization",
       "hasSession": "https://example.edu/Session/001",
