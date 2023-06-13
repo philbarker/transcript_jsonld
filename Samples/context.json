@@ -3,6 +3,7 @@
     "@vocab": "https://pesc.org/terms/",
     "@base": "http://example.edu/entities/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ceds": "https://ceds.ed.gov/",
     "pesc": "https://pesc.org/terms/",
     "pescAcademicSummaryLevels": "https://pesc.org/vocabs/AcademicSummaryLevels#",
     "pescAcademicSummaryTypes": "https://pesc.org/vocabs/AcademicSummaryTypes#",
@@ -416,6 +417,7 @@
       "@type": "xsd:string"
     },
     "firstName": {
+      "@id": "ceds:000115",
       "@type": "xsd:string"
     },
     "genderCode": {
