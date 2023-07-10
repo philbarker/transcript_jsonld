@@ -3,8 +3,9 @@
     "@vocab": "https://pesc.org/terms/",
     "@base": "http://example.edu/entities/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "ceds": "https://ceds.ed.gov/",
+    "ceds": "https://ceds.ed.gov/element/",
     "pesc": "https://pesc.org/terms/",
+    "sdo": "https://schema.org/",
     "pescAcademicSummaryLevels": "https://pesc.org/vocabs/AcademicSummaryLevels#",
     "pescAcademicSummaryTypes": "https://pesc.org/vocabs/AcademicSummaryTypes#",
     "pescAcademicProgramTypes": "https://pesc.org/vocabs/AcademicProgramTypes#",
@@ -493,6 +494,7 @@
       "@type": "@id"
     },
     "lastName": {
+      "@id": "ceds:000172",
       "@type": "xsd:string"
     },
     "licensure": {
@@ -514,6 +516,7 @@
       "@type": "xsd:string"
     },
     "middleName": {
+      "@id": "ceds:000184",
       "@type": "xsd:string"
     },
     "mutuallyDefinedID": {
@@ -547,6 +550,7 @@
       "@type": "xsd:string"
     },
     "organizationName": {
+      "@id": "ceds:000204",
       "@container": "@language"
     },
     "originalCourseID": {
