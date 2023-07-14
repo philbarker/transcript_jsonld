@@ -1,5 +1,5 @@
 {
-  "@context": "context.json",
+  "@context": "https://raw.githubusercontent.com/philbarker/transcript_jsonld/main/Samples/context.json",
   "@graph": [
     {
       "@id": "transcripts/050330001",
