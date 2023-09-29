@@ -3,7 +3,7 @@
     "@vocab": "https://pesc.org/terms/",
     "@base": "http://example.edu/entities/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "ceds": "https://ceds.ed.gov/element/",
+    "ceds": "http://ceds.ed.gov/owl#",
     "pesc": "https://pesc.org/terms/",
     "sdo": "https://schema.org/",
     "pescAcademicSummaryLevels": "https://pesc.org/vocabs/AcademicSummaryLevels#",
@@ -154,6 +154,7 @@
       "@type": "xsd:string"
     },
     "birthDate": {
+      "@id": "ceds:BirthDate",
       "@type": "xsd:date"
     },
     "birthStateProvinceCode": {
@@ -418,7 +419,6 @@
       "@type": "xsd:string"
     },
     "firstName": {
-      "@id": "ceds:000115",
       "@type": "xsd:string"
     },
     "genderCode": {
@@ -494,7 +494,6 @@
       "@type": "@id"
     },
     "lastName": {
-      "@id": "ceds:000172",
       "@type": "xsd:string"
     },
     "licensure": {
@@ -516,13 +515,13 @@
       "@type": "xsd:string"
     },
     "middleName": {
-      "@id": "ceds:000184",
       "@type": "xsd:string"
     },
     "mutuallyDefinedID": {
       "@type": "xsd:string"
     },
     "name": {
+      "@id": "ceds:hasPersonName",
       "@type": "@id"
     },
     "nameCode": {
@@ -550,7 +549,6 @@
       "@type": "xsd:string"
     },
     "organizationName": {
-      "@id": "ceds:000204",
       "@container": "@language"
     },
     "originalCourseID": {
