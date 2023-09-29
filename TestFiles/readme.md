@@ -1,0 +1,1 @@
+These files can be used along with a tool like pyshacl to check that changes the shacl file passes what it should and raises errors where it should. Also check that changes to the context file for JSON-LD do not invalidate the RDF output.
