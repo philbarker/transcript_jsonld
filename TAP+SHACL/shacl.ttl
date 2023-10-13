@@ -2031,7 +2031,7 @@
     sh:name "Alternate Name"@en-US ;
     sh:node <NameShape> ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path pesc:alternateName .
+    sh:path ceds:hasOtherPersonName .
 
 <studentshapeBirthCity> a sh:PropertyShape ;
     sh:datatype xsd:string ;
