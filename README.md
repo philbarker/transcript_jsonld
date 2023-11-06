@@ -1,18 +1,15 @@
-Attempts at creating JSON-LD from a JSON representation of a PESC Transcript.
+Recasting the PESC Transcript from XML to RDF as JSON-LD.
 
-Work in progress. Not endorsed. Do not re-use without permission.
+A work in progress. 
 
-You can [view the work in progress](https://tinyurl.com/ydocp59a) using the JSON-LD playground.
 
 ## Outline
-CollegeTranscriptInstanceRevised.json is example data in json, automatically converted from XML
+We have analysed the PESC Transcript XML model and have refactored it into structures that are aligned with RDF/Linked Data. The diagrams in the [ModelDiagram folder](./ModelDiagram) show this in varying degrees of detail.
 
-CollegeTranscriptInstanceRevisedLD_inlineContext.json is the same example data but in json, but as JSON-LD and recast to the schema described in the TAP+SHACL directory. This is the main file used for development.
+We are representing this model as Dublin Core Tabular Application Profile (DCTAP) using (where possible) terms from established vocabularies, CEDS, CTDL and schema.org. The source for the TAP is a [Google Sheets document](https://docs.google.com/spreadsheets/d/18HzS4phUl7olmUEjh0deA3vgVPdque4_iGzK7_zTWLE/edit?usp=sharing).
 
-context.json is a context block generated from tabular application profile in the TAP+SHACL directory, and CollegeTranscriptInstanceRevisedLD_remoteContext.json is the JSON block + a remote reference to this. These files are often some revisions behind the _inlineContext file.
+The TAP is a CSV file exported from the Googel sheets, that can be converted into SHACL, which, given suitable tools, both expresses the data structure and allows validation of instance data. This work is in the [TAP+SHACL folder](./TAP+SHACL/).  The TestFiles folder contains valid and invalid sample data that can be used to check that the SHACL is correctly expressing the data requirements.
 
-TAP+SHACL directory contains the schema described in graphical format, as a Tabular Application Profile (TAP),  and in SHACL derived from the TAP.
+The Samples folder contains an example of JSON-LD sample data and a context file generated from the TAP. These files may lag behind the current state of the project. 
 
-Examples directory contains small proof of concept examples, mostly dated.
-
-Archive directory contains false starts and other bits and bobs.
+Archive directory contains old material, false starts etc.; the xml2rdf folder is not yet developed.
